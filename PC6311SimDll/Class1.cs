@@ -8,5 +8,7 @@ namespace PC6311SimDll
 {
     public class Class1
     {
+
+
     }
 }
