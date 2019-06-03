@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BED536BD-F8D0-45E5-8DD8-6884C030392B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLD_win10.CaptureDriver</RootNamespace>
+    <AssemblyName>CaptureDriver</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaptureDriver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AC6623Driver\AC6623Driver.csproj">
+      <Project>{13bf2104-601f-4573-abcf-b7b401ffa60a}</Project>
+      <Name>AC6623Driver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AC6623SimDll\AC6623SimDriver.csproj">
+      <Project>{b2b34ae2-e08b-4c03-97f1-d2ddd67cd4e7}</Project>
+      <Name>AC6623SimDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CaptureData\ICaptureDriver.csproj">
+      <Project>{990f3008-e354-4773-b58c-73a069161076}</Project>
+      <Name>ICaptureDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PC6311Driver\PC6311Driver.csproj">
+      <Project>{002de2d2-7af2-47c6-b834-b59ae4d85934}</Project>
+      <Name>PC6311Driver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PC6311SimDll\PC6311SimDriver.csproj">
+      <Project>{ed7432a9-1540-4ee5-bd9d-20d891b68e37}</Project>
+      <Name>PC6311SimDriver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BLD_win10" GeneratedClassName="BldSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DriverDllName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AC6623.DLL</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
