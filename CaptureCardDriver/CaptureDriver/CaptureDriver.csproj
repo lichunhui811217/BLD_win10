@@ -50,9 +50,9 @@
       <Project>{13bf2104-601f-4573-abcf-b7b401ffa60a}</Project>
       <Name>AC6623Driver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AC6623SimDll\AC6623SimDriver.csproj">
+    <ProjectReference Include="..\AC6623SimDll\AC6623SimDll.csproj">
       <Project>{b2b34ae2-e08b-4c03-97f1-d2ddd67cd4e7}</Project>
-      <Name>AC6623SimDriver</Name>
+      <Name>AC6623SimDll</Name>
     </ProjectReference>
     <ProjectReference Include="..\CaptureData\ICaptureDriver.csproj">
       <Project>{990f3008-e354-4773-b58c-73a069161076}</Project>
