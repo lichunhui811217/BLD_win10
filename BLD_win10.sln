@@ -21,8 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC6311SimDll", "CaptureCard
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE5CB717-8FA4-4D8F-ABCA-035755207936}"
 	ProjectSection(SolutionItems) = preProject
-		Graph1_Driver.dgml = Graph1_Driver.dgml
-		ReadMe.txt = ReadMe.txt
+		Solution Items\Graph_CaptureDriver.dgml = Solution Items\Graph_CaptureDriver.dgml
+		Solution Items\ReadMe.txt = Solution Items\ReadMe.txt
 	EndProjectSection
 EndProject
 Global
