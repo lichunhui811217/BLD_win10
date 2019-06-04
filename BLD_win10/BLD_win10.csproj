@@ -50,10 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AC6623TestForm.cs">
+    <Compile Include="Form\AC6623TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AC6623TestForm.Designer.cs">
+    <Compile Include="Form\AC6623TestForm.Designer.cs">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BldSettings.Designer.cs">
@@ -61,10 +61,19 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>BldSettings.settings</DependentUpon>
     </Compile>
-    <Compile Include="HistogramForm.cs">
+    <Compile Include="Communication\DTU.cs" />
+    <Compile Include="Communication\Modbus.cs" />
+    <Compile Include="Communication\NetworkCommunication.cs" />
+    <Compile Include="Communication\SerialPortCommunication.cs" />
+    <Compile Include="Device\Boiler.cs" />
+    <Compile Include="Device\Host.cs" />
+    <Compile Include="Device\PowerPlant.cs" />
+    <Compile Include="Device\Sensor.cs" />
+    <Compile Include="Device\Server.cs" />
+    <Compile Include="Form\HistogramForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistogramForm.Designer.cs">
+    <Compile Include="Form\HistogramForm.Designer.cs">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -80,16 +89,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AC6623TestForm.resx">
+    <EmbeddedResource Include="Form\AC6623TestForm.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AC6623TestForm.zh-CN.resx">
+    <EmbeddedResource Include="Form\AC6623TestForm.zh-CN.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistogramForm.resx">
+    <EmbeddedResource Include="Form\HistogramForm.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistogramForm.zh-CN.resx">
+    <EmbeddedResource Include="Form\HistogramForm.zh-CN.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.en.resx">
@@ -119,6 +128,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>BldSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Device\ClassDiagram1.cd" />
+    <None Include="SolutionItems\Graph_Device.dgml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +139,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SolutionItems\Graph_CaptureDriver.dgml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -146,6 +158,9 @@
       <Project>{bed536bd-f8d0-45e5-8dd8-6884c030392b}</Project>
       <Name>CaptureDriver</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SolutionItems\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

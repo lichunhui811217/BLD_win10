@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLD_win10.Communication
 {
-    class Modbus
+    class Modbus : SerialPortCommunication
     {
 
     }

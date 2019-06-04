@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using System.Runtime.InteropServices;
-using BLD_win10.Driver;
+using BLD_win10.CaptureCardDriver;
 
 namespace BLD_win10
 {
@@ -24,11 +17,11 @@ namespace BLD_win10
 
         private void AC6623TestForm_Load(object sender, EventArgs e)
         {
-            //加载驱动列表
-            foreach (Driver.CaptureDriver.EnumDriverName item in Enum.GetValues(typeof(CaptureDriver.EnumDriverName)))
+            foreach(CaptureDriver.EnumDriverName enumDriverName in Enum.GetValues(typeof(CaptureDriver.EnumDriverName)))
             {
-                comboBox_DriverList.Items.Add(item);
+                comboBox_ChooseDriver.Items.Add(enumDriverName);
             }
+
         }
 
         private void DO_Click(object sender, EventArgs e)
@@ -155,21 +148,18 @@ namespace BLD_win10
             int i = captureDriver.DI(new IntPtr());
         }
 
-        private void comboBox_DriverList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox_ChooseDriver_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CaptureDriver.EnumDriverName edn = (CaptureDriver.EnumDriverName)comboBox_DriverList.SelectedItem;
-            label1.Text = edn.ToString();
-
             try
             {
-                captureDriver = new CaptureDriver(CaptureDriver.EnumDriverName.AC6623);
+                captureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)comboBox_ChooseDriver.SelectedItem);
 
                 hDevice = captureDriver.OpenDevice(0);
                 captureDriver.CAL(hDevice);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Initialization error/初始化错误");
+                MessageBox.Show(ex.Message);
             }
             addata = new Int32[600000];
 

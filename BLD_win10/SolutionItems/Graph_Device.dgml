@@ -1,102 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1 @3 Type=BldSettings)" Category="CodeSchema_Class" Bounds="444.861666666666,245,125.893333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BldSettings" />
-    <Node Id="(@1 @3 Type=MainFormResource)" Category="CodeSchema_Class" Bounds="600.754999999999,245,172.403333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainFormResource" />
-    <Node Id="(@1 @5 Type=Modbus Member=.ctor)" Category="CodeSchema_Method" Bounds="552.583796613719,48.8618584155586,83.64,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Modbus" UseManualLocation="True" />
-    <Node Id="(@1 @7 Type=NetworkCommunication Member=.ctor)" Category="CodeSchema_Method" Bounds="-72.9203070532288,195.763113650599,176.716666666667,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="NetworkCommunication" UseManualLocation="True" />
-    <Node Id="(@1 Namespace=BLD_win10.Properties Type=Settings)" Category="CodeSchema_Class" Bounds="555.833333333332,360,107.493333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Settings" />
-    <Node Id="@10" Category="CodeSchema_Class" Bounds="626.828333333332,190,159.16,25" CodeSchemaProperty_IsPublic="True" CommonLabel="AC6623TestForm" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="AC6623TestForm" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Form/AC6623TestForm.Designer.cs StartLineNumber=2 StartCharacterOffset=18 EndLineNumber=2 EndCharacterOffset=32)" />
-    <Node Id="@11" Category="CodeSchema_Class" Bounds="42.9783333333332,470,93.94,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Boiler" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Boiler" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Boiler.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=16)" />
-    <Node Id="@12" Category="CodeSchema_Class" Bounds="164.440833333333,80,85.98,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="DTU" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="227.958333333333,415,85.9800000000001,25" CodeSchemaProperty_IsInternal="True" CommonLabel="DTU" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Icon="CodeSchema_Class" Label="DTU" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/DTU.cs StartLineNumber=13 StartCharacterOffset=10 EndLineNumber=13 EndCharacterOffset=13)" />
-    <Node Id="@14" Category="CodeSchema_Class" Bounds="444.861666666666,190,151.093333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="HistogramForm" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="HistogramForm" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Form/HistogramForm.Designer.cs StartLineNumber=2 StartCharacterOffset=18 EndLineNumber=2 EndCharacterOffset=31)" />
-    <Node Id="@15" Category="CodeSchema_Class" Bounds="45.9816666666666,415,87.9333333333334,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Host" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Host" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Host.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=14)" />
-    <Node Id="@16" Category="CodeSchema_Class" Bounds="646.521666666665,135,119.773333333334,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainForm" />
-    <Node Id="@17" Category="CodeSchema_Class" Bounds="103.517499999999,190,108.64,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Modbus" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Icon="CodeSchema_Class" Label="Modbus" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Communication/Modbus.cs StartLineNumber=8 StartCharacterOffset=10 EndLineNumber=8 EndCharacterOffset=16)" />
-    <Node Id="@18" Category="CodeSchema_Class" Bounds="103.517499999999,245,201.716666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="NetworkCommunication" />
-    <Node Id="@19" Category="CodeSchema_Class" Bounds="40,635,201.717221162667,25.0022268633293" CodeSchemaProperty_IsInternal="True" CommonLabel="NetworkCommunication" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Icon="CodeSchema_Class" Label="NetworkCommunication" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Communication/NetworkCommunication.cs StartLineNumber=8 StartCharacterOffset=10 EndLineNumber=8 EndCharacterOffset=30)" />
-    <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="06/03/2019 08:14:01" Bounds="0,0,825.988333333332,700.002226863329" CodeSchemaProperty_StrongName="BLD_win10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="BLD_win10" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" FilePath="$(c4c60aaa-b1ce-4daf-a140-8f3503d0aaf8.OutputPath)" Group="Expanded" Label="BLD_win10.exe" />
-    <Node Id="@20" Category="CodeSchema_Class" Bounds="208.011666666666,580,125.873333333334,25" CodeSchemaProperty_IsInternal="True" CommonLabel="PowerPlant" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="PowerPlant" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/PowerPlant.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=20)" />
-    <Node Id="@21" Category="CodeSchema_Class" Bounds="651.061666666666,80,110.693333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Program" />
-    <Node Id="@22" Category="CodeSchema_Class" Bounds="555.833333333332,415,119.183333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Resources" />
-    <Node Id="@23" Category="CodeSchema_Class" Bounds="40,360,99.8966666666665,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Sensor" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Sensor" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Sensor.cs StartLineNumber=12 StartCharacterOffset=10 EndLineNumber=12 EndCharacterOffset=16)" />
-    <Node Id="@24" Category="CodeSchema_Class" Bounds="170,360,99.8966666666668,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Sensor" />
-    <Node Id="@25" Category="CodeSchema_Class" Bounds="103.517499999999,135,207.826666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SerialPortCommunication" />
-    <Node Id="@26" Category="CodeSchema_Class" Bounds="167.035000000001,470,207.826666666665,25" CodeSchemaProperty_IsInternal="True" CommonLabel="SerialPortCommunication" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="SerialPortCommunication" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Communication/SerialPortCommunication.cs StartLineNumber=8 StartCharacterOffset=10 EndLineNumber=8 EndCharacterOffset=33)" />
-    <Node Id="@27" Category="CodeSchema_Class" Bounds="222.441666666667,525,97.0133333333334,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Server" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Server" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Server.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=16)" />
-    <Node Id="@28" Category="CodeSchema_Method" Bounds="556.784882412893,247.079188164068,60.98,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="DTU" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="424.861666666666,40,381.126666666666,250" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Expanded" Label="BLD_win10" />
-    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="83.5174999999995,40,247.826666666667,250" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10.Communication" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="BLD_win10‎.Communication" />
-    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="20,320,374.861666666666,360.002226863329" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10.Device" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Expanded" Label="BLD_win10‎.Device" />
-    <Node Id="@9" Category="CodeSchema_Namespace" Bounds="524.989999999999,320,180.87,140" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="BLD_win10‎.Properties" />
+    <Node Id="(@1 @3 Type=BldSettings)" Category="CodeSchema_Class" Bounds="458.097653124544,261.103250542583,125.893333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BldSettings" />
+    <Node Id="(@1 @3 Type=MainFormResource)" Category="CodeSchema_Class" Bounds="613.990986457878,261.103250542583,172.403333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainFormResource" />
+    <Node Id="(@1 @7 Type=NetworkCommunication @29)" Category="CodeSchema_Method" Bounds="-72.9203070532288,195.763113650599,176.716666666667,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="NetworkCommunication" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=BLD_win10.Properties Type=Settings)" Category="CodeSchema_Class" Bounds="569.069319791211,376.103252042583,107.493333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Settings" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="458.097653124544,206.103250042583,159.16,25" CodeSchemaProperty_IsPublic="True" CommonLabel="AC6623TestForm" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="AC6623TestForm" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Form/AC6623TestForm.Designer.cs StartLineNumber=2 StartCharacterOffset=18 EndLineNumber=2 EndCharacterOffset=32)" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="42.9759672048937,453.16082094833,93.94,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Boiler" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Boiler" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Boiler.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=16)" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="164.393838243987,51.6426500558075,85.98,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Label="DTU" />
+    <Node Id="@14" Category="CodeSchema_Class" Bounds="227.955967204893,398.160819215753,85.9800000000001,25" CodeSchemaProperty_IsInternal="True" CommonLabel="DTU" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Icon="CodeSchema_Class" Label="DTU" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/DTU.cs StartLineNumber=13 StartCharacterOffset=10 EndLineNumber=13 EndCharacterOffset=13)" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="648.130986457878,206.103250042583,151.093333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="HistogramForm" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="HistogramForm" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Form/HistogramForm.Designer.cs StartLineNumber=2 StartCharacterOffset=18 EndLineNumber=2 EndCharacterOffset=31)" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="45.9793005382267,398.160820302933,87.9333333333335,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Host" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Host" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Host.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=14)" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="663.790986457877,151.103249542583,119.773333333334,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainForm" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="103.470504910654,161.642650055807,108.64,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Modbus" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="103.47050681444,216.621953100884,201.716666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="NetworkCommunication" />
+    <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="06/03/2019 08:14:01" Bounds="-0.00347141929444206,-28.3573499441925,839.227791210505,711.590050958829" CodeSchemaProperty_StrongName="BLD_win10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="BLD_win10" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" FilePath="$(c4c60aaa-b1ce-4daf-a140-8f3503d0aaf8.OutputPath)" Group="Expanded" Label="BLD_win10.exe" />
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="39.9962494236908,618.155281994805,201.717221162667,25.0022268633293" CodeSchemaProperty_IsInternal="True" CommonLabel="NetworkCommunication" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Icon="CodeSchema_Class" Label="NetworkCommunication" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Communication/NetworkCommunication.cs StartLineNumber=8 StartCharacterOffset=10 EndLineNumber=8 EndCharacterOffset=30)" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="208.009300538225,563.160821151942,125.873333333334,25" CodeSchemaProperty_IsInternal="True" CommonLabel="PowerPlant" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="PowerPlant" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/PowerPlant.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=20)" />
+    <Node Id="@22" Category="CodeSchema_Class" Bounds="668.330986457878,96.1032490425832,110.693333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Program" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="569.069319791211,431.103252542583,119.183333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Resources" />
+    <Node Id="@24" Category="CodeSchema_Class" Bounds="39.9976338715611,343.160819683155,99.8966666666664,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Sensor" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Sensor" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Sensor.cs StartLineNumber=12 StartCharacterOffset=10 EndLineNumber=12 EndCharacterOffset=16)" />
+    <Node Id="@25" Category="CodeSchema_Class" Bounds="169.99763387156,343.160818570357,99.8966666666669,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Sensor" />
+    <Node Id="@26" Category="CodeSchema_Class" Bounds="103.470504910654,106.642650055807,207.826666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SerialPortCommunication" />
+    <Node Id="@27" Category="CodeSchema_Class" Bounds="167.032633871566,453.160819886767,207.826666666665,25" CodeSchemaProperty_IsInternal="True" CommonLabel="SerialPortCommunication" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="SerialPortCommunication" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Communication/SerialPortCommunication.cs StartLineNumber=8 StartCharacterOffset=10 EndLineNumber=8 EndCharacterOffset=33)" />
+    <Node Id="@28" Category="CodeSchema_Class" Bounds="222.439300538227,508.160820532164,97.0133333333333,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Server" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Server" SourceLocation="(Assembly=file:///E:/VS2017project/BLD_win10/BLD_win10/Device/Server.cs StartLineNumber=11 StartCharacterOffset=10 EndLineNumber=11 EndCharacterOffset=16)" />
+    <Node Id="@30" Category="CodeSchema_Method" Bounds="176.940833333333,37.7171609187805,60.98,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="DTU" UseManualLocation="True" />
+    <Node Id="@31" Category="CodeSchema_Method" Bounds="556.784882412893,247.079188164068,60.98,25.24" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="DTU" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="438.097653124544,56.1032485425832,381.126666666666,250.0000025" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Expanded" Label="BLD_win10" />
+    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="83.4705049106537,11.6426500558075,247.826666666667,250" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10.Communication" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="BLD_win10‎.Communication" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="19.9965259530642,303.179043889128,374.862774585166,360.002926863329" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="BLD_win10.Device" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Expanded" Label="BLD_win10‎.Device" />
+    <Node Id="@9" Category="CodeSchema_Namespace" Bounds="538.225986457878,336.103251542583,180.87,140.0000015" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="BLD_win10‎.Properties" />
   </Nodes>
   <Links>
-    <Link Source="@11" Target="@27" Category="InheritsFrom" Bounds="131.084701538086,495,89.6376495361328,27.2379760742188" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
-      <Category Ref="CodeSchema_Calls" />
-    </Link>
-    <Link Source="@12" Target="@25" Category="InheritsFrom" Bounds="207.43083190918,105,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@11" Target="@28" Category="InheritsFrom" Bounds="131.082333973178,478.211503071385,89.6376543497273,27.2379609325893" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@13" Target="@26" Category="InheritsFrom" Weight="1" />
-    <Link Source="@13" Target="@28" Category="Contains" FetchingParent="@13" />
-    <Link Source="@15" Target="@11" Category="InheritsFrom" Bounds="89.9483337402344,440,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@13" Target="@30" Category="Contains" FetchingParent="@13" />
+    <Link Source="@14" Target="@27" Category="InheritsFrom" Weight="1" />
+    <Link Source="@14" Target="@31" Category="Contains" FetchingParent="@14" />
+    <Link Source="@16" Target="@11" Category="InheritsFrom" Bounds="89.9459698325349,423.211502684185,9.9475983006414E-14,20.5000003872" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@16" Target="@10" Category="References" Bounds="706.408325195313,160,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@17" Target="@10" Category="References" Bounds="588.592436090713,176.103426043254,92.8239601988915,27.4479454696292" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@16" Target="@14" Category="References" Bounds="571.311645507813,160,92.823974609375,27.4479522705078" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@17" Target="@15" Category="References" Bounds="723.689123178035,176.103426043254,2.27373675443232E-13,21.0000005" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@16" Target="@22" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
-    <Link Source="@17" Target="(@1 @5 Type=Modbus Member=.ctor)" Category="Contains" FetchingParent="@17" />
-    <Link Source="@18" Target="@27" Category="InheritsFrom" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@17" Target="@23" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@19" Target="@28" Category="InheritsFrom" Bounds="207.182801627262,241.708957762707,58.9040358162322,257.813987305935" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@19" Target="(@1 @7 Type=NetworkCommunication Member=.ctor)" Category="Contains" FetchingParent="@19" />
     <Link Source="@2" Target="@4" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@6" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@8" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@9" Category="Contains" FetchingParent="@2" />
-    <Link Source="@21" Target="@16" Category="CodeSchema_Calls" Bounds="706.408325195313,105,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@23" Target="@15" Category="InheritsFrom" Bounds="89.9483337402344,385,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@20" Target="(@1 @7 Type=NetworkCommunication @29)" Category="Contains" FetchingParent="@20" />
+    <Link Source="@22" Target="@17" Category="CodeSchema_Calls" Bounds="723.689123178035,121.103425543254,1.13686837721616E-13,21.0000005" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@24" Target="@16" Category="InheritsFrom" Bounds="89.9459698325352,368.211502322669,3.26849658449646E-13,20.5000003615157" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@24" Target="@15" Category="InheritsFrom" Bounds="128.242980957031,385,62.1598968505859,26.2984313964844" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@25" Target="@16" Category="InheritsFrom" Bounds="128.240612435548,368.211501209871,62.159903643519,26.2984214772059" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@25" Target="@27" Category="InheritsFrom" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@26" Target="@28" Category="InheritsFrom" Bounds="209.360432206848,131.708757762707,58.2013421096208,367.698766651689" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@26" Target="@27" Category="InheritsFrom" Bounds="270.948333740234,495,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@27" Target="@28" Category="InheritsFrom" Bounds="270.945969832537,478.211502009955,1.59161572810262E-12,20.5000003872003" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@27" Target="@20" Category="InheritsFrom" Bounds="270.948333740234,550,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@28" Target="@21" Category="InheritsFrom" Bounds="270.945969832534,533.211502397155,6.25277607468888E-13,20.5000003615155" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@28" Target="@26" Category="CodeSchema_Calls" Bounds="587.274887062329,272.319188232422,1.25523129099747E-05,58.0446670132207" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@26" Category="CodeSchema_Calls" Bounds="207.430825519217,62.9568931118573,5.70256472087749E-06,58.064018544233" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@31" Target="@27" Category="CodeSchema_Calls" Bounds="587.274887062329,272.319188232422,1.25523129099747E-05,58.0446670132207" IsTargetVirtualized="True" Weight="1" />
     <Link Source="@4" Target="(@1 @3 Type=BldSettings)" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="(@1 @3 Type=MainFormResource)" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@10" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@14" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@16" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@21" Category="Contains" FetchingParent="@4" />
-    <Link Source="@6" Target="@12" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@17" Category="Contains" FetchingParent="@6" />
+    <Link Source="@4" Target="@15" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@17" Category="Contains" FetchingParent="@4" />
+    <Link Source="@4" Target="@22" Category="Contains" FetchingParent="@4" />
+    <Link Source="@6" Target="@13" Category="Contains" FetchingParent="@6" />
     <Link Source="@6" Target="@18" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@25" Category="Contains" FetchingParent="@6" />
+    <Link Source="@6" Target="@19" Category="Contains" FetchingParent="@6" />
+    <Link Source="@6" Target="@26" Category="Contains" FetchingParent="@6" />
     <Link Source="@8" Target="@11" Category="Contains" FetchingParent="@8" />
-    <Link Source="@8" Target="@13" Category="Contains" FetchingParent="@8" />
-    <Link Source="@8" Target="@15" Category="Contains" FetchingParent="@8" />
-    <Link Source="@8" Target="@19" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@14" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@16" Category="Contains" FetchingParent="@8" />
     <Link Source="@8" Target="@20" Category="Contains" FetchingParent="@8" />
-    <Link Source="@8" Target="@23" Category="Contains" />
-    <Link Source="@8" Target="@24" Category="Contains" FetchingParent="@8" />
-    <Link Source="@8" Target="@26" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@21" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@24" Category="Contains" />
+    <Link Source="@8" Target="@25" Category="Contains" FetchingParent="@8" />
     <Link Source="@8" Target="@27" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="@28" Category="Contains" FetchingParent="@8" />
     <Link Source="@9" Target="(@1 Namespace=BLD_win10.Properties Type=Settings)" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@22" Category="Contains" FetchingParent="@9" />
+    <Link Source="@9" Target="@23" Category="Contains" FetchingParent="@9" />
   </Links>
   <Categories>
     <Category Id="CodeSchema_Assembly" Label="程序集" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="程序集" />
@@ -137,7 +136,7 @@
     <Property Id="FilePath" Label="文件路径" Description="文件路径" DataType="System.String" />
     <Property Id="Group" Label="组" Description="将节点显示为组" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
     <Property Id="GroupLabel" DataType="System.String" />
-    <Property Id="Icon" Label="图标" DataType="System.String" />
+    <Property Id="Icon" Label="图标" Description="图标" DataType="System.String" />
     <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
     <Property Id="IsContainment" DataType="System.Boolean" />
     <Property Id="IsEnabled" DataType="System.Boolean" />
@@ -174,23 +173,26 @@
     <Alias n="9" Id="(@1 Namespace=BLD_win10.Properties)" />
     <Alias n="10" Id="(@1 @3 Type=AC6623TestForm)" />
     <Alias n="11" Id="(@1 @7 Type=Boiler)" />
-    <Alias n="12" Id="(@1 @5 Type=DTU)" />
-    <Alias n="13" Id="(@1 @7 Type=DTU)" />
-    <Alias n="14" Id="(@1 @3 Type=HistogramForm)" />
-    <Alias n="15" Id="(@1 @7 Type=Host)" />
-    <Alias n="16" Id="(@1 @3 Type=MainForm)" />
-    <Alias n="17" Id="(@1 @5 Type=Modbus)" />
-    <Alias n="18" Id="(@1 @5 Type=NetworkCommunication)" />
-    <Alias n="19" Id="(@1 @7 Type=NetworkCommunication)" />
-    <Alias n="20" Id="(@1 @7 Type=PowerPlant)" />
-    <Alias n="21" Id="(@1 @3 Type=Program)" />
-    <Alias n="22" Id="(@1 Namespace=BLD_win10.Properties Type=Resources)" />
-    <Alias n="23" Id="(@1 @3 Type=Sensor)" />
-    <Alias n="24" Id="(@1 @7 Type=Sensor)" />
-    <Alias n="25" Id="(@1 @5 Type=SerialPortCommunication)" />
-    <Alias n="26" Id="(@1 @7 Type=SerialPortCommunication)" />
-    <Alias n="27" Id="(@1 @7 Type=Server)" />
-    <Alias n="28" Id="(@1 @7 Type=DTU Member=.ctor)" />
+    <Alias n="12" Id="Type=DTU" />
+    <Alias n="13" Id="(@1 @5 @12)" />
+    <Alias n="14" Id="(@1 @7 @12)" />
+    <Alias n="15" Id="(@1 @3 Type=HistogramForm)" />
+    <Alias n="16" Id="(@1 @7 Type=Host)" />
+    <Alias n="17" Id="(@1 @3 Type=MainForm)" />
+    <Alias n="18" Id="(@1 @5 Type=Modbus)" />
+    <Alias n="19" Id="(@1 @5 Type=NetworkCommunication)" />
+    <Alias n="20" Id="(@1 @7 Type=NetworkCommunication)" />
+    <Alias n="21" Id="(@1 @7 Type=PowerPlant)" />
+    <Alias n="22" Id="(@1 @3 Type=Program)" />
+    <Alias n="23" Id="(@1 Namespace=BLD_win10.Properties Type=Resources)" />
+    <Alias n="24" Id="(@1 @3 Type=Sensor)" />
+    <Alias n="25" Id="(@1 @7 Type=Sensor)" />
+    <Alias n="26" Id="(@1 @5 Type=SerialPortCommunication)" />
+    <Alias n="27" Id="(@1 @7 Type=SerialPortCommunication)" />
+    <Alias n="28" Id="(@1 @7 Type=Server)" />
+    <Alias n="29" Id="Member=.ctor" />
+    <Alias n="30" Id="(@1 @5 @12 @29)" />
+    <Alias n="31" Id="(@1 @7 @12 @29)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="结果" ValueLabel="True">
