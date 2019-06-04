@@ -61,18 +61,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>BldSettings.settings</DependentUpon>
     </Compile>
-    <Compile Include="CaptureData\AC6623.cs" />
-    <Compile Include="CaptureData\AC6623SIM.cs" />
-    <Compile Include="CaptureData\CaptureDriver.cs" />
-    <Compile Include="CaptureData\PC6311.cs" />
-    <Compile Include="CaptureData\PC6311SIM.cs" />
     <Compile Include="HistogramForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HistogramForm.Designer.cs">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CaptureData\ICaptureData.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

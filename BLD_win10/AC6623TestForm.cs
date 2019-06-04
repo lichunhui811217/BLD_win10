@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using BLD_win10.CaptureData;
+using BLD_win10.CaptureCardDriver;
 
 namespace BLD_win10
 {
