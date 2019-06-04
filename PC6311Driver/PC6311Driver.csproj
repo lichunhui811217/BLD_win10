@@ -7,7 +7,7 @@
     <ProjectGuid>{002DE2D2-7AF2-47C6-B834-B59AE4D85934}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLD_win10.CaptureDriver</RootNamespace>
+    <RootNamespace>BLD_win10.CaptureCardDriver</RootNamespace>
     <AssemblyName>PC6311Driver</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

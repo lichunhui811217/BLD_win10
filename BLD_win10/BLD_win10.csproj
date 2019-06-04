@@ -147,6 +147,10 @@
     <None Include="Resources\png.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CaptureData\ICaptureDriver.csproj">
+      <Project>{990f3008-e354-4773-b58c-73a069161076}</Project>
+      <Name>ICaptureDriver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CaptureDriver\CaptureDriver.csproj">
       <Project>{bed536bd-f8d0-45e5-8dd8-6884c030392b}</Project>
       <Name>CaptureDriver</Name>

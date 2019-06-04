@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using System.Runtime.InteropServices;
-
-using AC6623SimDll;
 using BLD_win10.CaptureData;
 
 namespace BLD_win10

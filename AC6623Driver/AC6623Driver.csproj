@@ -7,7 +7,7 @@
     <ProjectGuid>{13BF2104-601F-4573-ABCF-B7B401FFA60A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLD_win10.CaptureDriver</RootNamespace>
+    <RootNamespace>BLD_win10.CaptureCardDriver</RootNamespace>
     <AssemblyName>AC6623Driver</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

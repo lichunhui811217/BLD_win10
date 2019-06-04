@@ -32,7 +32,7 @@ namespace BLD_win10.CaptureCardDriver
                     captureDriver = new PC6311Driver();
                     break;
                 case EnumDriverName.PC6311SIM:
-                    captureDriver = new PC6311SimDriver();
+                    captureDriver = new PC6311SimDll();
                     break;
                 default:
                     throw new SystemException("使用了未知的采集卡驱动");
