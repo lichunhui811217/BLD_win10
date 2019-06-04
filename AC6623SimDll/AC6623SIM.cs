@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AC6623SimDll
+namespace BLD_win10.CaptureCardDriver
 {
-    public class AC6623SIM
+    public class AC6623SimDriver
     {
         public static IntPtr AC6623_OpenDevice(Int32 dev_num)
         {

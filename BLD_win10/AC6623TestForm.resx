@@ -117,40 +117,191 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;button_da.Name" xml:space="preserve">
-    <value>button_da</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_AD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 394</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_AD.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button_AD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_AD.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="button_AD.Text" xml:space="preserve">
+    <value>ADRun</value>
+  </data>
+  <data name="&gt;&gt;button_AD.Name" xml:space="preserve">
+    <value>button_AD</value>
+  </data>
+  <data name="&gt;&gt;button_AD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_AD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_AD.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="listBox_ad.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="listBox_ad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 141</value>
+  </data>
+  <data name="listBox_ad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="listBox_ad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 244</value>
+  </data>
+  <data name="listBox_ad.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;listBox_ad.Name" xml:space="preserve">
+    <value>listBox_ad</value>
+  </data>
+  <data name="&gt;&gt;listBox_ad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox_ad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listBox_ad.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label_di.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_di.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 184</value>
+  </data>
+  <data name="label_di.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label_di.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 15</value>
+  </data>
+  <data name="label_di.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label_di.Text" xml:space="preserve">
+    <value>label_di</value>
+  </data>
+  <data name="&gt;&gt;label_di.Name" xml:space="preserve">
+    <value>label_di</value>
+  </data>
+  <data name="&gt;&gt;label_di.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_di.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_di.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="DI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 178</value>
+  </data>
+  <data name="DI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="DI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="DI.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="DI.Text" xml:space="preserve">
+    <value>DI</value>
+  </data>
+  <data name="&gt;&gt;DI.Name" xml:space="preserve">
+    <value>DI</value>
+  </data>
+  <data name="&gt;&gt;DI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DI.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DI.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 141</value>
+  </data>
+  <data name="DO.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="DO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="DO.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="DO.Text" xml:space="preserve">
     <value>DO</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button_pwm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 290</value>
+  <data name="&gt;&gt;DO.Name" xml:space="preserve">
+    <value>DO</value>
+  </data>
+  <data name="&gt;&gt;DO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DO.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DO.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>196, 17</value>
+  </metadata>
+  <data name="button_cnt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 299</value>
+  </data>
+  <data name="button_cnt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button_cnt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="button_cnt.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="button_cnt.Text" xml:space="preserve">
+    <value>CNT</value>
+  </data>
+  <data name="&gt;&gt;button_cnt.Name" xml:space="preserve">
+    <value>button_cnt</value>
   </data>
   <data name="&gt;&gt;button_cnt.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox_da.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textBox_do.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_cnt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label_di.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;button_cnt.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_adstop.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="textBox_da.Location" type="System.Drawing.Point, System.Drawing">
+    <value>737, 231</value>
   </data>
-  <data name="textBox_do.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 113</value>
+  <data name="textBox_da.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBox_da.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
+    <value>111, 25</value>
+  </data>
+  <data name="textBox_da.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;textBox_da.Name" xml:space="preserve">
+    <value>textBox_da</value>
   </data>
   <data name="&gt;&gt;textBox_da.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -158,338 +309,250 @@
   <data name="&gt;&gt;textBox_da.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DO.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AC6623TestForm</value>
-  </data>
-  <data name="&gt;&gt;textBox_do.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_adstop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_cnt.Text" xml:space="preserve">
-    <value>CNT</value>
-  </data>
-  <data name="&gt;&gt;button_adstop.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="DO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 113</value>
-  </data>
-  <data name="listBox_ad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 196</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox_ad.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button_da.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBox_da.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;button_AD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_adstop.Text" xml:space="preserve">
-    <value>AdStop</value>
-  </data>
-  <data name="&gt;&gt;button_pwm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox_ad.Name" xml:space="preserve">
-    <value>listBox_ad</value>
-  </data>
-  <data name="&gt;&gt;DO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;button_da.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_di.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label_cnt.Text" xml:space="preserve">
-    <value>label_cnt</value>
-  </data>
-  <data name="&gt;&gt;PWM_END.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;listBox_ad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_adstop.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DO.Name" xml:space="preserve">
-    <value>DO</value>
-  </data>
-  <data name="label_di.Text" xml:space="preserve">
-    <value>label_di</value>
-  </data>
-  <data name="listBox_ad.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;button_pwm.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;DI.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button_pwm.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>854, 520</value>
-  </data>
-  <data name="&gt;&gt;DO.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="DI.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label_di.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="button_AD.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="textBox_da.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="DI.Text" xml:space="preserve">
-    <value>DI</value>
-  </data>
-  <data name="&gt;&gt;button_cnt.Name" xml:space="preserve">
-    <value>button_cnt</value>
-  </data>
   <data name="button_da.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 183</value>
+    <value>601, 229</value>
   </data>
-  <data name="DI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 142</value>
-  </data>
-  <data name="textBox_do.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="label_di.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;PWM_END.Name" xml:space="preserve">
-    <value>PWM_END</value>
-  </data>
-  <data name="&gt;&gt;timer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DO.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="button_cnt.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;DI.Name" xml:space="preserve">
-    <value>DI</value>
-  </data>
-  <data name="PWM_END.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;button_da.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="PWM_END.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="button_adstop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 315</value>
-  </data>
-  <data name="button_AD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 315</value>
+  <data name="button_da.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="button_da.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="label_cnt.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_AD.Text" xml:space="preserve">
-    <value>ADRun</value>
-  </data>
-  <data name="&gt;&gt;button_cnt.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="listBox_ad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 113</value>
+    <value>100, 29</value>
   </data>
   <data name="button_da.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;button_cnt.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="button_cnt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="button_da.Text" xml:space="preserve">
     <value>DA</value>
   </data>
-  <data name="&gt;&gt;DI.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;button_da.Name" xml:space="preserve">
+    <value>button_da</value>
   </data>
-  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
-    <value>timer1</value>
-  </data>
-  <data name="&gt;&gt;button_AD.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PWM_END.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_da.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_pwm.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;label_cnt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label_cnt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 244</value>
-  </data>
-  <data name="PWM_END.Text" xml:space="preserve">
-    <value>PWM_END</value>
-  </data>
-  <data name="&gt;&gt;PWM_END.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_da.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="PWM_END.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 290</value>
+  <data name="&gt;&gt;button_da.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+  <data name="button_adstop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 394</value>
   </data>
-  <data name="label_di.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;textBox_do.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;button_AD.Name" xml:space="preserve">
-    <value>button_AD</value>
-  </data>
-  <data name="button_pwm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;timer2.Name" xml:space="preserve">
-    <value>timer2</value>
-  </data>
-  <data name="&gt;&gt;textBox_da.Name" xml:space="preserve">
-    <value>textBox_da</value>
-  </data>
-  <data name="&gt;&gt;label_cnt.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="button_AD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="label_di.Location" type="System.Drawing.Point, System.Drawing">
-    <value>551, 147</value>
-  </data>
-  <data name="&gt;&gt;textBox_do.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button_pwm.Text" xml:space="preserve">
-    <value>PWM</value>
-  </data>
-  <data name="button_cnt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 239</value>
-  </data>
-  <data name="&gt;&gt;DI.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_adstop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="button_adstop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>100, 29</value>
   </data>
-  <data name="&gt;&gt;label_cnt.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="button_adstop.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;button_AD.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="button_adstop.Text" xml:space="preserve">
+    <value>AdStop</value>
   </data>
   <data name="&gt;&gt;button_adstop.Name" xml:space="preserve">
     <value>button_adstop</value>
   </data>
+  <data name="&gt;&gt;button_adstop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_adstop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_adstop.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 17</value>
+  </metadata>
+  <data name="PWM_END.Location" type="System.Drawing.Point, System.Drawing">
+    <value>737, 362</value>
+  </data>
+  <data name="PWM_END.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="PWM_END.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="PWM_END.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="PWM_END.Text" xml:space="preserve">
+    <value>PWM_END</value>
+  </data>
+  <data name="&gt;&gt;PWM_END.Name" xml:space="preserve">
+    <value>PWM_END</value>
+  </data>
+  <data name="&gt;&gt;PWM_END.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PWM_END.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PWM_END.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="button_pwm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 362</value>
+  </data>
+  <data name="button_pwm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button_pwm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="button_pwm.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="button_pwm.Text" xml:space="preserve">
+    <value>PWM</value>
+  </data>
   <data name="&gt;&gt;button_pwm.Name" xml:space="preserve">
     <value>button_pwm</value>
   </data>
-  <data name="&gt;&gt;listBox_ad.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;button_pwm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBox_da.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 185</value>
+  <data name="&gt;&gt;button_pwm.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button_pwm.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="textBox_do.Location" type="System.Drawing.Point, System.Drawing">
+    <value>737, 141</value>
   </data>
-  <data name="&gt;&gt;label_cnt.Name" xml:space="preserve">
-    <value>label_cnt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="textBox_do.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;label_di.Name" xml:space="preserve">
-    <value>label_di</value>
+  <data name="textBox_do.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 25</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label_cnt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+  <data name="textBox_do.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;textBox_do.Name" xml:space="preserve">
     <value>textBox_do</value>
   </data>
-  <data name="&gt;&gt;label_di.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textBox_do.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_do.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_do.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label_cnt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_cnt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>735, 305</value>
+  </data>
+  <data name="label_cnt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label_cnt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
   </data>
   <data name="label_cnt.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="listBox_ad.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="label_cnt.Text" xml:space="preserve">
+    <value>label_cnt</value>
+  </data>
+  <data name="&gt;&gt;label_cnt.Name" xml:space="preserve">
+    <value>label_cnt</value>
+  </data>
+  <data name="&gt;&gt;label_cnt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_cnt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_cnt.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1139, 650</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox_ChooseDriver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="comboBox_ChooseDriver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="comboBox_ChooseDriver.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ChooseDriver.Name" xml:space="preserve">
+    <value>comboBox_ChooseDriver</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ChooseDriver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ChooseDriver.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ChooseDriver.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-CN</value>
-  </metadata>
-  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>286, 17</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1067, 562</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer2.Name" xml:space="preserve">
+    <value>timer2</value>
+  </data>
+  <data name="&gt;&gt;timer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AC6623TestForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

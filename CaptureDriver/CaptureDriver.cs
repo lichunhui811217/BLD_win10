@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLD_win10.Driver
+namespace BLD_win10.CaptureCardDriver
 {
     public class CaptureDriver
     {

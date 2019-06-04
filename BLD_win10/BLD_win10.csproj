@@ -147,13 +147,9 @@
     <None Include="Resources\png.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AC6623SimDll\AC6623SimDll.csproj">
-      <Project>{b2b34ae2-e08b-4c03-97f1-d2ddd67cd4e7}</Project>
-      <Name>AC6623SimDll</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PC6311SimDll\PC6311SimDll.csproj">
-      <Project>{ed7432a9-1540-4ee5-bd9d-20d891b68e37}</Project>
-      <Name>PC6311SimDll</Name>
+    <ProjectReference Include="..\CaptureDriver\CaptureDriver.csproj">
+      <Project>{bed536bd-f8d0-45e5-8dd8-6884c030392b}</Project>
+      <Name>CaptureDriver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

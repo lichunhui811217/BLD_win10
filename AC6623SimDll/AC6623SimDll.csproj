@@ -7,8 +7,8 @@
     <ProjectGuid>{B2B34AE2-E08B-4C03-97F1-D2DDD67CD4E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AC6623SimDll</RootNamespace>
-    <AssemblyName>AC6623SimDll</AssemblyName>
+    <RootNamespace>BLD_win10.CaptureCardDriver</RootNamespace>
+    <AssemblyName>AC6623SimDriver</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

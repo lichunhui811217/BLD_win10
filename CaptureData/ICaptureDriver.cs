@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /// <summary>
 /// 
 /// </summary>
-namespace BLD_win10.Driver
+namespace BLD_win10.CaptureCardDriver
 {
     /// <summary>
     /// 连接数据采集卡驱动的接口

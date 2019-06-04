@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BLD_win10.Driver
+namespace BLD_win10.CaptureCardDriver
 {
     public class AC6623Driver : ICaptureDriver
     {

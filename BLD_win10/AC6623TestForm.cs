@@ -26,21 +26,11 @@ namespace BLD_win10
 
         private void AC6623TestForm_Load(object sender, EventArgs e)
         {
-            try
+            foreach(CaptureDriver.EnumDriverName enumDriverName in Enum.GetValues(typeof(CaptureDriver.EnumDriverName)))
             {
-                captureDriver = new CaptureDriver(CaptureDriver.EnumDriverName.AC6623);
-
-                hDevice = captureDriver.OpenDevice(0);
-                captureDriver.CAL(hDevice);
+                comboBox_ChooseDriver.Items.Add(enumDriverName);
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            addata = new Int32[600000];
 
-            textBox_do.Text = "0";
-            textBox_da.Text = "0";
         }
 
         private void DO_Click(object sender, EventArgs e)
@@ -165,6 +155,25 @@ namespace BLD_win10
         {
             //captureDriver.PEnd(new IntPtr(), 0);
             int i = captureDriver.DI(new IntPtr());
+        }
+
+        private void ComboBox_ChooseDriver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                captureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)comboBox_ChooseDriver.SelectedItem);
+
+                hDevice = captureDriver.OpenDevice(0);
+                captureDriver.CAL(hDevice);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            addata = new Int32[600000];
+
+            textBox_do.Text = "0";
+            textBox_da.Text = "0";
         }
     }
 }

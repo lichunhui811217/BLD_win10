@@ -46,6 +46,7 @@
             this.textBox_do = new System.Windows.Forms.TextBox();
             this.label_cnt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox_ChooseDriver = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button_AD
@@ -57,8 +58,8 @@
             // 
             // listBox_ad
             // 
-            resources.ApplyResources(this.listBox_ad, "listBox_ad");
             this.listBox_ad.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox_ad, "listBox_ad");
             this.listBox_ad.Name = "listBox_ad";
             // 
             // label_di
@@ -145,10 +146,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox_ChooseDriver
+            // 
+            this.comboBox_ChooseDriver.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_ChooseDriver, "comboBox_ChooseDriver");
+            this.comboBox_ChooseDriver.Name = "comboBox_ChooseDriver";
+            this.comboBox_ChooseDriver.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChooseDriver_SelectedIndexChanged);
+            // 
             // AC6623TestForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox_ChooseDriver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_AD);
             this.Controls.Add(this.listBox_ad);
@@ -188,5 +197,6 @@
         private System.Windows.Forms.TextBox textBox_do;
         private System.Windows.Forms.Label label_cnt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox_ChooseDriver;
     }
 }
