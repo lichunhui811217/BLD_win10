@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC6311Driver", "CaptureCard
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC6311SimDll", "CaptureCardDriver\PC6311SimDll\PC6311SimDll.csproj", "{ED7432A9-1540-4EE5-BD9D-20D891B68E37}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE5CB717-8FA4-4D8F-ABCA-035755207936}"
+	ProjectSection(SolutionItems) = preProject
+		Graph1_Driver.dgml = Graph1_Driver.dgml
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
