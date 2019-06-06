@@ -4,44 +4,44 @@
     <Node Id="(@1 @3 Type=BldSettings)" Category="CodeSchema_Class" Bounds="192.769768063668,-115.007116883842,125.893333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="BldSettings" />
     <Node Id="(@1 @3 Type=MainFormResource)" Category="CodeSchema_Class" Bounds="348.663101397001,-115.007116883842,172.403333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainFormResource" />
     <Node Id="(@1 Namespace=BLD_win10.Properties Type=Settings)" Category="CodeSchema_Class" Bounds="303.743906723904,-0.00711687424222873,107.493333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Settings" />
-    <Node Id="@10" Category="CodeSchema_Class" Bounds="374.736434730335,-170.007116883843,159.16,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AC6623TestForm" />
-    <Node Id="@11" Category="CodeSchema_Class" Bounds="-61.6378699866157,55.0052638529085,93.94,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Boiler" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="-152.106837909665,-280.007031844527,85.98,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="DTU" />
-    <Node Id="@15" Category="CodeSchema_Class" Bounds="192.769768063668,-170.007116887042,151.093333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HistogramForm" />
-    <Node Id="@16" Category="CodeSchema_Class" Bounds="-58.6346327599491,0.00702385290844632,87.9333333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Host" />
-    <Node Id="@17" Category="CodeSchema_Class" Bounds="394.429768063668,-225.007116887043,119.773333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainForm" />
-    <Node Id="@18" Category="CodeSchema_Class" Bounds="-35.4368379096654,-280.007031845594,108.64,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Modbus" />
-    <Node Id="@19" Category="CodeSchema_Class" Bounds="-152.106837909665,-170.007031838127,201.716666666667,25.0000000000001" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="NetworkCommunication" />
-    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-192.122528362999,-360.007116896643,766.0325344,590.008220752751" CodeSchemaProperty_StrongName="BLD_win10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" FilePath="$(c4c60aaa-b1ce-4daf-a140-8f3503d0aaf8.OutputPath)" Group="Expanded" Label="BLD_win10.exe" UseManualLocation="True" />
-    <Node Id="@21" Category="CodeSchema_Class" Bounds="-77.6040257199491,165.001743852908,125.873333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PowerPlant" />
-    <Node Id="@22" Category="CodeSchema_Class" Bounds="398.969768063668,-280.007116890243,110.693333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Program" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="192.782072170335,-170.003106520325,159.16,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AC6623TestForm" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="-61.6375330287074,82.7115846171351,93.94,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Boiler" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="-152.104505214786,-309.252821106355,85.98,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="DTU" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="382.815405503668,-170.003106520325,151.093333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="HistogramForm" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="-58.6348600526695,15.551849593397,87.9333333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Host" UseManualLocation="True" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="398.475405503668,-225.003206520325,119.773333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainForm" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="-35.4345052147869,-309.252821107422,108.64,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Modbus" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="-152.104505214787,-199.252821099955,201.716666666667,25.0000000000001" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="NetworkCommunication" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-192.120541629183,-389.255132213231,766.030030441897,676.50107020531" CodeSchemaProperty_StrongName="BLD_win10, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" FilePath="$(c4c60aaa-b1ce-4daf-a140-8f3503d0aaf8.OutputPath)" Group="Expanded" Label="BLD_win10.exe" UseManualLocation="True" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="-77.6035941799466,222.24593799208,125.873333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PowerPlant" />
+    <Node Id="@22" Category="CodeSchema_Class" Bounds="403.015405503668,-280.003306520325,110.693333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Program" />
     <Node Id="@23" Category="CodeSchema_Class" Bounds="303.743906723904,54.9928831289578,119.183333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Resources" />
-    <Node Id="@25" Category="CodeSchema_Class" Bounds="-64.6161080132824,-54.9912161470917,99.8966666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Sensor" />
-    <Node Id="@26" Category="CodeSchema_Class" Bounds="-85.0301712429988,-225.007031841327,207.826666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SerialPortCommunication" />
-    <Node Id="@28" Category="CodeSchema_Class" Bounds="-63.174487479949,110.003503852908,97.0133333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Server" />
+    <Node Id="@25" Category="CodeSchema_Class" Bounds="-64.6158654837342,-51.3185738195081,99.8966666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Sensor" />
+    <Node Id="@26" Category="CodeSchema_Class" Bounds="-85.0278385481204,-254.252821103155,207.826666666667,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SerialPortCommunication" />
+    <Node Id="@28" Category="CodeSchema_Class" Bounds="-63.1748519265325,152.003908732154,97.0133333333333,25" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Server" />
     <Node Id="@4" Category="CodeSchema_Namespace" Bounds="172.769768063668,-320.007116893443,381.126666666667,250.000000012801" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Expanded" Label="BLD_win10" />
-    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="-172.106837909665,-320.007031848794,314.903333333333,195.000000013866" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="BLD_win10‎.Communication" />
-    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="-97.6033857199491,-94.9899361470916,165.873161386667,304.99104" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Label="BLD_win10‎.Device" />
+    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="-172.120541629183,-349.255132213231,314.903333333333,195.0004" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="BLD_win10‎.Communication" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="-97.6035941799466,-91.3185738195081,165.873333333333,358.564511811588" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="5" Group="Expanded" Label="BLD_win10‎.Device" />
     <Node Id="@9" Category="CodeSchema_Namespace" Bounds="272.900573390571,-40.0071168774422,180.87,140.0000000096" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="BLD_win10‎.Properties" />
   </Nodes>
   <Links>
-    <Link Source="@11" Target="@28" Category="InheritsFrom" Bounds="-14.666805267334,80.0049209594727,0,20.999382019043" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@11" Target="@28" Category="InheritsFrom" Bounds="-14.6614164198929,107.711952691479,0.000326744692589642,34.7923906213936" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@13" Target="@26" Category="InheritsFrom" Bounds="-80.0259323120117,-255.007034301758,61.0898380279541,26.2495422363281" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@13" Target="@26" Category="InheritsFrom" Bounds="-80.0380172729492,-284.248809814453,61.5492191314697,26.4469604492188" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@16" Target="@11" Category="InheritsFrom" Bounds="-14.666805267334,25.0065383911133,0,20.999382019043" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@16" Target="@11" Category="InheritsFrom" Bounds="-14.6615089059715,40.6241169826837,0.000320352278684766,32.5878357092544" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@17" Target="@10" Category="References" Bounds="454.316436767578,-200.007110595703,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@17" Target="@10" Category="References" Bounds="323.265380859375,-200.003005981445,92.823974609375,27.4479370117188" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@17" Target="@15" Category="References" Bounds="319.219757080078,-200.007110595703,92.8239440917969,27.4479370117188" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@17" Target="@15" Category="References" Bounds="458.362060546875,-200.003005981445,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@17" Target="@23" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
-    <Link Source="@18" Target="@26" Category="InheritsFrom" Bounds="18.8831615447998,-255.007034301758,0,20.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@18" Target="@26" Category="InheritsFrom" Bounds="18.8710708618164,-284.248809814453,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@19" Target="@28" Category="InheritsFrom" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
@@ -51,14 +51,14 @@
     <Link Source="@2" Target="@6" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@8" Category="Contains" FetchingParent="@2" />
     <Link Source="@2" Target="@9" Category="Contains" FetchingParent="@2" />
-    <Link Source="@22" Target="@17" Category="CodeSchema_Calls" Bounds="454.316436767578,-255.007110595703,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
-    <Link Source="@25" Target="@16" Category="InheritsFrom" Bounds="-14.666805267334,-29.9918460845947,0,20.9993839263916" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@22" Target="@17" Category="CodeSchema_Calls" Bounds="458.362060546875,-255.003005981445,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@25" Target="@16" Category="InheritsFrom" Bounds="-14.6614142631484,-26.3183086758473,0.000320771736616265,32.4424256589954" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@26" Target="@28" Category="InheritsFrom" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@28" Target="@21" Category="InheritsFrom" Bounds="-14.666805267334,135.003311157227,0,20.9993743896484" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@28" Target="@21" Category="InheritsFrom" Bounds="-14.6613991665031,177.004343312454,0.000640101340929178,35.7420717264213" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeSchema_Calls" />
     </Link>
     <Link Source="@4" Target="(@1 @3 Type=BldSettings)" Category="Contains" FetchingParent="@4" />

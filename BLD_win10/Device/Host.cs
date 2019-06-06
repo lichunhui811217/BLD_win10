@@ -11,6 +11,10 @@ namespace BLD_win10.Device
     /// </summary>
     class Host : Boiler
     {
+        
+        public void SendData()
+        {
 
+        }
     }
 }

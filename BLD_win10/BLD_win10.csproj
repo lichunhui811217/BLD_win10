@@ -87,6 +87,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainFormResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="OldCpp\aboutunit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\aboutunit.Designer.cs">
+      <DependentUpon>aboutunit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\Alarm.Designer.cs">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\bjjl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\bjjl.Designer.cs">
+      <DependentUpon>bjjl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\DataCenter.cs" />
+    <Compile Include="OldCpp\MainForm.cs" />
+    <Compile Include="OldCpp\PortNew.cs" />
+    <Compile Include="OldCpp\WriteData\WriteData.cs" />
+    <Compile Include="OldCpp\WriteData\WriteDataCom.cs" />
+    <Compile Include="OldCpp\WriteData\WriteDataDTU.cs" />
+    <Compile Include="OldCpp\WriteData\WriteDataUdp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\AC6623TestForm.resx">
@@ -113,6 +138,15 @@
     <EmbeddedResource Include="MainFormResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainFormResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\aboutunit.resx">
+      <DependentUpon>aboutunit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\Alarm.resx">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\bjjl.resx">
+      <DependentUpon>bjjl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
