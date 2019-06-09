@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 namespace BLD_win10.Device
 {
     /// <summary>
-    /// 锅炉
+    /// 采集卡
     /// </summary>
-    public class Boiler
+    public class CaptureCard
     {
         /// <summary>
         /// 传感器集合[]
         /// </summary>
         public Sensor[] Sensors;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public CaptureCard()
+        {
+
+        }
     }
 }

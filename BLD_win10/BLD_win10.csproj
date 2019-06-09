@@ -66,7 +66,7 @@
     <Compile Include="Communication\NetworkCommunication.cs" />
     <Compile Include="Communication\SerialPortCommunication.cs" />
     <Compile Include="Device\Boiler.cs" />
-    <Compile Include="Device\Host.cs" />
+    <Compile Include="Device\CaptureCard.cs" />
     <Compile Include="Device\PowerPlant.cs" />
     <Compile Include="Device\Sensor.cs" />
     <Compile Include="Device\Server.cs" />
@@ -76,10 +76,10 @@
     <Compile Include="Form\HistogramForm.Designer.cs">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormResource.Designer.cs">
@@ -99,21 +99,56 @@
     <Compile Include="OldCpp\Alarm.Designer.cs">
       <DependentUpon>Alarm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\bjjl.cs">
+    <Compile Include="OldCpp\BjjlForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCpp\bjjl.Designer.cs">
-      <DependentUpon>bjjl.cs</DependentUpon>
+    <Compile Include="OldCpp\BjjlForm.Designer.cs">
+      <DependentUpon>BjjlForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OldCpp\BjqxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\BjqxForm.Designer.cs">
+      <DependentUpon>BjqxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\CdwzForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\CdwzForm.Designer.cs">
+      <DependentUpon>CdwzForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\ChanelCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\ChanelCheck.Designer.cs">
+      <DependentUpon>ChanelCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\CommonParam.cs" />
+    <Compile Include="OldCpp\Constant.cs" />
     <Compile Include="OldCpp\DataCenter.cs" />
     <Compile Include="OldCpp\MainForm.cs" />
     <Compile Include="OldCpp\PortNew.cs" />
+    <Compile Include="OldCpp\TcyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\TcyForm.Designer.cs">
+      <DependentUpon>TcyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\TL_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\TL_Form1.Designer.cs">
+      <DependentUpon>TL_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OldCpp\WriteData\CRC.cs" />
     <Compile Include="OldCpp\WriteData\WriteData.cs" />
     <Compile Include="OldCpp\WriteData\WriteDataCom.cs" />
     <Compile Include="OldCpp\WriteData\WriteDataDTU.cs" />
     <Compile Include="OldCpp\WriteData\WriteDataUdp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wavelet\Seq.cs" />
+    <Compile Include="Wavelet\Wvlt.cs" />
     <EmbeddedResource Include="Form\AC6623TestForm.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,13 +161,13 @@
     <EmbeddedResource Include="Form\HistogramForm.zh-CN.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.en.resx">
+    <EmbeddedResource Include="Form\MainForm.en.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.zh-CN.resx">
+    <EmbeddedResource Include="Form\MainForm.zh-CN.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormResource.resx">
@@ -145,8 +180,23 @@
     <EmbeddedResource Include="OldCpp\Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\bjjl.resx">
-      <DependentUpon>bjjl.cs</DependentUpon>
+    <EmbeddedResource Include="OldCpp\BjjlForm.resx">
+      <DependentUpon>BjjlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\BjqxForm.resx">
+      <DependentUpon>BjqxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\CdwzForm.resx">
+      <DependentUpon>CdwzForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\ChanelCheck.resx">
+      <DependentUpon>ChanelCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\TcyForm.resx">
+      <DependentUpon>TcyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCpp\TL_Form1.resx">
+      <DependentUpon>TL_Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,7 +212,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>BldSettings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Device\ClassDiagram1.cd" />
+    <None Include="Device\DeviceGraph1.dgml" />
     <None Include="SolutionItems\Graph_Device.dgml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

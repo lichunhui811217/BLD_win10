@@ -62,9 +62,9 @@
       <Project>{002de2d2-7af2-47c6-b834-b59ae4d85934}</Project>
       <Name>PC6311Driver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PC6311SimDll\PC6311SimDriver.csproj">
+    <ProjectReference Include="..\PC6311SimDll\PC6311SimDll.csproj">
       <Project>{ed7432a9-1540-4ee5-bd9d-20d891b68e37}</Project>
-      <Name>PC6311SimDriver</Name>
+      <Name>PC6311SimDll</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

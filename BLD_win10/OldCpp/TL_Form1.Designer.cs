@@ -1,6 +1,6 @@
 ﻿namespace BLD_win10.OldCpp
 {
-    partial class bjjl
+    partial class TL_Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // bjjl
+            // TL_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "bjjl";
-            this.Text = "bjjl";
-            this.Load += new System.EventHandler(this.Bjjl_Load);
+            this.Name = "TL_Form1";
+            this.Text = "TL_Form1";
+            this.Load += new System.EventHandler(this.TL_Form1_Load);
             this.ResumeLayout(false);
 
         }

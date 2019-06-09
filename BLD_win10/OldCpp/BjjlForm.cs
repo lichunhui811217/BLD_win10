@@ -11,13 +11,13 @@ using System.Windows.Forms;
 namespace BLD_win10.OldCpp
 {
     /// <summary>
-    /// ?报警记录?
+    /// 报警记录
     /// </summary>
-    public partial class bjjl : Form
+    public partial class BjjlForm : Form
     {
         private string Fh, Tj, mField;
 
-        public bjjl()
+        public BjjlForm()
         {
             InitializeComponent();
         }
@@ -92,6 +92,8 @@ namespace BLD_win10.OldCpp
             //                  Table1->Exclusive = false;
             //                  Table1->Active = true;
             //              }
+            throw new NotImplementedException();
+
         }
 
         private void SBqxClick(object sender, EventArgs e)
@@ -119,6 +121,8 @@ namespace BLD_win10.OldCpp
             //    }
             //}
             //delete PasswordDlg;
+            throw new NotImplementedException();
+
         }
 
         private void SBdyClick(object sender, EventArgs e)
@@ -149,6 +153,8 @@ namespace BLD_win10.OldCpp
             //            }
             //            else
             //                MessageDlg("对不起，没有报警记录?", mtInformation, TMsgDlgButtons() << mbYes, 0);
+            throw new NotImplementedException();
+
         }
 
         private void SBdyylClick(object sender, EventArgs e)
@@ -166,6 +172,8 @@ namespace BLD_win10.OldCpp
             //Report->Table1->Close();
             //delete Report;*/
             //QuickRep1->Preview();
+            throw new NotImplementedException();
+
         }
 
         private void OnmyShow(object sender, EventArgs e)
@@ -192,7 +200,9 @@ namespace BLD_win10.OldCpp
             //        ShowMessage("记录表没有打开，请稍后再试。");
             //        Close();
             //    }
-        //}
+            //}
+            throw new NotImplementedException();
+
         }
 
         private void FormKeyPress(object sender, EventArgs e)
@@ -220,6 +230,8 @@ namespace BLD_win10.OldCpp
             //    }
 
             //}
+            throw new NotImplementedException();
+
         }
 
         private void ComboBox3Change(object sender, EventArgs e)
@@ -229,6 +241,8 @@ namespace BLD_win10.OldCpp
             //    case 0: Tj = " and "; break;
             //    case 1: Tj = "  or "; break;
             //}
+            throw new NotImplementedException();
+
         }
 
         private void CheckBox1Click(object sender, EventArgs e)
@@ -246,6 +260,8 @@ namespace BLD_win10.OldCpp
             //    Panel4->Visible = false;
             //    Height = 348;
             //}
+            throw new NotImplementedException();
+
         }
 
         private void Button1Click(object sender, EventArgs e)
@@ -258,6 +274,8 @@ namespace BLD_win10.OldCpp
             //}
             //TListItem* ListItem = ListView1->Items->Add();
             //ListItem->Caption = mField + Fh + Edit1->Text.Trim() + Tj;
+            throw new NotImplementedException();
+
         }
 
         private void ComboBox2Change(object sender, EventArgs e)
@@ -271,6 +289,8 @@ namespace BLD_win10.OldCpp
             //    case 4: Fh = "<"; break;
             //    case 5: Fh = "<>"; break;
             //}
+            throw new NotImplementedException();
+
         }
 
         private void Button2Click(object sender, EventArgs e)
@@ -288,6 +308,7 @@ namespace BLD_win10.OldCpp
             //Table1->Filtered = false;
             //Table1->Filter = mTiaojian;
             //Table1->Filtered = true;
+            throw new NotImplementedException();
         }
 
         private void ComboBox1Change(object sender, EventArgs e)
@@ -299,21 +320,25 @@ namespace BLD_win10.OldCpp
             //    case 2: mField = "maxvalue"; break;
             //    case 3: mField = "flowtime"; break;
             //}
+            throw new NotImplementedException();
         }
 
         private void Button3Click(object sender, EventArgs e)
         {
             //if (ListView1->Selected) ListView1->Selected->Delete();
+            throw new NotImplementedException();
         }
 
         private void Button4Click(object sender, EventArgs e)
         {
             //ListView1->Items->Clear();
+            throw new NotImplementedException();
         }
 
         private void Edit1KeyPress(object sender, EventArgs e)
         {
             //if (Key < 48 || Key > 57) Key = NULL;
+            throw new NotImplementedException();
         }
 
         private void SpeedButton1Click(object sender, EventArgs e)
@@ -321,6 +346,7 @@ namespace BLD_win10.OldCpp
             //Table1->Filtered = false;
             //Table1->Close();
             //Table1->Open();
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace BLD_win10.Device
     /// <summary>
     /// 传感器
     /// </summary>
-    class Sensor : Host
+    public class Sensor
     {
     }
 }

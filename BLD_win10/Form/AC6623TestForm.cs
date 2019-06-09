@@ -50,6 +50,7 @@ namespace BLD_win10
             //AD(hDevice, 0, 14, 2, 1000);
 
             timer1.Enabled = true;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

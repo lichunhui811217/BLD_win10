@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLD_win10.Device
+namespace BLD_win10.OldCpp
 {
     /// <summary>
-    /// 监控主机
+    /// 常数类,应该删除掉.
     /// </summary>
-    class Host : Boiler
+    class Constant
     {
-        
-        public void SendData()
-        {
+        const int MAX_CHANNEL = 60;
+        const short AD_CHANNEL = 30;
 
-        }
     }
 }

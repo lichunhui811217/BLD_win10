@@ -9,5 +9,6 @@ namespace BLD_win10.Communication
 {
     class SerialPortCommunication : Server
     {
+
     }
 }
