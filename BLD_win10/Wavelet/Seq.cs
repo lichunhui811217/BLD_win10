@@ -4,7 +4,7 @@ using System.Diagnostics;
 namespace BLD_win10.Wavelet
 {
     /// <summary> 
-    /// Seq 
+    /// Seq 为小波变换设计的序列运算对象
     /// </summary> 
     public class Seq
     {
@@ -32,6 +32,7 @@ namespace BLD_win10.Wavelet
             elements = new float[s.Length];
             s.elements.CopyTo(elements, 0);
         }
+
         //Length of sequence 
         public int Length
         {
@@ -40,6 +41,7 @@ namespace BLD_win10.Wavelet
                 return elements.Length;
             }
         }
+
         public float this[int index]
         {
             get
@@ -53,6 +55,12 @@ namespace BLD_win10.Wavelet
                 elements[index] = value;
             }
         }
+
+        /// <summary>
+        /// 分解?分裂?
+        /// </summary>
+        /// <param name="sl"></param>
+        /// <param name="s2"></param>
         public void Split2(out Seq sl, out Seq s2)
         {
             int i, half = Length / 2;
@@ -64,6 +72,7 @@ namespace BLD_win10.Wavelet
             sl = new Seq(A);
             s2 = new Seq(D);
         }
+
         public Seq Concatenate(Seq s)
         {
             if (Length == 0) return s;
@@ -76,6 +85,7 @@ namespace BLD_win10.Wavelet
             }
             return new Seq(d);
         }
+
         public bool IsOdd
         {
             get
@@ -83,6 +93,7 @@ namespace BLD_win10.Wavelet
                 return (Length % 2 != 0);
             }
         }
+
         public bool IsEven
         {
             get
