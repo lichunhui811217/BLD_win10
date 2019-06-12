@@ -1,4 +1,4 @@
-﻿namespace BLD_win10
+﻿namespace BLD_win10.AppForms
 {
     partial class AC6623TestForm
     {

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration.Assemblies;
+
+using BLD_win10.AppForms;
 
 namespace BLD_win10
 {

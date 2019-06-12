@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using BLD_win10;
 using BLD_win10.CaptureCardDriver;
 
-namespace BLD_win10
+namespace BLD_win10.AppForms
 {
     unsafe public partial class AC6623TestForm : Form
     {

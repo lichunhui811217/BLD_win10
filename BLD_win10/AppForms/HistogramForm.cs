@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BLD_win10
+namespace BLD_win10.AppForms
 {
     public partial class HistogramForm : Form
     {

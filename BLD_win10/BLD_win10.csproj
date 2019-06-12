@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -50,16 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\AC6623TestForm.cs">
+    <Compile Include="AppForms\AC6623TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\AC6623TestForm.Designer.cs">
+    <Compile Include="AppForms\AC6623TestForm.Designer.cs">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BldSettings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>BldSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Communication\DTU.cs" />
     <Compile Include="Communication\Modbus.cs" />
@@ -70,17 +66,23 @@
     <Compile Include="Device\PowerPlant.cs" />
     <Compile Include="Device\Sensor.cs" />
     <Compile Include="Device\Server.cs" />
-    <Compile Include="Form\HistogramForm.cs">
+    <Compile Include="AppForms\HistogramForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\HistogramForm.Designer.cs">
+    <Compile Include="AppForms\HistogramForm.Designer.cs">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\MainForm.cs">
+    <Compile Include="AppForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MainForm.Designer.cs">
+    <Compile Include="AppForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\OtherTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\OtherTestForm.Designer.cs">
+      <DependentUpon>OtherTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,26 +151,29 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wavelet\Seq.cs" />
     <Compile Include="Wavelet\Wvlt.cs" />
-    <EmbeddedResource Include="Form\AC6623TestForm.resx">
+    <EmbeddedResource Include="AppForms\AC6623TestForm.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\AC6623TestForm.zh-CN.resx">
+    <EmbeddedResource Include="AppForms\AC6623TestForm.zh-CN.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\HistogramForm.resx">
+    <EmbeddedResource Include="AppForms\HistogramForm.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\HistogramForm.zh-CN.resx">
+    <EmbeddedResource Include="AppForms\HistogramForm.zh-CN.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MainForm.en.resx">
+    <EmbeddedResource Include="AppForms\MainForm.en.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MainForm.resx">
+    <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MainForm.zh-CN.resx">
+    <EmbeddedResource Include="AppForms\MainForm.zh-CN.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\OtherTestForm.resx">
+      <DependentUpon>OtherTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -208,10 +213,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="BldSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>BldSettings.Designer.cs</LastGenOutput>
-    </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Device\DeviceGraph1.dgml" />
     <None Include="SolutionItems\Graph_Device.dgml" />
     <None Include="Properties\Settings.settings">
