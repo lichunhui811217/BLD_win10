@@ -1,6 +1,6 @@
 ﻿namespace BLD_win10.OldCpp
 {
-    partial class Alarm
+    partial class AlarmForm
     {
         /// <summary>
         /// Required designer variable.

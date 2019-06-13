@@ -13,11 +13,11 @@ namespace BLD_win10.OldCpp
     /// <summary>
     /// 报警记录
     /// </summary>
-    public partial class BjjlForm : Form
+    public partial class AlarmLogForm : Form
     {
         private string Fh, Tj, mField;
 
-        public BjjlForm()
+        public AlarmLogForm()
         {
             InitializeComponent();
         }

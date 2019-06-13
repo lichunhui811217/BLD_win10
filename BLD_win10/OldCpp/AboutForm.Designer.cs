@@ -1,6 +1,6 @@
 ﻿namespace BLD_win10.OldCpp
 {
-    partial class aboutunit
+    partial class AboutForm
     {
         /// <summary>
         /// Required designer variable.

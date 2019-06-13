@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BLD_win10.OldCpp
 {
-    public partial class aboutunit : Form
+    public partial class AboutForm : Form
     {
-        public aboutunit()
+        public AboutForm()
         {
             InitializeComponent();
         }

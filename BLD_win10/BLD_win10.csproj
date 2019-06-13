@@ -95,23 +95,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainFormResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\aboutunit.cs">
+    <Compile Include="OldCpp\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCpp\aboutunit.Designer.cs">
-      <DependentUpon>aboutunit.cs</DependentUpon>
+    <Compile Include="OldCpp\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\Alarm.cs">
+    <Compile Include="OldCpp\AlarmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCpp\Alarm.Designer.cs">
-      <DependentUpon>Alarm.cs</DependentUpon>
+    <Compile Include="OldCpp\AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\BjjlForm.cs">
+    <Compile Include="OldCpp\AlarmLogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCpp\BjjlForm.Designer.cs">
-      <DependentUpon>BjjlForm.cs</DependentUpon>
+    <Compile Include="OldCpp\AlarmLogForm.Designer.cs">
+      <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OldCpp\BjqxForm.cs">
       <SubType>Form</SubType>
@@ -160,13 +160,7 @@
     <EmbeddedResource Include="AppForms\AC6623TestForm.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\AC6623TestForm.zh-CN.resx">
-      <DependentUpon>AC6623TestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\HistogramForm.resx">
-      <DependentUpon>HistogramForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\HistogramForm.zh-CN.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainForm.resx">
@@ -185,14 +179,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainFormResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\aboutunit.resx">
-      <DependentUpon>aboutunit.cs</DependentUpon>
+    <EmbeddedResource Include="OldCpp\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\Alarm.resx">
-      <DependentUpon>Alarm.cs</DependentUpon>
+    <EmbeddedResource Include="OldCpp\AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\BjjlForm.resx">
-      <DependentUpon>BjjlForm.cs</DependentUpon>
+    <EmbeddedResource Include="OldCpp\AlarmLogForm.resx">
+      <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OldCpp\BjqxForm.resx">
       <DependentUpon>BjqxForm.cs</DependentUpon>

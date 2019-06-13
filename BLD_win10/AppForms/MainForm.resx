@@ -170,31 +170,31 @@
     <value>Watch</value>
   </data>
   <data name="ToolStripMenuItem_AlarmLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="ToolStripMenuItem_AlarmLog.Text" xml:space="preserve">
     <value>Alarm log</value>
   </data>
   <data name="fftAndWaveletToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="fftAndWaveletToolStripMenuItem.Text" xml:space="preserve">
     <value>FFT &amp; Wavelet</value>
   </data>
   <data name="checkChannelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="checkChannelsToolStripMenuItem.Text" xml:space="preserve">
     <value>Check channels</value>
   </data>
   <data name="systemLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="systemLogToolStripMenuItem.Text" xml:space="preserve">
     <value>System log</value>
   </data>
   <data name="listenerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="listenerToolStripMenuItem.Text" xml:space="preserve">
     <value>Listener</value>
@@ -206,25 +206,25 @@
     <value>Analysis</value>
   </data>
   <data name="ToolStripMenuItem_SystemConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="ToolStripMenuItem_SystemConfig.Text" xml:space="preserve">
     <value>System config</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Text" xml:space="preserve">
     <value>Change password</value>
   </data>
   <data name="alternateAlarmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="alternateAlarmToolStripMenuItem.Text" xml:space="preserve">
     <value>Alternate alarm</value>
   </data>
   <data name="alarmConfigToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="alarmConfigToolStripMenuItem.Text" xml:space="preserve">
     <value>Alarm config</value>
@@ -281,22 +281,22 @@
     <value>Tools</value>
   </data>
   <data name="helpFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>200, 26</value>
   </data>
   <data name="helpFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Help file</value>
   </data>
   <data name="leakJudgmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>200, 26</value>
   </data>
   <data name="leakJudgmentToolStripMenuItem.Text" xml:space="preserve">
     <value>Leak judgment</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>197, 6</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>200, 26</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
@@ -306,12 +306,6 @@
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
-  </data>
-  <data name="exitToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
-  </data>
-  <data name="exitToolStripMenuItem2.Text" xml:space="preserve">
-    <value>Exit</value>
   </data>
   <data name="mainMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -401,6 +395,18 @@
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;systemToolStripMenuItem.Name" xml:space="preserve">
+    <value>systemToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;systemToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;watchToolStripMenuItem.Name" xml:space="preserve">
     <value>watchToolStripMenuItem</value>
@@ -564,6 +570,12 @@
   <data name="&gt;&gt;helpFileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;leakJudgmentToolStripMenuItem.Name" xml:space="preserve">
+    <value>leakJudgmentToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;leakJudgmentToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
   </data>
@@ -574,12 +586,6 @@
     <value>aboutToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem2.Name" xml:space="preserve">
-    <value>exitToolStripMenuItem2</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
@@ -605,24 +611,6 @@
   </data>
   <data name="&gt;&gt;toolTip2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;leakJudgmentToolStripMenuItem.Name" xml:space="preserve">
-    <value>leakJudgmentToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;leakJudgmentToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
-    <value>exitToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;systemToolStripMenuItem.Name" xml:space="preserve">
-    <value>systemToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;systemToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

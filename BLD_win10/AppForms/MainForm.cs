@@ -13,8 +13,8 @@ namespace BLD_win10.AppForms
 {
     public partial class MainForm : Form
     {
-        HistogramForm histogramForm = new HistogramForm();
-        AC6623TestForm AC6623TestForm = new AC6623TestForm();
+        
+       
         public MainForm()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace BLD_win10.AppForms
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            HistogramForm histogramForm = new HistogramForm();
             histogramForm.MdiParent = this;
             histogramForm.Show();
             //histogramForm.WindowState = FormWindowState.Maximized;
@@ -34,6 +35,7 @@ namespace BLD_win10.AppForms
 
         private void ac6623TestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AC6623TestForm AC6623TestForm = new AC6623TestForm();
             AC6623TestForm.MdiParent = this;
             AC6623TestForm.Show();
             //AC6623TestForm.WindowState = FormWindowState.Maximized;

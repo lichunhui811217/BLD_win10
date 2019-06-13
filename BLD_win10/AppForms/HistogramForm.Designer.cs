@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistogramForm));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistogramForm));
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,14 +40,14 @@
             // 
             // histogramChart
             // 
-            resources.ApplyResources(this.histogramChart, "histogramChart");
             this.histogramChart.BorderlineColor = System.Drawing.SystemColors.MenuHighlight;
             chartArea1.Name = "ChartArea1";
             this.histogramChart.ChartAreas.Add(chartArea1);
+            resources.ApplyResources(this.histogramChart, "histogramChart");
             legend1.Name = "Legend1";
             this.histogramChart.Legends.Add(legend1);
             this.histogramChart.Name = "histogramChart";
-            this.histogramChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            this.histogramChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
             series1.Legend = "Legend1";

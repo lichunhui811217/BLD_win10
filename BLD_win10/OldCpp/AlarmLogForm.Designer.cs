@@ -1,6 +1,6 @@
 ﻿namespace BLD_win10.OldCpp
 {
-    partial class BjjlForm
+    partial class AlarmLogForm
     {
         /// <summary>
         /// Required designer variable.

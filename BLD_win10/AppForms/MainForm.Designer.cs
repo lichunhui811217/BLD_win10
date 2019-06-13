@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicalGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,17 +61,14 @@
             this.otherTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leakJudgmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.leakJudgmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,10 +83,21 @@
             this.analysisToolStripMenuItem,
             this.configToolStripMenuItem,
             this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.exitToolStripMenuItem2});
+            this.helpToolStripMenuItem});
             resources.ApplyResources(this.mainMenuStrip, "mainMenuStrip");
             this.mainMenuStrip.Name = "mainMenuStrip";
+            // 
+            // systemToolStripMenuItem
+            // 
+            this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
+            resources.ApplyResources(this.systemToolStripMenuItem, "systemToolStripMenuItem");
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             // 
             // watchToolStripMenuItem
             // 
@@ -258,6 +268,11 @@
             this.helpFileToolStripMenuItem.Name = "helpFileToolStripMenuItem";
             resources.ApplyResources(this.helpFileToolStripMenuItem, "helpFileToolStripMenuItem");
             // 
+            // leakJudgmentToolStripMenuItem
+            // 
+            this.leakJudgmentToolStripMenuItem.Name = "leakJudgmentToolStripMenuItem";
+            resources.ApplyResources(this.leakJudgmentToolStripMenuItem, "leakJudgmentToolStripMenuItem");
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -267,11 +282,6 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            // 
-            // exitToolStripMenuItem2
-            // 
-            this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
-            resources.ApplyResources(this.exitToolStripMenuItem2, "exitToolStripMenuItem2");
             // 
             // toolStrip1
             // 
@@ -303,23 +313,6 @@
             this.toolStripButton2.Image = global::BLD_win10.Properties.Resources.jpg;
             this.toolStripButton2.Name = "toolStripButton2";
             resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            // 
-            // leakJudgmentToolStripMenuItem
-            // 
-            this.leakJudgmentToolStripMenuItem.Name = "leakJudgmentToolStripMenuItem";
-            resources.ApplyResources(this.leakJudgmentToolStripMenuItem, "leakJudgmentToolStripMenuItem");
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            // 
-            // systemToolStripMenuItem
-            // 
-            this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            resources.ApplyResources(this.systemToolStripMenuItem, "systemToolStripMenuItem");
             // 
             // MainForm
             // 
@@ -370,7 +363,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem ac6623TestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BLD_win10.OldCpp
 {
-    public partial class Alarm : Form
+    public partial class AlarmForm : Form
     {
-        public Alarm()
+        public AlarmForm()
         {
             InitializeComponent();
         }
