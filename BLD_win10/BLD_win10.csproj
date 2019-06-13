@@ -57,6 +57,12 @@
     <Compile Include="AppForms\AC6623TestForm.Designer.cs">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\WaveletTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\WaveletTestForm.Designer.cs">
+      <DependentUpon>WaveletTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Communication\DTU.cs" />
     <Compile Include="Communication\Modbus.cs" />
     <Compile Include="Communication\NetworkCommunication.cs" />
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\OtherTestForm.resx">
       <DependentUpon>OtherTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\WaveletTestForm.resx">
+      <DependentUpon>WaveletTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
