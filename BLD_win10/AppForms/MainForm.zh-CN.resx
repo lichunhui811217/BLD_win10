@@ -117,147 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripMenuItem_System.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 21</value>
+  <data name="mainMenuStrip.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
+  <data name="mainMenuStrip.ToolTip1" xml:space="preserve">
+    <value />
   </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
+  <data name="toolStrip1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="设置ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
+  <data name="toolStrip1.ToolTip1" xml:space="preserve">
+    <value />
   </data>
-  <data name="设置ToolStripMenuItem.Text" xml:space="preserve">
-    <value>设置</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="工具ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="工具ToolStripMenuItem.Text" xml:space="preserve">
-    <value>工具</value>
-  </data>
-  <data name="帮助ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="帮助ToolStripMenuItem.Text" xml:space="preserve">
-    <value>帮助</value>
-  </data>
-  <data name="退出ToolStripMenuItem2.Text" xml:space="preserve">
-    <value>退出</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mainMenuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 2, 0, 2</value>
-  </data>
-  <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 25</value>
-  </data>
-  <data name="退出ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="toolStripMenuItem3.Text" xml:space="preserve">
-    <value>柱状图</value>
-  </data>
-  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="泄漏概率ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="报警记录ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="瞬时波形ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="通道检测ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="日志ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="日志ToolStripMenuItem.Text" xml:space="preserve">
-    <value>日志</value>
-  </data>
-  <data name="监听ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="系统参数ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="密码设置ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="密码设置ToolStripMenuItem.Text" xml:space="preserve">
-    <value>密码设置</value>
-  </data>
-  <data name="备用报警选线ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="报警开关量设置ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="生成远程支持文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="长期历史曲线查询ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="泄漏情况登记ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="泄漏情况查询ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 6</value>
-  </data>
-  <data name="aC6623测试ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="aC6623测试ToolStripMenuItem.Text" xml:space="preserve">
-    <value>AC6623测试</value>
-  </data>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
-  </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 31</value>
-  </data>
-  <data name="toolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 28</value>
-  </data>
-  <data name="toolStripButton1.Text" xml:space="preserve">
-    <value>柱状图</value>
-  </data>
-  <data name="toolStripButton2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="toolStripButton2.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 28</value>
-  </data>
-  <data name="toolStripButton2.Text" xml:space="preserve">
-    <value>toolStripButton2</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 527</value>
+  <data name="$this.ToolTip1" xml:space="preserve">
+    <value />
   </data>
 </root>

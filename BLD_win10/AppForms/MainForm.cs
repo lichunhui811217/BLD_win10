@@ -32,7 +32,7 @@ namespace BLD_win10.AppForms
             //histogramForm.WindowState = FormWindowState.Maximized;
         }
 
-        private void aC6623测试ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ac6623TestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AC6623TestForm.MdiParent = this;
             AC6623TestForm.Show();

@@ -32,40 +32,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem_System = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.泄漏概率ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.报警记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.瞬时波形ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.通道检测ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.监听ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统参数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.密码设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.备用报警选线ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.报警开关量设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.生成远程支持文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.长期历史曲线查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.泄漏情况登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.泄漏情况查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historicalGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.observationMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.probabilityOfLeakageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.analysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_AlarmLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.fftAndWaveletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkChannelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listenerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SystemConfig = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alternateAlarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alarmConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buildRemoteSupportFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leakRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leakQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.aC6623测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ac6623TestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.waveletTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.leakJudgmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,170 +79,158 @@
             this.mainMenuStrip.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem_System,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.设置ToolStripMenuItem,
-            this.工具ToolStripMenuItem,
-            this.帮助ToolStripMenuItem,
-            this.退出ToolStripMenuItem2});
+            this.systemToolStripMenuItem,
+            this.watchToolStripMenuItem,
+            this.analysisToolStripMenuItem,
+            this.configToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.exitToolStripMenuItem2});
             resources.ApplyResources(this.mainMenuStrip, "mainMenuStrip");
             this.mainMenuStrip.Name = "mainMenuStrip";
             // 
-            // toolStripMenuItem_System
+            // watchToolStripMenuItem
             // 
-            this.toolStripMenuItem_System.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.退出ToolStripMenuItem});
-            this.toolStripMenuItem_System.Name = "toolStripMenuItem_System";
-            resources.ApplyResources(this.toolStripMenuItem_System, "toolStripMenuItem_System");
+            this.watchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.histogramToolStripMenuItem,
+            this.historicalGraphToolStripMenuItem,
+            this.observationMapToolStripMenuItem,
+            this.probabilityOfLeakageToolStripMenuItem,
+            this.toolStripSeparator4});
+            this.watchToolStripMenuItem.Name = "watchToolStripMenuItem";
+            resources.ApplyResources(this.watchToolStripMenuItem, "watchToolStripMenuItem");
+            this.watchToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // 退出ToolStripMenuItem
+            // histogramToolStripMenuItem
             // 
-            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            resources.ApplyResources(this.退出ToolStripMenuItem, "退出ToolStripMenuItem");
+            this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
+            resources.ApplyResources(this.histogramToolStripMenuItem, "histogramToolStripMenuItem");
+            this.histogramToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // toolStripMenuItem1
+            // historicalGraphToolStripMenuItem
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.泄漏概率ToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.historicalGraphToolStripMenuItem.Name = "historicalGraphToolStripMenuItem";
+            resources.ApplyResources(this.historicalGraphToolStripMenuItem, "historicalGraphToolStripMenuItem");
             // 
-            // toolStripMenuItem3
+            // observationMapToolStripMenuItem
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.observationMapToolStripMenuItem.Name = "observationMapToolStripMenuItem";
+            resources.ApplyResources(this.observationMapToolStripMenuItem, "observationMapToolStripMenuItem");
             // 
-            // toolStripMenuItem4
+            // probabilityOfLeakageToolStripMenuItem
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
+            this.probabilityOfLeakageToolStripMenuItem.Name = "probabilityOfLeakageToolStripMenuItem";
+            resources.ApplyResources(this.probabilityOfLeakageToolStripMenuItem, "probabilityOfLeakageToolStripMenuItem");
             // 
-            // toolStripMenuItem5
+            // toolStripSeparator4
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
-            // 泄漏概率ToolStripMenuItem
+            // analysisToolStripMenuItem
             // 
-            this.泄漏概率ToolStripMenuItem.Name = "泄漏概率ToolStripMenuItem";
-            resources.ApplyResources(this.泄漏概率ToolStripMenuItem, "泄漏概率ToolStripMenuItem");
+            this.analysisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_AlarmLog,
+            this.fftAndWaveletToolStripMenuItem,
+            this.checkChannelsToolStripMenuItem,
+            this.systemLogToolStripMenuItem,
+            this.listenerToolStripMenuItem});
+            this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
+            resources.ApplyResources(this.analysisToolStripMenuItem, "analysisToolStripMenuItem");
             // 
-            // toolStripMenuItem2
+            // ToolStripMenuItem_AlarmLog
             // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.报警记录ToolStripMenuItem,
-            this.瞬时波形ToolStripMenuItem,
-            this.通道检测ToolStripMenuItem,
-            this.日志ToolStripMenuItem,
-            this.监听ToolStripMenuItem});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.ToolStripMenuItem_AlarmLog.Name = "ToolStripMenuItem_AlarmLog";
+            resources.ApplyResources(this.ToolStripMenuItem_AlarmLog, "ToolStripMenuItem_AlarmLog");
             // 
-            // 报警记录ToolStripMenuItem
+            // fftAndWaveletToolStripMenuItem
             // 
-            this.报警记录ToolStripMenuItem.Name = "报警记录ToolStripMenuItem";
-            resources.ApplyResources(this.报警记录ToolStripMenuItem, "报警记录ToolStripMenuItem");
+            this.fftAndWaveletToolStripMenuItem.Name = "fftAndWaveletToolStripMenuItem";
+            resources.ApplyResources(this.fftAndWaveletToolStripMenuItem, "fftAndWaveletToolStripMenuItem");
             // 
-            // 瞬时波形ToolStripMenuItem
+            // checkChannelsToolStripMenuItem
             // 
-            this.瞬时波形ToolStripMenuItem.Name = "瞬时波形ToolStripMenuItem";
-            resources.ApplyResources(this.瞬时波形ToolStripMenuItem, "瞬时波形ToolStripMenuItem");
+            this.checkChannelsToolStripMenuItem.Name = "checkChannelsToolStripMenuItem";
+            resources.ApplyResources(this.checkChannelsToolStripMenuItem, "checkChannelsToolStripMenuItem");
             // 
-            // 通道检测ToolStripMenuItem
+            // systemLogToolStripMenuItem
             // 
-            this.通道检测ToolStripMenuItem.Name = "通道检测ToolStripMenuItem";
-            resources.ApplyResources(this.通道检测ToolStripMenuItem, "通道检测ToolStripMenuItem");
+            this.systemLogToolStripMenuItem.Name = "systemLogToolStripMenuItem";
+            resources.ApplyResources(this.systemLogToolStripMenuItem, "systemLogToolStripMenuItem");
             // 
-            // 日志ToolStripMenuItem
+            // listenerToolStripMenuItem
             // 
-            this.日志ToolStripMenuItem.Name = "日志ToolStripMenuItem";
-            resources.ApplyResources(this.日志ToolStripMenuItem, "日志ToolStripMenuItem");
+            this.listenerToolStripMenuItem.Name = "listenerToolStripMenuItem";
+            resources.ApplyResources(this.listenerToolStripMenuItem, "listenerToolStripMenuItem");
             // 
-            // 监听ToolStripMenuItem
+            // configToolStripMenuItem
             // 
-            this.监听ToolStripMenuItem.Name = "监听ToolStripMenuItem";
-            resources.ApplyResources(this.监听ToolStripMenuItem, "监听ToolStripMenuItem");
+            this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_SystemConfig,
+            this.changePasswordToolStripMenuItem,
+            this.alternateAlarmToolStripMenuItem,
+            this.alarmConfigToolStripMenuItem});
+            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
+            resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
             // 
-            // 设置ToolStripMenuItem
+            // ToolStripMenuItem_SystemConfig
             // 
-            this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.系统参数ToolStripMenuItem,
-            this.密码设置ToolStripMenuItem,
-            this.备用报警选线ToolStripMenuItem,
-            this.报警开关量设置ToolStripMenuItem});
-            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            resources.ApplyResources(this.设置ToolStripMenuItem, "设置ToolStripMenuItem");
+            this.ToolStripMenuItem_SystemConfig.Name = "ToolStripMenuItem_SystemConfig";
+            resources.ApplyResources(this.ToolStripMenuItem_SystemConfig, "ToolStripMenuItem_SystemConfig");
             // 
-            // 系统参数ToolStripMenuItem
+            // changePasswordToolStripMenuItem
             // 
-            this.系统参数ToolStripMenuItem.Name = "系统参数ToolStripMenuItem";
-            resources.ApplyResources(this.系统参数ToolStripMenuItem, "系统参数ToolStripMenuItem");
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            resources.ApplyResources(this.changePasswordToolStripMenuItem, "changePasswordToolStripMenuItem");
             // 
-            // 密码设置ToolStripMenuItem
+            // alternateAlarmToolStripMenuItem
             // 
-            this.密码设置ToolStripMenuItem.Name = "密码设置ToolStripMenuItem";
-            resources.ApplyResources(this.密码设置ToolStripMenuItem, "密码设置ToolStripMenuItem");
+            this.alternateAlarmToolStripMenuItem.Name = "alternateAlarmToolStripMenuItem";
+            resources.ApplyResources(this.alternateAlarmToolStripMenuItem, "alternateAlarmToolStripMenuItem");
             // 
-            // 备用报警选线ToolStripMenuItem
+            // alarmConfigToolStripMenuItem
             // 
-            this.备用报警选线ToolStripMenuItem.Name = "备用报警选线ToolStripMenuItem";
-            resources.ApplyResources(this.备用报警选线ToolStripMenuItem, "备用报警选线ToolStripMenuItem");
+            this.alarmConfigToolStripMenuItem.Name = "alarmConfigToolStripMenuItem";
+            resources.ApplyResources(this.alarmConfigToolStripMenuItem, "alarmConfigToolStripMenuItem");
             // 
-            // 报警开关量设置ToolStripMenuItem
+            // toolsToolStripMenuItem
             // 
-            this.报警开关量设置ToolStripMenuItem.Name = "报警开关量设置ToolStripMenuItem";
-            resources.ApplyResources(this.报警开关量设置ToolStripMenuItem, "报警开关量设置ToolStripMenuItem");
-            // 
-            // 工具ToolStripMenuItem
-            // 
-            this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.生成远程支持文件ToolStripMenuItem,
-            this.长期历史曲线查询ToolStripMenuItem,
-            this.泄漏情况登记ToolStripMenuItem,
-            this.泄漏情况查询ToolStripMenuItem,
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buildRemoteSupportFilesToolStripMenuItem,
+            this.leakRegistrationToolStripMenuItem,
+            this.leakQueryToolStripMenuItem,
             this.toolStripSeparator1,
-            this.aC6623测试ToolStripMenuItem,
+            this.ac6623TestToolStripMenuItem,
             this.waveletTestToolStripMenuItem,
             this.otherTestToolStripMenuItem});
-            this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
-            resources.ApplyResources(this.工具ToolStripMenuItem, "工具ToolStripMenuItem");
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
             // 
-            // 生成远程支持文件ToolStripMenuItem
+            // buildRemoteSupportFilesToolStripMenuItem
             // 
-            this.生成远程支持文件ToolStripMenuItem.Name = "生成远程支持文件ToolStripMenuItem";
-            resources.ApplyResources(this.生成远程支持文件ToolStripMenuItem, "生成远程支持文件ToolStripMenuItem");
+            this.buildRemoteSupportFilesToolStripMenuItem.Name = "buildRemoteSupportFilesToolStripMenuItem";
+            resources.ApplyResources(this.buildRemoteSupportFilesToolStripMenuItem, "buildRemoteSupportFilesToolStripMenuItem");
             // 
-            // 长期历史曲线查询ToolStripMenuItem
+            // leakRegistrationToolStripMenuItem
             // 
-            this.长期历史曲线查询ToolStripMenuItem.Name = "长期历史曲线查询ToolStripMenuItem";
-            resources.ApplyResources(this.长期历史曲线查询ToolStripMenuItem, "长期历史曲线查询ToolStripMenuItem");
+            this.leakRegistrationToolStripMenuItem.Name = "leakRegistrationToolStripMenuItem";
+            resources.ApplyResources(this.leakRegistrationToolStripMenuItem, "leakRegistrationToolStripMenuItem");
             // 
-            // 泄漏情况登记ToolStripMenuItem
+            // leakQueryToolStripMenuItem
             // 
-            this.泄漏情况登记ToolStripMenuItem.Name = "泄漏情况登记ToolStripMenuItem";
-            resources.ApplyResources(this.泄漏情况登记ToolStripMenuItem, "泄漏情况登记ToolStripMenuItem");
-            // 
-            // 泄漏情况查询ToolStripMenuItem
-            // 
-            this.泄漏情况查询ToolStripMenuItem.Name = "泄漏情况查询ToolStripMenuItem";
-            resources.ApplyResources(this.泄漏情况查询ToolStripMenuItem, "泄漏情况查询ToolStripMenuItem");
+            this.leakQueryToolStripMenuItem.Name = "leakQueryToolStripMenuItem";
+            resources.ApplyResources(this.leakQueryToolStripMenuItem, "leakQueryToolStripMenuItem");
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
-            // aC6623测试ToolStripMenuItem
+            // ac6623TestToolStripMenuItem
             // 
-            this.aC6623测试ToolStripMenuItem.Name = "aC6623测试ToolStripMenuItem";
-            resources.ApplyResources(this.aC6623测试ToolStripMenuItem, "aC6623测试ToolStripMenuItem");
-            this.aC6623测试ToolStripMenuItem.Click += new System.EventHandler(this.aC6623测试ToolStripMenuItem_Click);
+            this.ac6623TestToolStripMenuItem.Name = "ac6623TestToolStripMenuItem";
+            resources.ApplyResources(this.ac6623TestToolStripMenuItem, "ac6623TestToolStripMenuItem");
+            this.ac6623TestToolStripMenuItem.Click += new System.EventHandler(this.ac6623TestToolStripMenuItem_Click);
             // 
             // waveletTestToolStripMenuItem
             // 
@@ -251,15 +243,35 @@
             resources.ApplyResources(this.otherTestToolStripMenuItem, "otherTestToolStripMenuItem");
             this.otherTestToolStripMenuItem.Click += new System.EventHandler(this.OtherTestToolStripMenuItem_Click);
             // 
-            // 帮助ToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            resources.ApplyResources(this.帮助ToolStripMenuItem, "帮助ToolStripMenuItem");
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpFileToolStripMenuItem,
+            this.leakJudgmentToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
-            // 退出ToolStripMenuItem2
+            // helpFileToolStripMenuItem
             // 
-            this.退出ToolStripMenuItem2.Name = "退出ToolStripMenuItem2";
-            resources.ApplyResources(this.退出ToolStripMenuItem2, "退出ToolStripMenuItem2");
+            this.helpFileToolStripMenuItem.Name = "helpFileToolStripMenuItem";
+            resources.ApplyResources(this.helpFileToolStripMenuItem, "helpFileToolStripMenuItem");
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            // 
+            // exitToolStripMenuItem2
+            // 
+            this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
+            resources.ApplyResources(this.exitToolStripMenuItem2, "exitToolStripMenuItem2");
             // 
             // toolStrip1
             // 
@@ -292,6 +304,23 @@
             this.toolStripButton2.Name = "toolStripButton2";
             resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
             // 
+            // leakJudgmentToolStripMenuItem
+            // 
+            this.leakJudgmentToolStripMenuItem.Name = "leakJudgmentToolStripMenuItem";
+            resources.ApplyResources(this.leakJudgmentToolStripMenuItem, "leakJudgmentToolStripMenuItem");
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            // 
+            // systemToolStripMenuItem
+            // 
+            this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
+            resources.ApplyResources(this.systemToolStripMenuItem, "systemToolStripMenuItem");
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -318,38 +347,42 @@
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_System;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 泄漏概率ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 报警记录ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 瞬时波形ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 通道检测ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 日志ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 监听ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 系统参数ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 密码设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 备用报警选线ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 报警开关量设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 生成远程支持文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 长期历史曲线查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 泄漏情况登记ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 泄漏情况查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem watchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem analysisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historicalGraphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem observationMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem probabilityOfLeakageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_AlarmLog;
+        private System.Windows.Forms.ToolStripMenuItem fftAndWaveletToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkChannelsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemLogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listenerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SystemConfig;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alternateAlarmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alarmConfigToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buildRemoteSupportFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leakRegistrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leakQueryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem aC6623测试ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem ac6623TestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem waveletTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem leakJudgmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

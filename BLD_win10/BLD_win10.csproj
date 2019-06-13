@@ -169,9 +169,6 @@
     <EmbeddedResource Include="AppForms\HistogramForm.zh-CN.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainForm.en.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
