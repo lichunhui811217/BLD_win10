@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BLD_win10.OldCpp
+namespace BLD_win10.AppForms
 {
     /// <summary>
     /// 关于

@@ -51,11 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\AC6623TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AppForms\AC6623TestForm.Designer.cs">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AlarmLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AlarmLogForm.Designer.cs">
+      <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\WaveletTestForm.cs">
       <SubType>Form</SubType>
@@ -157,8 +175,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wavelet\Seq.cs" />
     <Compile Include="Wavelet\Wvlt.cs" />
+    <EmbeddedResource Include="AppForms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AC6623TestForm.resx">
       <DependentUpon>AC6623TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AlarmLogForm.resx">
+      <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\HistogramForm.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>

@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace BLD_win10.OldCpp
 {
     /// <summary>
-    /// 报警曲线
+    /// 弃用页面
+    /// 编辑曲线组页面。//报警曲线？
     /// </summary>
     public partial class BjqxForm : Form
     {
