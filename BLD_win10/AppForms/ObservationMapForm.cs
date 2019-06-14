@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BLD_win10.OldCpp
+namespace BLD_win10.AppForms
 {
     /// <summary>
-    /// 测点位置
+    /// 测点位置图
+    /// 原 cdwz.cpp
     /// </summary>
-    public partial class CdwzForm : Form
+    public partial class ObservationMapForm : Form
     {
         //int tongdaoshu[4];
         //bool hand_operation[4];
@@ -44,7 +45,7 @@ namespace BLD_win10.OldCpp
         //USEFORM("dlg_loca3.cpp", l3);
         //AnsiString lb;
 
-        public CdwzForm()
+        public ObservationMapForm()
         {
             InitializeComponent();
         }

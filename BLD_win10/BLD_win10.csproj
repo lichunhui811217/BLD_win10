@@ -75,6 +75,12 @@
     <Compile Include="AppForms\AlarmLogForm.Designer.cs">
       <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\ObservationMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\ObservationMapForm.Designer.cs">
+      <DependentUpon>ObservationMapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\WaveletTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,47 +119,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainFormResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\AboutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OldCpp\AboutForm.Designer.cs">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OldCpp\AlarmForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OldCpp\AlarmForm.Designer.cs">
-      <DependentUpon>AlarmForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OldCpp\AlarmLogForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OldCpp\AlarmLogForm.Designer.cs">
-      <DependentUpon>AlarmLogForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="OldCpp\BjqxForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OldCpp\BjqxForm.Designer.cs">
       <DependentUpon>BjqxForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OldCpp\CdwzForm.cs">
+    <Compile Include="AppForms\ChanelCheckForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCpp\CdwzForm.Designer.cs">
-      <DependentUpon>CdwzForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OldCpp\ChanelCheck.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OldCpp\ChanelCheck.Designer.cs">
-      <DependentUpon>ChanelCheck.cs</DependentUpon>
+    <Compile Include="AppForms\ChanelCheckForm.Designer.cs">
+      <DependentUpon>ChanelCheckForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OldCpp\CommonParam.cs" />
     <Compile Include="OldCpp\Constant.cs" />
     <Compile Include="OldCpp\DataCenter.cs" />
     <Compile Include="OldCpp\MainForm.cs" />
     <Compile Include="OldCpp\PortNew.cs" />
+    <Compile Include="OldCpp\SystemConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCpp\SystemConfigForm.Designer.cs">
+      <DependentUpon>SystemConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OldCpp\TcyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +184,9 @@
     <EmbeddedResource Include="AppForms\MainForm.zh-CN.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\ObservationMapForm.resx">
+      <DependentUpon>ObservationMapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\OtherTestForm.resx">
       <DependentUpon>OtherTestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,23 +197,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainFormResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\AboutForm.resx">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\AlarmForm.resx">
-      <DependentUpon>AlarmForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\AlarmLogForm.resx">
-      <DependentUpon>AlarmLogForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OldCpp\BjqxForm.resx">
       <DependentUpon>BjqxForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\CdwzForm.resx">
-      <DependentUpon>CdwzForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\ChanelCheckForm.resx">
+      <DependentUpon>ChanelCheckForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldCpp\ChanelCheck.resx">
-      <DependentUpon>ChanelCheck.cs</DependentUpon>
+    <EmbeddedResource Include="OldCpp\SystemConfigForm.resx">
+      <DependentUpon>SystemConfigForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OldCpp\TcyForm.resx">
       <DependentUpon>TcyForm.cs</DependentUpon>
@@ -273,6 +255,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config.xml" />
     <Content Include="SolutionItems\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

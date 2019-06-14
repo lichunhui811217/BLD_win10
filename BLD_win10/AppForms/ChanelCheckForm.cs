@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BLD_win10.OldCpp
+namespace BLD_win10.AppForms
 {
-    public partial class ChanelCheck : Form
+    public partial class ChanelCheckForm : Form
     {
-        public ChanelCheck()
+        public ChanelCheckForm()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace BLD_win10.OldCpp
 
         }
 
-        ChanelCheck(
+        ChanelCheckForm(
             //TComponent* Owner, 
             short vPipeCount, bool vLeakage, bool vLeakageAlarm, float vGenFactor
             )

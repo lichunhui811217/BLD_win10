@@ -1,6 +1,6 @@
-﻿namespace BLD_win10.OldCpp
+﻿namespace BLD_win10.AppForms
 {
-    partial class CdwzForm
+    partial class ChanelCheckForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // CdwzForm
+            // ChanelCheckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "CdwzForm";
-            this.Text = "CdwzForm";
-            this.Load += new System.EventHandler(this.CdwzForm_Load);
+            this.Name = "ChanelCheckForm";
+            this.Text = "ChanelCheckForm";
+            this.Load += new System.EventHandler(this.ChanelCheckForm_Load);
             this.ResumeLayout(false);
 
         }

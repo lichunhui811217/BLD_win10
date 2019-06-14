@@ -1,6 +1,20 @@
 
 [log]:
 
+[2019-6-14]
+继续整理旧程序:
+
+旧程序移植:
+命名空间转移	BLD_win10.OldCpp	->	BLD_win10.AppForms
+	aboutunit.cs	->	AboutForm.cs
+	Alarm.cs		->	AlarmForm.cs
+	BjjlForm.cs		->	AlarmLogForm.cs
+	CdwzForm.cs		->	ObservationMapForm.cs
+	ChanelCheck.cs	->	ChanelCheckForm.cs
+[2019-6-13]
+改用xml文件配置程序
+TODO:需要做一个旧版ini文件转移新版xml的小工具. 考虑是否使用中文配置.
+
 [2019-6-7]
 增加CRC.cs, 把 WriteDataCom.cs, WriteDataDTU.cs 中的 CRC 校验部分抽象出来使用.
 整理旧程序:

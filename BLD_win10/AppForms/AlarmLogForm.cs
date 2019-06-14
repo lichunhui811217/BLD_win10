@@ -12,6 +12,7 @@ namespace BLD_win10.AppForms
 {
     /// <summary>
     /// 报警记录
+    /// 原 bjjl.cpp
     /// </summary>
     public partial class AlarmLogForm : Form
     {
