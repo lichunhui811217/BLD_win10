@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace BLD_win10.Device
 {
@@ -44,8 +45,6 @@ namespace BLD_win10.Device
             this.sensorsList = sensorsList;
         }
 
-
-
         public static async Task Main()
         {
             CaptureCard captureCard = new CaptureCard();
@@ -74,7 +73,7 @@ namespace BLD_win10.Device
 
             //    // 将节点转换为元素，便于得到节点的属性值
             //    XmlElement xe = (XmlElement)xn1;
-                
+
             //    // 得到属性值
             //    card.CaptureCardID = Convert.ToInt32(xe.GetAttribute("CaptureCardID"));
             //    //card.CaptureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)xe.GetAttribute("CaptureCardID"));
