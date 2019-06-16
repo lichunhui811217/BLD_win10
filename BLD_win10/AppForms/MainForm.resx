@@ -125,184 +125,184 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>96, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="systemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
+    <value>61, 21</value>
   </data>
   <data name="systemToolStripMenuItem.Text" xml:space="preserve">
     <value>System</value>
   </data>
   <data name="histogramToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 26</value>
+    <value>204, 22</value>
   </data>
   <data name="histogramToolStripMenuItem.Text" xml:space="preserve">
     <value>Histogram</value>
   </data>
   <data name="historicalGraphToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 26</value>
+    <value>204, 22</value>
   </data>
   <data name="historicalGraphToolStripMenuItem.Text" xml:space="preserve">
     <value>Historical graph</value>
   </data>
   <data name="observationMapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 26</value>
+    <value>204, 22</value>
   </data>
   <data name="observationMapToolStripMenuItem.Text" xml:space="preserve">
     <value>Observation map</value>
   </data>
   <data name="probabilityOfLeakageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 26</value>
+    <value>204, 22</value>
   </data>
   <data name="probabilityOfLeakageToolStripMenuItem.Text" xml:space="preserve">
     <value>Probability of leakage</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 6</value>
+    <value>201, 6</value>
   </data>
   <data name="watchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>56, 21</value>
   </data>
   <data name="watchToolStripMenuItem.Text" xml:space="preserve">
     <value>Watch</value>
   </data>
   <data name="ToolStripMenuItem_AlarmLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>165, 22</value>
   </data>
   <data name="ToolStripMenuItem_AlarmLog.Text" xml:space="preserve">
     <value>Alarm log</value>
   </data>
   <data name="fftAndWaveletToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>165, 22</value>
   </data>
   <data name="fftAndWaveletToolStripMenuItem.Text" xml:space="preserve">
     <value>FFT &amp; Wavelet</value>
   </data>
   <data name="checkChannelsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>165, 22</value>
   </data>
   <data name="checkChannelsToolStripMenuItem.Text" xml:space="preserve">
     <value>Check channels</value>
   </data>
   <data name="systemLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>165, 22</value>
   </data>
   <data name="systemLogToolStripMenuItem.Text" xml:space="preserve">
     <value>System log</value>
   </data>
   <data name="listenerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>165, 22</value>
   </data>
   <data name="listenerToolStripMenuItem.Text" xml:space="preserve">
     <value>Listener</value>
   </data>
   <data name="analysisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
+    <value>66, 21</value>
   </data>
   <data name="analysisToolStripMenuItem.Text" xml:space="preserve">
     <value>Analysis</value>
   </data>
   <data name="ToolStripMenuItem_SystemConfig.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>181, 22</value>
   </data>
   <data name="ToolStripMenuItem_SystemConfig.Text" xml:space="preserve">
     <value>System config</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>181, 22</value>
   </data>
   <data name="changePasswordToolStripMenuItem.Text" xml:space="preserve">
     <value>Change password</value>
   </data>
   <data name="alternateAlarmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>181, 22</value>
   </data>
   <data name="alternateAlarmToolStripMenuItem.Text" xml:space="preserve">
     <value>Alternate alarm</value>
   </data>
   <data name="alarmConfigToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>181, 22</value>
   </data>
   <data name="alarmConfigToolStripMenuItem.Text" xml:space="preserve">
     <value>Alarm config</value>
   </data>
   <data name="configToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 24</value>
+    <value>58, 21</value>
   </data>
   <data name="configToolStripMenuItem.Text" xml:space="preserve">
     <value>Config</value>
   </data>
   <data name="buildRemoteSupportFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="buildRemoteSupportFilesToolStripMenuItem.Text" xml:space="preserve">
     <value>Build remote support files</value>
   </data>
   <data name="leakRegistrationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="leakRegistrationToolStripMenuItem.Text" xml:space="preserve">
     <value>Leak registration</value>
   </data>
   <data name="leakQueryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="leakQueryToolStripMenuItem.Text" xml:space="preserve">
     <value>Leak query</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 6</value>
+    <value>225, 6</value>
   </data>
   <data name="ac6623TestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="ac6623TestToolStripMenuItem.Text" xml:space="preserve">
     <value>AC6623 Test</value>
   </data>
   <data name="waveletTestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="waveletTestToolStripMenuItem.Text" xml:space="preserve">
     <value>Wavelet Test</value>
   </data>
   <data name="otherTestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+    <value>228, 22</value>
   </data>
   <data name="otherTestToolStripMenuItem.Text" xml:space="preserve">
     <value>Other Test</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 24</value>
+    <value>52, 21</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
   <data name="helpFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 26</value>
+    <value>162, 22</value>
   </data>
   <data name="helpFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Help file</value>
   </data>
   <data name="leakJudgmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 26</value>
+    <value>162, 22</value>
   </data>
   <data name="leakJudgmentToolStripMenuItem.Text" xml:space="preserve">
     <value>Leak judgment</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 6</value>
+    <value>159, 6</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 26</value>
+    <value>162, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
+    <value>47, 21</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
@@ -312,10 +312,10 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="mainMenuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
+    <value>4, 2, 0, 2</value>
   </data>
   <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 28</value>
+    <value>1006, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
@@ -340,19 +340,19 @@
     <value>395, 17</value>
   </metadata>
   <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 28</value>
+    <value>28, 28</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 31</value>
   </data>
   <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 28</value>
+    <value>24, 28</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
+    <value>0, 25</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 31</value>
+    <value>1006, 31</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -379,13 +379,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 15</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>1006, 636</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>BLD_WIN10</value>

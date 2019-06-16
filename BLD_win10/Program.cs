@@ -19,7 +19,25 @@ namespace BLD_win10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            LoaderParameters();
+            InitializeComponent();
             Application.Run(new MainForm());
+        }
+
+        /// <summary>
+        /// 读取参数设置
+        /// </summary>
+        private static void LoaderParameters()
+        {
+             
+        }
+
+        /// <summary>
+        /// 初始化一些东西
+        /// </summary>
+        private static void InitializeComponent()
+        {
+
         }
     }
 }

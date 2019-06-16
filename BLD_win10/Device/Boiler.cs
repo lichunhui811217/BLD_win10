@@ -12,8 +12,30 @@ namespace BLD_win10.Device
     public class Boiler
     {
         /// <summary>
-        /// 传感器集合[]
+        /// 锅炉编号 BoilerNo
         /// </summary>
-        public Sensor[] Sensors;
+        public int BoilerID;
+
+        /// <summary>
+        /// 锅炉名字 Caption
+        /// </summary>
+        public string Caption;
+
+        public Boiler ()
+        {
+
+        }
+
+        public Boiler(int boilerID)
+        {
+            this.BoilerID = boilerID;
+            this.Caption = "#" + boilerID.ToString() + "锅炉";
+        }
+
+        public Boiler(int boilerID, string caption)
+        {
+            this.BoilerID = boilerID;
+            this.Caption = caption;
+        }
     }
 }

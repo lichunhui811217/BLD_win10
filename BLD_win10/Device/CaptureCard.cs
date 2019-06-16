@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using static BLD_win10.CaptureCardDriver.CaptureDriver;
 
 namespace BLD_win10.Device
 {
@@ -21,28 +22,22 @@ namespace BLD_win10.Device
         public CaptureDriver CaptureDriver;
 
         /// <summary>
-        /// 采集卡连接的传感器List
-        /// </summary>
-        public List<Sensor> sensorsList;
-
-        /// <summary>
         /// 
         /// </summary>
         public CaptureCard()
         {
         }
 
+        public CaptureCard(int captureCardID, string captureDriverName)
+        {
+            this.CaptureCardID = captureCardID;
+            this.CaptureDriver = new CaptureDriver((EnumDriverName)Enum.Parse(typeof(EnumDriverName), captureDriverName));
+        }
+
         public CaptureCard(int captureCardID, CaptureDriver captureDriver)
         {
             this.CaptureCardID = captureCardID;
             this.CaptureDriver = captureDriver;
-        }
-
-        public CaptureCard(int captureCardID, CaptureDriver captureDriver, List<Sensor> sensorsList)
-        {
-            this.CaptureCardID = captureCardID;
-            this.CaptureDriver = captureDriver;
-            this.sensorsList = sensorsList;
         }
 
         public static async Task Main()

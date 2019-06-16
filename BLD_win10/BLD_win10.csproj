@@ -256,7 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config - 复制.xml" />
-    <Content Include="Config.xml" />
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SolutionItems\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

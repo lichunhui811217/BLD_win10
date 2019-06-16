@@ -13,6 +13,8 @@ namespace BLD_win10.Device
     /// </summary>
     public class Sensor
     {
+        //SensorID ChannelNumber="1" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" 
+
         /// <summary>
         /// 传感器ID
         /// </summary>
@@ -26,12 +28,7 @@ namespace BLD_win10.Device
         /// <summary>
         /// 传感器使用的板卡通道
         /// </summary>
-        public int Channel;
-
-        /// <summary>
-        /// 传感器对应的锅炉
-        /// </summary>
-        public Boiler Boiler;
+        public int ChannelNumber;
 
         /// <summary>
         /// 传感器对应的锅炉ID
@@ -41,45 +38,58 @@ namespace BLD_win10.Device
         /// <summary>
         /// 放大倍数因子
         /// </summary>
-        public double Amplification;
+        public double Multiplicative;
 
         /// <summary>
         /// 基础噪声强度
         /// </summary>
-        public double BasicNoise;
+        public double BaseNoise;
 
         /// <summary>
         /// 上限
         /// </summary>
-        public double UpLimit = 100;
+        public double Uplimit = 100;
 
         /// <summary>
         /// 下限
         /// </summary>
-        public double DownLimit = 0;
+        public double Downlimit = 0;
+
+        /// <summary>
+        /// FFT警戒线
+        /// </summary>
+        public int FFT = 0;
+
+        /// <summary>
+        /// 传感器对应的锅炉
+        /// </summary>
+        public Boiler Boiler;
 
         public Sensor()
         {
         }
 
-        public Sensor(int SensorID, CaptureCard CaptureCard, int Channel, int BoilerID)
+        public Sensor(int SensorID, CaptureCard CaptureCard, int ChannelNumber, int BoilerID)
         {
             this.SensorID = SensorID;
             this.CaptureCard = CaptureCard;
-            this.Channel = Channel;
+            this.ChannelNumber = ChannelNumber;
             this.BoilerID = BoilerID;
         }
 
-        public Sensor(int SensorID, CaptureCard CaptureCard, int Channel, int BoilerID, int Amplification, double BasicNoise, double UpLimit, double DownLimit)
+        public Sensor(int SensorID, CaptureCard CaptureCard, int ChannelNumber, int BoilerID, int Multiplicative, 
+            double BaseNoise, double Uplimit, double Downlimit, int FFT, Boiler Boiler)
         {
             this.SensorID = SensorID;
             this.CaptureCard = CaptureCard;
-            this.Channel = Channel;
+            this.ChannelNumber = ChannelNumber;
             this.BoilerID = BoilerID;
-            this.Amplification = Amplification;
-            this.BasicNoise = BasicNoise;
-            this.UpLimit = UpLimit;
-            this.DownLimit = DownLimit;
+            this.Multiplicative = Multiplicative;
+            this.BaseNoise = BaseNoise;
+            this.Uplimit = Uplimit;
+            this.Downlimit = Downlimit;
+            this.FFT = FFT;
+            this.Boiler = Boiler;
         }
     }
 }

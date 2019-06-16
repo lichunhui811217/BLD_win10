@@ -43,8 +43,9 @@ namespace ProfileConversion
 
         private void OpenIniFileDialog_FileOk(object sender, CancelEventArgs e)
         {
+            int sensorID = 1;
             List<XNode> systemParameters = new List<XNode>();     //系统参数 server
-            List<XObject> boilderParameters;    //炉参数 Boiler
+            List<XObject> boilerParameters;    //炉参数 Boiler
             List<XNode> captureCardsParameters = new List<XNode>();    //采集卡 CaptureCards
             List<XNode> sensorsParameters;    //传感器参数 sensor
             List<XNode> serialPortsParameters = new List<XNode>();    //串口通讯参数 serialPorts
@@ -117,19 +118,19 @@ namespace ProfileConversion
             #endregion
 
             #region 炉参数
-            boilderParameters = new List<XObject>();
+            boilerParameters = new List<XObject>();
             bool[] bQHKZh = new bool[4];        //清灰控制
             for (int i = 1; i <= BoilerNumber; i++)    //炉参数
             {
-                boilderParameters = new List<XObject>();
+                boilerParameters = new List<XObject>();
                 //号炉
                 int BoilerNo = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "号炉", "BoilerNo", i.ToString()));
-                boilderParameters.Add(new XAttribute("BoilerNo", BoilerNo));
+                boilerParameters.Add(new XAttribute("BoilerID", BoilerNo));
                 //名称
                 string Caption = IniFile.IniReadValue(i.ToString() + "名称", "Caption", "名称");
                 string 厂内编号 = IniFile.IniReadValue(i.ToString() + "名称", "厂内编号", "1");
-                boilderParameters.Add(new XAttribute("Caption", Caption));
-                boilderParameters.Add(new XAttribute("厂内编号", 厂内编号));
+                boilerParameters.Add(new XAttribute("Caption", Caption));
+                boilerParameters.Add(new XAttribute("厂内编号", 厂内编号));
 
                 //[1串行通讯] 改为通讯池
                 string ComPort = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuPort", "COM1");
@@ -165,7 +166,7 @@ namespace ProfileConversion
                 //Switch6 = QHKZ6
                 //Switch7 = QHKZ7
                 //Switch8 = QHKZ8
-                boilderParameters.Add(new XElement("报警开关量", "TODO:暂缺"));
+                boilerParameters.Add(new XElement("报警开关量", "TODO:暂缺"));
                 //清灰控制 TODO: 缺后几个参数 
                 bQHKZh[i - 1] = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "清灰控制", "QHKZh", "0")));
                 //AutoEachTime = 5
@@ -178,53 +179,53 @@ namespace ProfileConversion
                 //SelectedGroup6 = 0
                 //SelectedGroup7 = 0
                 //SelectedGroup8 = 0
-                boilderParameters.Add(new XElement("清灰控制", "TODO:暂缺"));
+                boilerParameters.Add(new XElement("清灰控制", "TODO:暂缺"));
 
                 //管道数 白字先生 :P
                 int ChannelNumber = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "管道数", "ChanelNumber", "60"));
-                boilderParameters.Add(new XElement("管道数", ChannelNumber));
+                boilerParameters.Add(new XElement("管道数", ChannelNumber));
                 //总因子 TODO:改为各通道倍数因子
                 float GeneralFactor = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "总因子", "GeneralFactor", "15"));
-                boilderParameters.Add(new XElement("总因子", GeneralFactor));
+                boilerParameters.Add(new XElement("总因子", GeneralFactor));
                 //流量因子
                 float FluxFactor = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "流量因子", "FluxFactor", "1.0"));
-                boilderParameters.Add(new XElement("流量因子", FluxFactor));
+                boilerParameters.Add(new XElement("流量因子", FluxFactor));
                 //采样间隔
                 int SamplingInterval = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "采样间隔", "SamplingInterval", "60"));
-                boilderParameters.Add(new XElement("采样间隔", SamplingInterval));
+                boilerParameters.Add(new XElement("采样间隔", SamplingInterval));
                 //泄漏报警延迟时间
                 int LeakageAlarmDelayTime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "泄漏报警延迟时间", "LeakageAlarmDelayTime", "60"));
-                boilderParameters.Add(new XElement("泄漏报警延迟时间", LeakageAlarmDelayTime));
+                boilerParameters.Add(new XElement("泄漏报警延迟时间", LeakageAlarmDelayTime));
                 //堵灰报警延迟时间
                 int BlockAshDelayTime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警延迟时间", "BlockAshDelayTime", "60"));
-                boilderParameters.Add(new XElement("堵灰报警延迟时间", BlockAshDelayTime));
+                boilerParameters.Add(new XElement("堵灰报警延迟时间", BlockAshDelayTime));
                 //超限、堵灰、故障参数 等等
                 int AlarmSwitch1 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "超限报警开关", "AlarmSwitch", "0"));
-                boilderParameters.Add(new XElement("超限报警开关", AlarmSwitch1));
+                boilerParameters.Add(new XElement("超限报警开关", AlarmSwitch1));
 
                 int AlarmSwitch2 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警开关", "AlarmSwitch", "0"));
-                boilderParameters.Add(new XElement("堵灰报警开关", AlarmSwitch2));
+                boilerParameters.Add(new XElement("堵灰报警开关", AlarmSwitch2));
 
                 int AlarmSwitch3 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "故障报警开关", "AlarmSwitch", "0"));
-                boilderParameters.Add(new XElement("故障报警开关", AlarmSwitch3));
+                boilerParameters.Add(new XElement("故障报警开关", AlarmSwitch3));
 
                 int AlarmSwitch4 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "停炉报警开关", "AlarmSwitch", "0"));
-                boilderParameters.Add(new XElement("停炉报警开关", AlarmSwitch4));
+                boilerParameters.Add(new XElement("停炉报警开关", AlarmSwitch4));
 
                 int sleeptime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "线程休眠时间", "SleepTime", "0"));
-                boilderParameters.Add(new XElement("线程休眠时间", sleeptime));
+                boilerParameters.Add(new XElement("线程休眠时间", sleeptime));
 
                 float StopBoielrFlux = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "判断停炉流量标准", "StopBoielrFlux", "0"));
-                boilderParameters.Add(new XElement("判断停炉流量标准", StopBoielrFlux));
+                boilerParameters.Add(new XElement("判断停炉流量标准", StopBoielrFlux));
 
                 string odbcName = IniFile.IniReadValue(i.ToString() + "数据源", "odbcName", "0");
-                boilderParameters.Add(new XElement("数据源", odbcName));
+                boilerParameters.Add(new XElement("数据源", odbcName));
 
                 int sqlTableNameNum = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "sql表名编号", "sqlTableNameNum", "1"));
-                boilderParameters.Add(new XElement("sql表名编号", sqlTableNameNum));
+                boilerParameters.Add(new XElement("sql表名编号", sqlTableNameNum));
 
                 string BeginTime = IniFile.IniReadValue(i.ToString() + "开始运行时间", "yearmonthday", DateTime.Now.ToString());
-                boilderParameters.Add(new XElement("开始运行时间", BeginTime));
+                boilerParameters.Add(new XElement("开始运行时间", BeginTime));
                 #endregion
 
                 #region 通道参数
@@ -243,27 +244,27 @@ namespace ProfileConversion
                     Downlimit = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "下限", j.ToString() + "号通道", "0.5"));
                     FFT = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "FFT警戒限", j.ToString() + "号通道", "0"));
                     sensorsParameters.Add(new XElement("Sensor"
+                        , new XAttribute("SensorID", sensorID)
                         , new XAttribute("ChannelNumber", j)
-                        , new XAttribute("BoilderID", BoilerNo)
+                        , new XAttribute("BoilerID", BoilerNo)
                         , new XAttribute("Multiplicative", GeneralFactor)
                         , new XAttribute("BaseNoise", BaseNoise)
                         , new XAttribute("Uplimit", Uplimit)
                         , new XAttribute("Downlimit", Downlimit)
                         , new XAttribute("FFT", FFT)
                     ));
-
+                    sensorID++;
                 }
                 captureCardsParameters.Add(new XElement("CaptureCard"
                     , new XAttribute("CaptureCardID", i)
                     , new XAttribute("Driver", "AC6623")
-                    , new XElement("Sensors"
-                    , new XComment("ChannelNumber 通道序号, BoilderID 锅炉, BaseNoise 基础噪音因子, Uplimit 上限, Downlimit 下限, FFT 警戒限")
-                    , sensorsParameters)));
+                    , new XComment("Sensor 传感器配置 :ChannelNumber 通道序号, BoilerID 锅炉, BaseNoise 基础噪音因子, Uplimit 上限, Downlimit 下限, FFT 警戒限")
+                    , sensorsParameters));
                 #endregion
             }
 
             systemParameters.Add(new XElement("SerialPorts", serialPortsParameters));
-            systemParameters.Add(new XElement("Boilders", new XElement("Boilder", boilderParameters)));
+            systemParameters.Add(new XElement("Boilers", new XElement("Boiler", boilerParameters)));
             systemParameters.Add(new XElement("CaptureCards"
                 , new XComment("CaptureCardID 采集卡ID, Driver 驱动. 驱动目前支持: AC6623, AC6623SIM, PC6311, PC6311SIM.")
                 , captureCardsParameters));
