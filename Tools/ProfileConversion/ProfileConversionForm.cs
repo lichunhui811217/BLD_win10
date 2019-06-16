@@ -8,12 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Xml;
+using System.IO.Ports;
 
 namespace ProfileConversion
 {
     public partial class ProfileConversionForm : Form
     {
-        XDocument srcTree;
+        XDocument config_Xml;
 
         public ProfileConversionForm()
         {
@@ -42,140 +43,296 @@ namespace ProfileConversion
 
         private void OpenIniFileDialog_FileOk(object sender, CancelEventArgs e)
         {
-            int MAX_CHANNEL = 60;
-            //UDP
-            int udp, USEFFT, Cyyz, keysetValue, By_Alarm;
+            List<XElement> systemParameters = new List<XElement>();     //系统参数 server
+            List<XElement> boilderParameters;    //炉参数 Boilers
+            List<XElement> captureCardsParameters = new List<XElement>();    //采集卡 CaptureCards
+            List<XElement> sensorsParameters;    //传感器参数 sensor
+            List<XElement> serialPortsParameters = new List<XElement>();    //串口通讯参数 serialPorts
 
-            //bool
-            bool DA, WavRecord, boStandby, boLeak, dtuPortEnable;
-            bool[] bQHKZh = new bool[4];     // 清灰控制
-            string pwlsh;
+            #region 读参数 glsys.ini文件 
+            #region 系统参数
+            //[炉数]
+            int BoilerNumber = Convert.ToInt32(IniFile.IniReadValue("炉数", "BoilerNumber", "1"));
+            systemParameters.Add(new XElement("炉数",
+                    new XAttribute("BoilerNumber", BoilerNumber)
+                )); //炉数 不应该在这使用,暂时先加在这吧.
+            //[服务器]
+            int SupportServer = Convert.ToInt32(IniFile.IniReadValue("服务器", "SupportServer", "0"));
+            int UDP = Convert.ToInt32(IniFile.IniReadValue("服务器", "UDP", "0"));
+            int RemotePort = Convert.ToInt32(IniFile.IniReadValue("服务器", "RemotePort", "6803"));
+            string RemoteHost = IniFile.IniReadValue("服务器", "RemoteHost", "10.164.12.200");
+            systemParameters.Add(new XElement("服务器"
+                , new XAttribute("SupportServer", SupportServer)
+                , new XAttribute("UDP", UDP)
+                , new XAttribute("RemotePort", RemotePort)
+                , new XAttribute("RemoteHost", RemoteHost)
+                ));
+            //[板卡数量] 弃用,改为 CaptureCards下的元素
+            int CardCount = Convert.ToInt32(IniFile.IniReadValue("板卡数量", "CardCount", "1"));
+            //[DTU通讯]
+            bool dtuPortEnable = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("DTU通讯", "dtuPortEnable", "1")));
+            string dtuPort = IniFile.IniReadValue("DTU通讯", "dtuPort", "COM1"); //dtuPort =COM7
+            string dtuProtocol = IniFile.IniReadValue("DTU通讯", "dtuProtocol", "Modbus"); //dtuProtocol = Modbus
+            string dtuDataModal = IniFile.IniReadValue("DTU通讯", "dtuDataModal", "DTU"); //dtuDataModal =DTU
+            int dtuAddress = Convert.ToInt32(IniFile.IniReadValue("DTU通讯", "dtuAddress", "1")); //dtuAddress = 1 通讯站号 UnitID
+            string dtuDcb = IniFile.IniReadValue("DTU通讯", "dtuDcb", "19200,E,8,1"); //dtuDcb =19200,E,8,1 TODO:需要拆分.
+            string[] dtuDcbSplit = dtuDcb.Split(',');
+            Parity parity = GetParity(dtuDcbSplit[1]);
+            serialPortsParameters.Add(new XElement("SerialPort"
+                        , new XAttribute("PortName", dtuPort)
+                        , new XAttribute("BaudRate", dtuDcbSplit[0])
+                        , new XAttribute("Parity", parity)
+                        , new XAttribute("DataBits", dtuDcbSplit[2])
+                        , new XAttribute("StopBits", dtuDcbSplit[3])
+                        , new XAttribute("Handshake", 0)
+                        , new XAttribute("ReadTimeout", 300)
+                        , new XAttribute("WriteTimeout", 300)
 
-            //炉数量, 炉号, 服务器, 管道, 采样间隔, 
-            int lushu, luhao, fuwuqi, guandao, cyjg, xlych, dhych, chaoxian, duhui, guzhang, bool_tl, sleeptime;
-            string Mingcheng, ComStr;
-            float zyz, llyz, standard_tl;
-            float[] jchzsh = new float[MAX_CHANNEL],
-                shx = new float[MAX_CHANNEL],
-                xiax = new float[MAX_CHANNEL],
-                fftlimit = new float[MAX_CHANNEL];
-            char[] PassWord = new char[50];
+                        , new XAttribute("UnitID", dtuAddress)
+                        , new XAttribute("DtuUsed", dtuPortEnable)
+                        , new XAttribute("PortEnable", true)
+                    ));
 
-            string strcpy;
-            string BeginTime;
-            //--------------------- 读参数 glsys.ini文件 -----------------------
-            try
+            
+
+
+            //[键盘]
+            int keysetValue = Convert.ToInt32(IniFile.IniReadValue("键盘", "KeyBoard", ""));
+            //[使用FFT]
+            int USEFFT = Convert.ToInt32(IniFile.IniReadValue("使用FFT", "USEFFT", "0"));
+            //[历史曲线抽样倍数]
+            int Cyyz = Convert.ToInt32(IniFile.IniReadValue("历史曲线抽样倍数", "Cyyz", "1"));
+            //[[口令]
+            string pwlsh = IniFile.IniReadValue("口令", "Password", "");
+            //[历史数据保存天数]
+            int DaysOfData = Convert.ToInt32(IniFile.IniReadValue("历史数据保存天数", "DaysOfData", "360")); //DaysOfData =360
+            //[吹灰状态]
+            int ChHStatus = Convert.ToInt32(IniFile.IniReadValue("吹灰状态", "ChHStatus", "1")); //ChHStatus =1
+            //[吹灰报警时间]
+            int ChHAlarmtime = Convert.ToInt32(IniFile.IniReadValue("吹灰报警时间", "ChHAlarmtime", "1")); //ChHAlarmtime = 8
+            //[备用报警控制]
+            bool boStandby = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "Standby", "0")));
+            int By_Alarm = Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "StandbyAlarm", "0"));
+            bool boLeak = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "LeakStandbyAlarm", "0")));
+            //[监听]
+            bool DA = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("监听", "DA", "0")));
+            bool Record = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("监听", "Record", "0")));
+            #endregion
+
+            #region 炉参数
+            boilderParameters = new List<XElement>();
+            bool[] bQHKZh = new bool[4];        //清灰控制
+            for (int i = 1; i <= BoilerNumber; i++)    //炉参数
             {
-                lushu = Convert.ToInt32(IniFile.IniReadValue("炉数", "BoilerNumber", "1"));
-                fuwuqi = Convert.ToInt32(IniFile.IniReadValue("服务器", "SupportServer", "0"));
-                udp = Convert.ToInt32(IniFile.IniReadValue("服务器", "UDP", "0"));
-                // CreateABoilerParam(lushu, fuwuqi);
-                USEFFT = Convert.ToInt32(IniFile.IniReadValue("使用FFT", "USEFFT", "0"));
-                Cyyz = Convert.ToInt32(IniFile.IniReadValue("历史曲线抽样倍数", "Cyyz", "1"));
-                keysetValue = Convert.ToInt32(IniFile.IniReadValue("键盘", "KeyBoard", ""));
-                pwlsh = IniFile.IniReadValue("口令", "Password", "");
+                //号炉
+                int BoilerNo = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "号炉", "BoilerNo", i.ToString()));
+                boilderParameters.Add(new XElement("BoilerNo"
+                    , new XAttribute("BoilerNo", BoilerNo)
+                    ));
+                //名称
+                string Caption = IniFile.IniReadValue(i.ToString() + "名称", "Caption", "名称");
+                string 厂内编号 = IniFile.IniReadValue(i.ToString() + "名称", "厂内编号", "1");
+                boilderParameters.Add(new XElement("Caption"
+                    , new XAttribute("Caption", Caption)
+                    , new XAttribute("厂内编号", 厂内编号)
+                    ));
 
-                DA = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("监听", "DA", "0")));
-                WavRecord = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("监听", "Record", "0")));
+                //[1串行通讯] 改为通讯池
+                string ComPort = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuPort", "COM1");
+                string ComProtocol = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuProtocol", "Modbus");
+                string ComDataModal = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuDataModal", "RTU");
+                int ComAddress = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuAddress", "9")); //通讯站号 UnitID
+                string ComDCB = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuDcb", "19200,E,8,1"); // TODO:需要拆分.
+                string[] ComDCBSplit = dtuDcb.Split(',');
+                parity = GetParity(ComDCBSplit[1]);
+                serialPortsParameters.Add(new XElement("SerialPort"
+                    , new XAttribute("PortName", ComPort)
+                    , new XAttribute("BaudRate", ComDCBSplit[0])
+                    , new XAttribute("Parity", parity)
+                    , new XAttribute("DataBits", ComDCBSplit[2])
+                    , new XAttribute("StopBits", ComDCBSplit[3])
+                    , new XAttribute("Handshake", 0)
+                    , new XAttribute("ReadTimeout", 300)
+                    , new XAttribute("WriteTimeout", 300)
 
-                boStandby = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "Standby", "0")));
-                By_Alarm = Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "StandbyAlarm", "0"));
-                boLeak = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("备用报警控制", "LeakStandbyAlarm", "0")));
+                    , new XAttribute("UnitID", ComAddress)
+                    , new XAttribute("DtuUsed", false)
+                    , new XAttribute("PortEnable", true)
+                ));
 
-                // DTU通讯 add by lich @2019-5-6
-                dtuPortEnable = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue("DTU通讯", "dtuPortEnable", "1")));
+                //清灰控制和报警开关量没读取到XML
+                //TODO:报警开关量 
+                //Switch = 0
+                //Switch1 = QHKZ1
+                //Switch2 = QHKZ2
+                //Switch3 = QHKZ3
+                //Switch4 = QHKZ4
+                //Switch5 = QHKZ5
+                //Switch6 = QHKZ6
+                //Switch7 = QHKZ7
+                //Switch8 = QHKZ8
+                boilderParameters.Add(new XElement("报警开关量", "TODO:暂缺"));
+                //清灰控制 TODO: 缺后几个参数 
+                bQHKZh[i - 1] = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "清灰控制", "QHKZh", "0")));
+                //AutoEachTime = 5
+                //AutoBreakTime = 10
+                //SelectedGroup1 = 1
+                //SelectedGroup2 = 0
+                //SelectedGroup3 = 0
+                //SelectedGroup4 = 0
+                //SelectedGroup5 = 0
+                //SelectedGroup6 = 0
+                //SelectedGroup7 = 0
+                //SelectedGroup8 = 0
+                boilderParameters.Add(new XElement("清灰控制", "TODO:暂缺"));
 
-                //for (int i = 0; i < PassWord.Length; i++)
-                //{
-                //    PassWord[i] = PassWord[i] ^ (0xf9);
-                //}
+                //管道数 白字先生 :P
+                int ChannelNumber = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "管道数", "ChanelNumber", "60"));
+                boilderParameters.Add(new XElement("管道数", ChannelNumber));
+                //总因子 TODO:改为各通道倍数因子
+                float GeneralFactor = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "总因子", "GeneralFactor", "15"));
+                boilderParameters.Add(new XElement("总因子", GeneralFactor));
+                //流量因子
+                float FluxFactor = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "流量因子", "FluxFactor", "1.0"));
+                boilderParameters.Add(new XElement("流量因子", FluxFactor));
+                //采样间隔
+                int SamplingInterval = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "采样间隔", "SamplingInterval", "60"));
+                boilderParameters.Add(new XElement("采样间隔", SamplingInterval));
+                //泄漏报警延迟时间
+                int LeakageAlarmDelayTime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "泄漏报警延迟时间", "LeakageAlarmDelayTime", "60"));
+                boilderParameters.Add(new XElement("泄漏报警延迟时间", LeakageAlarmDelayTime));
+                //堵灰报警延迟时间
+                int BlockAshDelayTime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警延迟时间", "BlockAshDelayTime", "60"));
+                boilderParameters.Add(new XElement("堵灰报警延迟时间", BlockAshDelayTime));
+                //超限、堵灰、故障参数 等等
+                int AlarmSwitch1 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "超限报警开关", "AlarmSwitch", "0"));
+                boilderParameters.Add(new XElement("超限报警开关", AlarmSwitch1));
 
-                for (int i = 1; i <= lushu; i++)
+                int AlarmSwitch2 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警开关", "AlarmSwitch", "0"));
+                boilderParameters.Add(new XElement("堵灰报警开关", AlarmSwitch2));
+
+                int AlarmSwitch3 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "故障报警开关", "AlarmSwitch", "0"));
+                boilderParameters.Add(new XElement("故障报警开关", AlarmSwitch3));
+
+                int AlarmSwitch4 = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "停炉报警开关", "AlarmSwitch", "0"));
+                boilderParameters.Add(new XElement("停炉报警开关", AlarmSwitch4));
+
+                int sleeptime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "线程休眠时间", "SleepTime", "0"));
+                boilderParameters.Add(new XElement("线程休眠时间", sleeptime));
+
+                float StopBoielrFlux = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "判断停炉流量标准", "StopBoielrFlux", "0"));
+                boilderParameters.Add(new XElement("判断停炉流量标准", StopBoielrFlux));
+
+                string odbcName = IniFile.IniReadValue(i.ToString() + "数据源", "odbcName", "0");
+                boilderParameters.Add(new XElement("数据源", odbcName));
+
+                int sqlTableNameNum = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "sql表名编号", "sqlTableNameNum", "1"));
+                boilderParameters.Add(new XElement("sql表名编号", sqlTableNameNum));
+
+                string BeginTime = IniFile.IniReadValue(i.ToString() + "开始运行时间", "yearmonthday", DateTime.Now.ToString());
+                boilderParameters.Add(new XElement("开始运行时间", BeginTime));
+                #endregion
+
+                #region 通道参数
+                int tempi = i;
+                float BaseNoise;
+                float Uplimit;
+                float Downlimit;
+                float FFT;
+
+                captureCardsParameters = new List<XElement>();
+                sensorsParameters = new List<XElement>();
+                for (int j = 1; j <= ChannelNumber; j++)
                 {
-                    bQHKZh[i - 1] = Convert.ToBoolean(Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "清灰控制", "QHKZh", "0")));
-                    ComStr = IniFile.IniReadValue(i.ToString() + "串行通讯", "ComPort", "COM1");
-                    //if (ComStr != "")
-                    //{
-                    //    ComStatus[i - 1] = true;
-                    //}
-                    luhao = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "号炉", "BoilerNo", i.ToString()));
-                    Mingcheng = IniFile.IniReadValue(i.ToString() + "名称", "Caption", "名称");
+                    BaseNoise = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "基础噪声因子", j.ToString() + "号通道", "0"));
+                    Uplimit = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "上限", j.ToString() + "号通道", "4"));
+                    Downlimit = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "下限", j.ToString() + "号通道", "0.5"));
+                    FFT = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "FFT警戒限", j.ToString() + "号通道", "0"));
+                    sensorsParameters.Add(new XElement("Sensor"
+                        , new XAttribute("ChannelNumber", j)
+                        , new XAttribute("BoilderID", BoilerNo)
+                        , new XAttribute("Multiplicative", GeneralFactor)
+                        , new XAttribute("BaseNoise", BaseNoise)
+                        , new XAttribute("Uplimit", Uplimit)
+                        , new XAttribute("Downlimit", Downlimit)
+                        , new XAttribute("FFT", FFT)
+                    ));
 
-                    //_MenuItem[i - 1] = new TMenuItem(Watchgl);
-                    //_MenuItem[i - 1]->Caption = Mingcheng;
-                    //_MenuItem[i - 1]->Name = "MenuItem" + i.ToString();
-                    //_MenuItem[i - 1]->RadioItem = true;
-                    //_MenuItem[i - 1]->Tag = i;
-                    //_MenuItem[i - 1]->OnClick = SwitchglExecute;
-                    //if (i == 1)
-                    //{
-                    //    _MenuItem[i - 1]->Checked = true;
-                    //}
-                    //Watchgl->Add(_MenuItem[i - 1]);
-                    guandao = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "管道数", "ChanelNumber", "60"));
-
-                    //-------------------------------生成炉B参数----------------------------------
-                    //CreateBBoilerParam(luhao, guandao, Mingcheng, AnsiString(PassWord));
-
-                    //----------------------------------------------------------------------------
-                    zyz = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "总因子", "GeneralFactor", "15"));
-                    llyz = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "流量因子", "FluxFactor", "1.0"));
-                    cyjg = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "采样间隔", "SamplingInterval", "60"));
-                    xlych = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "泄漏报警延迟时间", "LeakageAlarmDelayTime", "60"));
-                    dhych = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警延迟时间", "BlockAshDelayTime", "60"));
-                    int tempi = i;
-                    for (int j = 1; j <= guandao; j++)
-                    {
-                        jchzsh[j - 1] = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "基础噪音因子", j.ToString() + "号通道", "0"));
-                        shx[j - 1] = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "上限", j.ToString() + "号通道", "4"));
-                        xiax[j - 1] = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "下限", j.ToString() + "号通道", "0.5"));
-                        fftlimit[j - 1] = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "FFT警戒限", j.ToString() + "号通道", "0"));
-                    }
-
-                    //---------------------------超限、堵灰、故障参数-----------------------------
-                    chaoxian = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "超限报警开关", "AlarmSwitch", "0"));
-                    duhui = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "堵灰报警开关", "AlarmSwitch", "0"));
-                    guzhang = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "故障报警开关", "AlarmSwitch", "0"));
-                    bool_tl = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "停炉报警开关", "AlarmSwitch", "0"));
-                    sleeptime = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "线程休眠时间", "SleepTime", "0"));
-                    standard_tl = Convert.ToSingle(IniFile.IniReadValue(i.ToString() + "判断停炉流量标准", "StopBoielrFlux", "0"));
-                    strcpy = IniFile.IniReadValue(i.ToString() + "数据源", "odbcName", "0");
-                    BeginTime = IniFile.IniReadValue(i.ToString() + "开始运行时间", "yearmonthday", DateTime.Now.ToString());
-
-                    //history[i - 1] = new Thistory(i, guandao, AppPath);
-                    //history[i - 1]->loadCurData();
-                    //生成通道对象
-                    //CreateChannelObject(luhao, guandao, jchzsh, shx, xiax, AnsiString(odbc[i - 1]), fftlimit);
-                    //CreateglObject(luhao, guandao, zyz, llyz, cyjg, xlych, dhych, chaoxian, duhui, guzhang, ChanelParams[luhao - 1], bool_tl, sleeptime, standard_tl);
                 }
+                captureCardsParameters.Add(new XElement("CaptureCard"
+                    , new XAttribute("CaptureCardID", "1")
+                    , new XAttribute("Driver", "AC6623")
+                    , new XElement("Sensors"
+                    , new XComment("ChannelNumber 通道序号, BoilderID 锅炉, BaseNoise 基础噪音因子, Uplimit 上限, Downlimit 下限, FFT 警戒限")
+                    , sensorsParameters)));
+                #endregion
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
 
-            srcTree = new XDocument(
-                new XComment("This is a comment. 这是一行注释."),
+            systemParameters.Add(new XElement("SerialPorts", serialPortsParameters));
+            systemParameters.Add(new XElement("Boilders", new XElement("Boilder", boilderParameters)));
+            systemParameters.Add(new XElement("CaptureCards"
+                , new XComment("CaptureCardID 采集卡ID, Driver 驱动. 驱动目前支持: AC6623, AC6623SIM, PC6311, PC6311SIM.")
+                , captureCardsParameters));
+            #endregion
 
-                new XElement("Root", new XAttribute("ID", "IDABC"),
-                    new XElement("XText", new XText("这是一个xml文本")),
-                    new XElement("XCData", new XCData("这是个xml CData")),
-                    new XElement("Child1", "data1"),
-                    new XElement("Child2", "data2"),
-                    new XElement("Child3", "data3"),
-                    new XElement("Child2", "data4"),
-                    new XElement("Info5", "info5"),
-                    new XElement("Info6", "info6"),
-                    new XElement("Info7", "info7"),
-                    new XElement("Info8", "info8")
-                )
-            );
+            config_Xml = new XDocument(
+                    new XDeclaration("1.0", "gb2312", "yes")
+                    , new XComment("BLD系统配置文件, 非专业人士请勿修改.")
+                    , new XComment("Edit by lich @2019-6-16")
 
-            //srcTree.Save(@"d:\glsys\glsys.xml");
+                    , new XElement("PowerPlant"    //根节点 
+                        , new XAttribute("ID", "随便")
+                        , new XAttribute("Name", "吉林开元")
+                        , new XAttribute("LastUpdate", DateTime.Now.ToString())
+                        , new XAttribute("Description", "电厂信息. 例:吉林开元. PowerPlant是根节点, 每个程序必须有且只能有一个")
 
-            textBoxXml.Text = srcTree.ToString();
+                        , new XElement("Server"
+                            , new XAttribute("ID", "随便")
+                            , new XAttribute("Name", "五号机组BLD")
+                            , new XAttribute("Description", "服务器主机信息. 例:五号机组BLD")
+                            , systemParameters
+                        )
+                    )
+                );
+
+
+
+            textBoxXml.Text = config_Xml.ToString();
         }
 
+        private static Parity GetParity(string FirstCaptionOfParity)
+        {
+            Parity parity;
+            switch (FirstCaptionOfParity)
+            {
+                case "N":
+                    parity = Parity.None;
+                    break;
+                case "O":
+                    parity = Parity.Odd;
+                    break;
+                case "E":
+                    parity = Parity.Even;
+                    break;
+                case "M":
+                    parity = Parity.Mark;
+                    break;
+                case "S":
+                    parity = Parity.Space;
+                    break;
+                default:
+                    parity = Parity.None;
+                    break;
+            }
+
+            return parity;
+        }
+
+        /// <summary>
+        /// save config.xml
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonSaveXml_Click(object sender, EventArgs e)
         {
             string fileName;
@@ -192,7 +349,7 @@ namespace ProfileConversion
                 if ((myStream = saveXmlFileDialog.OpenFile()) != null)
                 {
                     //// Code to write the stream goes here.
-                    
+
                     ////saveXmlFileDialog.FileName;
                     //StreamWriter writer = new StreamWriter(myStream, Encoding.GetEncoding("gb2312"));
                     //writer.Write(textBoxXml.Text);
@@ -202,9 +359,11 @@ namespace ProfileConversion
             else
             {
                 fileName = @"d:\glsys.xml";
+                
             }
 
-            srcTree.Save(fileName);
+            config_Xml.Save(fileName);
+            MessageBox.Show("配置文件保存为:" + fileName);
         }
 
         /// <summary>
@@ -218,105 +377,136 @@ namespace ProfileConversion
         }
 
         /// <summary>
-        /// ini 转换为 xml
+        ///  System.Xml.Linq;
+        ///  XML 学习代码
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TextBoxIni_TextChanged学习(object sender, EventArgs e)
+        private void learnXml()
         {
-            //XNode xNode = new XNode();
+            #region 根据ini文件生成 xml文件
+            //UDP通讯配置 例子
+            XElement udpXElement =
+                    new XElement("UDP",
+                        new XAttribute("Enable", "0"),
+                        new XAttribute("SupportServer", "0"),
+                        new XAttribute("RemotePort", "6803"),
+                        new XAttribute("RemoteHost", "10.164.19.255")
+                    );
 
-            XElement root = new XElement("ElementName", "content");
-            Console.WriteLine(root);
+            //串口通讯配置 例子
+            XElement serialPortsXElement =
+                new XElement("SerialPorts",
+                    new XElement("SerialPort",
+                        new XAttribute("PortName", "COM1"),
+                        new XAttribute("BaudRate", "19200"),
+                        new XAttribute("Parity", "Even"),
+                        new XAttribute("DataBits", "8"),
+                        new XAttribute("StopBits", "1"),
+                        new XAttribute("Handshake", "0"),
+                        new XAttribute("ReadTimeout", "500"),
+                        new XAttribute("WriteTimeout", "500"),
+                        new XAttribute("Default", "true"),
+                        new XAttribute("PortEnable", "true")
+                    )
+                );
 
-            XElement xmlTree1 = new XElement("PowerPlant",
-                new XElement("Child1", 1),
-                new XElement("Child2", 2),
-                new XElement("Child3", 3),
-                new XElement("Child4", 4),
-                new XElement("Child5", 5),
-                new XElement("Child6", 6)
-            );
-
-            XElement xmlTree2 = new XElement("Root",
-                from el in xmlTree1.Elements()
-                where ((int)el >= 3 && (int)el <= 5)
-                select el
-            );
-
-            XDocument srcTree = new XDocument(
-                new XComment("This is a comment. 这是一行注释."),
-
-                new XElement("Root", new XAttribute("ID", "IDABC"),
-                    new XElement("XText", new XText("这是一个xml文本")),
-                    new XElement("XCData", new XCData("这是个xml CData")),
-                    new XElement("Child1", "data1"),
-                    new XElement("Child2", "data2"),
-                    new XElement("Child3", "data3"),
-                    new XElement("Child2", "data4"),
-                    new XElement("Info5", "info5"),
-                    new XElement("Info6", "info6"),
-                    new XElement("Info7", "info7"),
-                    new XElement("Info8", "info8")
-                )
-            );
-
-            IEnumerable<XComment> comments;
-            List<XElement> elements;
-
-            XDocument doc = new XDocument(
-                new XComment("This is a comment"),
-                new XElement("Root",
-                    from el in srcTree.Element("Root").Elements()
-                    where ((string)el).StartsWith("data")
-                    select el
-                )
-            );
-
-            XDocument xmlTree = new XDocument(
-                new XComment("a comment"),
-                new XProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"hello.xsl\""),
-                new XElement("Root",
-                    new XAttribute("Att", "attContent"),
-                    new XElement("Child1",
-                        new XCData("CDATA content")
+            //锅炉配置 例子
+            XElement boilersXElement =
+                new XElement("Boilers",
+                    new XElement("Boiler",
+                        new XAttribute("BoilerID", "1"),
+                        new XAttribute("Name", "1号锅炉"),
+                        new XAttribute("SerialPortName", "COM1"),
+                        new XAttribute("UnitID", "1"),
+                        new XAttribute("Description", "锅炉详情. 例:1号锅炉")
                     ),
-                    new XElement("Child2", "Text content")
-                )
-            );
+                    new XElement("Boiler",
+                        new XAttribute("BoilerID", "2"),
+                        new XAttribute("Name", "2号锅炉"),
+                        new XAttribute("SerialPortName", "COM2"),
+                        new XAttribute("UnitID", "2"),
+                        new XAttribute("Description", "锅炉详情. 例:2号锅炉")
+                    )
+                );
 
-            // 每个节点和节点内属性值遍历
-            foreach (XNode node in xmlTree.DescendantNodes())
-            {
-                Console.WriteLine(node.NodeType);
-                if (node.NodeType == XmlNodeType.Element)
-                {
-                    foreach (XAttribute att in ((XElement)node).Attributes())
-                        Console.WriteLine(att.NodeType);
-                }
-            }
 
-            textBoxXml.Text = xmlTree1.ToString() + "\r\n"
-                + xmlTree2.ToString() + "\r\n"
-                + srcTree.ToString() + "\r\n"
-                + doc + "\r\n"
-                + xmlTree + "\r\n"
-                ;
-            /*
-            < Root >
-              < Child1 > 1 </ Child1 >
-              < Child2 > 2 </ Child2 >
-              < Child3 > 3 </ Child3 >
-              < Child4 > 4 </ Child4 >
-              < Child5 > 5 </ Child5 >
-              < Child6 > 6 </ Child6 >
-            </ Root >
-            < Root >
-              < Child3 > 3 </ Child3 >
-              < Child4 > 4 </ Child4 >
-              < Child5 > 5 </ Child5 >
-            </ Root >
-            */
+
+            //单传感器配置1
+            XElement sensorXElement =
+                    new XElement("Sensor"
+                        , new XAttribute("SensorID", "1")
+                        , new XAttribute("Channel", "1")
+                        , new XAttribute("BoilerID", "1")
+                        , new XAttribute("Amplification", "24")
+                        , new XAttribute("BasicNoise", "3")
+                        , new XAttribute("UpLimit", "5")
+                        , new XAttribute("DownLimit", "0.5")
+                    );
+            List<XElement> sensorsParameters = new List<XElement>();
+            sensorsParameters.Add(sensorXElement);
+
+            //单传感器配置2
+            sensorXElement
+                //.Attribute("SensorID").Value = "222"; //sensorXElement直接改属性是不行的.会把前面一个的属性覆盖掉sensorXElement
+                //.SetAttributeValue("SensorID", "222");
+                = new XElement("Sensor"
+                    , new XAttribute("SensorID", "2")
+                    , new XAttribute("Channel", "1")
+                    , new XAttribute("BoilerID", "1")
+                    , new XAttribute("Amplification", "24")
+                    , new XAttribute("BasicNoise", "3")
+                    , new XAttribute("UpLimit", "5")
+                    , new XAttribute("DownLimit", "0.5")
+                );
+            sensorsParameters.Add(sensorXElement);
+
+            //传感器组配置
+            XElement sensorsXElement =
+                new XElement("Sensors"
+                    , new XComment("传感器属性说明: SensorID通道ID, Channel板卡通道 BoilerID = 锅炉 Amplification = 放大倍数 BasicNoise基础噪声 UpLimit = 上限 DownLimit下限")
+                    //, sensorXElement
+                    , sensorsParameters
+                );
+
+
+
+
+            //板卡,套传感器例子
+            XElement captureCardsXElement =
+                new XElement(
+                    "CaptureCards",
+                    new XElement("CaptureCard"
+                        , sensorsXElement
+                    )
+                );
+
+            config_Xml = new XDocument(
+                    new XDeclaration("1.0", "gb2312", "yes")
+                    , new XComment("BLD系统配置文件, 非专业人士请勿修改.")
+                    , new XComment("Edit by lich @2019-6-16")
+
+                    , new XElement("PowerPlant"    //根节点 
+                        , new XAttribute("ID", "随便")
+                        , new XAttribute("Name", "吉林开元")
+                        , new XAttribute("Description", "电厂信息. 例:吉林开元. PowerPlant是根节点, 每个程序必须有且只能有一个")
+
+                        , new XElement("Server"
+                            , new XAttribute("ID", "随便")
+                            , new XAttribute("Name", "五号机组BLD")
+                            , new XAttribute("Description", "服务器主机信息. 例:五号机组BLD")
+
+                            , new XComment("UDP通讯配置"), udpXElement
+                            , new XComment("串口通讯配置"), serialPortsXElement
+                            , new XComment("锅炉配置 用于显示及通讯"), boilersXElement
+                            , new XComment("采集卡分组 用于数据采集"), captureCardsXElement
+
+
+                        //,new XElement("XText", new XText("这是一个xml文本"))
+                        //,new XElement("XCData", new XCData("这是个xml CData"))
+                        )
+                    )
+                );
+
+            #endregion
         }
 
     }

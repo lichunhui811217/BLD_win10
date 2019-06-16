@@ -38,9 +38,10 @@
             // 
             // buttonReadIni
             // 
-            this.buttonReadIni.Location = new System.Drawing.Point(1056, 344);
+            this.buttonReadIni.Location = new System.Drawing.Point(338, 528);
+            this.buttonReadIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonReadIni.Name = "buttonReadIni";
-            this.buttonReadIni.Size = new System.Drawing.Size(114, 28);
+            this.buttonReadIni.Size = new System.Drawing.Size(86, 22);
             this.buttonReadIni.TabIndex = 0;
             this.buttonReadIni.Text = "Read ini";
             this.buttonReadIni.UseVisualStyleBackColor = true;
@@ -48,11 +49,12 @@
             // 
             // textBoxIni
             // 
-            this.textBoxIni.Location = new System.Drawing.Point(13, 9);
+            this.textBoxIni.Location = new System.Drawing.Point(10, 7);
+            this.textBoxIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIni.Multiline = true;
             this.textBoxIni.Name = "textBoxIni";
             this.textBoxIni.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxIni.Size = new System.Drawing.Size(1157, 329);
+            this.textBoxIni.Size = new System.Drawing.Size(414, 517);
             this.textBoxIni.TabIndex = 2;
             this.textBoxIni.TextChanged += new System.EventHandler(this.TextBoxIni_TextChanged);
             // 
@@ -65,9 +67,10 @@
             // 
             // buttonSaveXml
             // 
-            this.buttonSaveXml.Location = new System.Drawing.Point(1056, 713);
+            this.buttonSaveXml.Location = new System.Drawing.Point(911, 528);
+            this.buttonSaveXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveXml.Name = "buttonSaveXml";
-            this.buttonSaveXml.Size = new System.Drawing.Size(114, 28);
+            this.buttonSaveXml.Size = new System.Drawing.Size(86, 22);
             this.buttonSaveXml.TabIndex = 4;
             this.buttonSaveXml.Text = "Save Xml";
             this.buttonSaveXml.UseVisualStyleBackColor = true;
@@ -75,22 +78,24 @@
             // 
             // textBoxXml
             // 
-            this.textBoxXml.Location = new System.Drawing.Point(13, 378);
+            this.textBoxXml.Location = new System.Drawing.Point(428, 7);
+            this.textBoxXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxXml.Multiline = true;
             this.textBoxXml.Name = "textBoxXml";
             this.textBoxXml.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxXml.Size = new System.Drawing.Size(1157, 329);
+            this.textBoxXml.Size = new System.Drawing.Size(569, 517);
             this.textBoxXml.TabIndex = 5;
             // 
             // ProfileConversionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1008, 561);
             this.Controls.Add(this.textBoxXml);
             this.Controls.Add(this.buttonSaveXml);
             this.Controls.Add(this.textBoxIni);
             this.Controls.Add(this.buttonReadIni);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProfileConversionForm";
