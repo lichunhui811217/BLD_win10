@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!-- BLD_win10配置文件 TODO:其它属性需要在代码中的类编写完成后完善. -->
+<PowerPlant ID="随便" Name="吉林开元"  Description="电厂信息. 例:吉林开元. PowerPlant是根节点, 每个程序必须有且只能有一个">
+  <Server ID="随便" Name="五号机组BLD" Description="服务器主机信息. 例:五号机组BLD" >
+
+    <!-- MIS通讯设置说明 
+    SupportServer=n       ;是否与MIS通讯。n=1通讯，n=0不通讯
+    UDP=n                 ;是否使用UDP方式。n=1采用，n=0不采用 .   *UDP 改为 Enable
+    RemotePort=n          ;UDP端口设置,如：8001
+    RemoteHost=n          ;UDP远程主机地址,如：255.255.255.255-->
+    <UDP Enable="0" SupportServer="0"  RemotePort="6803" RemoteHost="10.164.19.255"></UDP>
+
+    <!--
+    下述配置属性未转换:
+    
+    [使用FFT]
+    USEFFT=0
+    
+    [历史曲线抽样倍数]
+    Cyyz=2
+    
+    [口令]
+    Password=耸
+    
+    [历史数据保存天数]
+    DaysOfData=360
+    
+    [吹灰状态]
+    ChHStatus=1
+    
+    ;=================吹灰报警时间（单位小时)======================
+    [吹灰报警时间]
+    ChHAlarmtime=8
+    
+    ;=================备用报警控制开关=================
+    ;    Standby=n   是否使用备用报警控制.n=1－使用，n=0－不使用
+    ;    StandbyAlarm=n  备用报警选线：n=0－不指定，n=1－泄漏，n=2－故障
+    ;    LeakStandbyAlarm=n  是否启用泄漏备用报警.n=1－使用，n=0－不使用
+    ;=============================================================
+    [备用报警控制]
+    Standby=0
+    StandbyAlarm=0
+    LeakStandbyAlarm=0
+    ;=================监听开关=================
+    [监听]
+    DA=1
+    Record=1
+    ;=============================================================
+    [键盘]
+    KeyBoard=1
+    -->
+
+    <!--       串行通讯设置说明
+    ;    ComPort=COMn        通讯端口，n=1,2,3,4等
+    ;    ComProtocol=Modbus  通讯协议，一般不需设置
+    ;    ComDataModal=RTU    数据传输方式，RTU或ASCII
+    ;    ComAddress=n        主设备地址编号;    ComDCB=19200,E,8,1  串行通讯参数
+    -->
+
+    <!--
+       串行通讯设置说明
+    ;    ComPort=COMn        通讯端口，n=1,2,3,4等
+    ;    ComProtocol=Modbus  通讯协议，一般不需设置
+    ;    ComDataModal=RTU    数据传输方式，RTU或ASCII
+    ;    ComAddress=n        主设备地址编号;    ComDCB=19200,E,8,1  串行通讯参数    
+    原串口通讯设置改为通用串口数据池.-->
+    <SerialPorts>
+      <SerialPort  
+        PortName = "COM1"
+        BaudRate = "19200"
+        Parity = "Even"
+        DataBits = "8"
+        StopBits = "1"
+        Handshake = "0"
+        ReadTimeout = "500"
+        WriteTimeout = "500"
+                   
+        DtuUsed="true"
+        PortEnable="true" >
+      </SerialPort>
+      <SerialPort
+        PortName = "COM2"
+        BaudRate = "19200"
+        Parity = "Even"
+        DataBits = "8"
+        StopBits = "1"
+        Handshake = "0"
+        ReadTimeout = "500"
+        WriteTimeout = "500"
+                   
+        DtuUsed="false"
+        PortEnable="true" >
+      </SerialPort>
+    </SerialPorts>
+    
+    <!--锅炉分组  显示及通讯-->
+    <Boilers>
+      <Boiler BoilerID="1" Name="1号锅炉" SerialPortName="COM1" UnitID="1" Description="锅炉信息1. 例:1号锅炉" />
+      <Boiler BoilerID="2" Name="2号锅炉" SerialPortName="COM2" UnitID="2" Description="锅炉信息2. Name不可以重复. 锅炉信息是组织画面用的. " />
+    </Boilers>
+
+    <!--采集卡分组 数据采集-->
+    <CaptureCards Description="采集卡组.用于采集数据">
+      <CaptureCard CaptureCardID="1" Driver="AC6623" Description="采集卡信息1. 例:采集卡1" >
+        <Sensors Description="传感器组 使用板卡的模拟量输入">
+          <!-- SensorID通道ID, Channel板卡通道 BoilerID=锅炉 Amplification=放大倍数 BasicNoise基础噪声 UpLimit=上限 DownLimit下限 -->
+          <Sensor SensorID="1" Channel="1" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="传感器信息1. Channel对应板卡的通道." />
+          <Sensor SensorID="2" Channel="2" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="传感器信息2, 根据BoilerID 分配所属的锅炉,实现1主机带N个锅炉" />
+          <Sensor SensorID="3" Channel="3" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="4" Channel="4" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="5" Channel="5" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="6" Channel="6" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="7" Channel="7" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="8" Channel="8" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="9" Channel="9" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          
+          <Sensor SensorID="10" Channel="10" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="11" Channel="11" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="12" Channel="12" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="13" Channel="13" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="14" Channel="14" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="15" Channel="15" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="16" Channel="16" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="17" Channel="17" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="18" Channel="18" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="19" Channel="19" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+
+          <Sensor SensorID="20" Channel="20" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="21" Channel="21" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="22" Channel="22" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="23" Channel="23" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="24" Channel="24" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="25" Channel="25" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="26" Channel="26" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="27" Channel="27" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="28" Channel="28" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="29" Channel="29" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          
+          <Sensor SensorID="30" Channel="30" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+        </Sensors>
+        
+        <Valves Description="阀门组 使用板卡的开关量输出" >
+          <Valve />
+          <Valve />
+        </Valves>
+        <Alarm Description="报警组 使用板卡的开关量输出 TODO: 是否和阀门合并?">
+        </Alarm>
+      </CaptureCard>
+      <CaptureCard CaptureCardID="2" Driver="PC6311" Description="采集卡信息2. 例:采集卡2. CaptureCardID不可以重复." >
+        <Sensors>
+          <Sensor SensorID="31" Channel="1" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="传感器信息1. Channel对应板卡的通道." />
+          <Sensor SensorID="32" Channel="2" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="传感器信息2, 根据BoilerID 分配所属的锅炉,实现1主机带N个锅炉" />
+          <Sensor SensorID="33" Channel="3" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="34" Channel="4" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="35" Channel="5" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="36" Channel="6" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="37" Channel="7" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="38" Channel="8" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="39" Channel="9" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+
+          <Sensor SensorID="40" Channel="10" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="41" Channel="11" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="42" Channel="12" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="43" Channel="13" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="44" Channel="14" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="45" Channel="15" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="46" Channel="16" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="47" Channel="17" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="48" Channel="18" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="49" Channel="19" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+
+          <Sensor SensorID="50" Channel="20" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="51" Channel="21" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="52" Channel="22" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="53" Channel="23" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="54" Channel="24" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="55" Channel="25" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="56" Channel="26" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="57" Channel="27" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="58" Channel="28" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <Sensor SensorID="59" Channel="29" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+
+          <Sensor SensorID="60" Channel="30" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+        </Sensors>
+      </CaptureCard>
+    </CaptureCards>
+
+  </Server>
+</PowerPlant>
+

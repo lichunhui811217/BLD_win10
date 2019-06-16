@@ -13,7 +13,7 @@ public class SerialPortCommunication
     static bool _continue;
     static SerialPort _serialPort;
 
-    public static void Main()
+    public static void testMain()
     {
         string name;
         string message;

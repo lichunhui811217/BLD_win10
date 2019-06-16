@@ -1,190 +1,108 @@
-<?xml version="1.0" encoding="gb2312" ?>
-<!-- BLD_win10ÅäÖÃÎÄ¼þ TODO:ÆäËüÊôÐÔÐèÒªÔÚ´úÂëÖÐµÄÀà±àÐ´Íê³ÉºóÍêÉÆ. -->
-<PowerPlant ID="Ëæ±ã" Name="¼ªÁÖ¿ªÔª"  Description="µç³§ÐÅÏ¢. Àý:¼ªÁÖ¿ªÔª. PowerPlantÊÇ¸ù½Úµã, Ã¿¸ö³ÌÐò±ØÐëÓÐÇÒÖ»ÄÜÓÐÒ»¸ö">
-  <Server ID="Ëæ±ã" Name="ÎåºÅ»ú×éBLD" Description="·þÎñÆ÷Ö÷»úÐÅÏ¢. Àý:ÎåºÅ»ú×éBLD" >
-
-    <!-- MISÍ¨Ñ¶ÉèÖÃËµÃ÷ 
-    SupportServer=n       ;ÊÇ·ñÓëMISÍ¨Ñ¶¡£n=1Í¨Ñ¶£¬n=0²»Í¨Ñ¶
-    UDP=n                 ;ÊÇ·ñÊ¹ÓÃUDP·½Ê½¡£n=1²ÉÓÃ£¬n=0²»²ÉÓÃ .   *UDP ¸ÄÎª Enable
-    RemotePort=n          ;UDP¶Ë¿ÚÉèÖÃ,Èç£º8001
-    RemoteHost=n          ;UDPÔ¶³ÌÖ÷»úµØÖ·,Èç£º255.255.255.255-->
-    <UDP Enable="0" SupportServer="0"  RemotePort="6803" RemoteHost="10.164.19.255"></UDP>
-
-    <!--
-    ÏÂÊöÅäÖÃÊôÐÔÎ´×ª»»:
-    
-    [Ê¹ÓÃFFT]
-    USEFFT=0
-    
-    [ÀúÊ·ÇúÏß³éÑù±¶Êý]
-    Cyyz=2
-    
-    [¿ÚÁî]
-    Password=ËÊ
-    
-    [ÀúÊ·Êý¾Ý±£´æÌìÊý]
-    DaysOfData=360
-    
-    [´µ»Ò×´Ì¬]
-    ChHStatus=1
-    
-    ;=================´µ»Ò±¨¾¯Ê±¼ä£¨µ¥Î»Ð¡Ê±)======================
-    [´µ»Ò±¨¾¯Ê±¼ä]
-    ChHAlarmtime=8
-    
-    ;=================±¸ÓÃ±¨¾¯¿ØÖÆ¿ª¹Ø=================
-    ;    Standby=n   ÊÇ·ñÊ¹ÓÃ±¸ÓÃ±¨¾¯¿ØÖÆ.n=1£­Ê¹ÓÃ£¬n=0£­²»Ê¹ÓÃ
-    ;    StandbyAlarm=n  ±¸ÓÃ±¨¾¯Ñ¡Ïß£ºn=0£­²»Ö¸¶¨£¬n=1£­Ð¹Â©£¬n=2£­¹ÊÕÏ
-    ;    LeakStandbyAlarm=n  ÊÇ·ñÆôÓÃÐ¹Â©±¸ÓÃ±¨¾¯.n=1£­Ê¹ÓÃ£¬n=0£­²»Ê¹ÓÃ
-    ;=============================================================
-    [±¸ÓÃ±¨¾¯¿ØÖÆ]
-    Standby=0
-    StandbyAlarm=0
-    LeakStandbyAlarm=0
-    ;=================¼àÌý¿ª¹Ø=================
-    [¼àÌý]
-    DA=1
-    Record=1
-    ;=============================================================
-    [¼üÅÌ]
-    KeyBoard=1
-    -->
-
-    <!--       ´®ÐÐÍ¨Ñ¶ÉèÖÃËµÃ÷
-    ;    ComPort=COMn        Í¨Ñ¶¶Ë¿Ú£¬n=1,2,3,4µÈ
-    ;    ComProtocol=Modbus  Í¨Ñ¶Ð­Òé£¬Ò»°ã²»ÐèÉèÖÃ
-    ;    ComDataModal=RTU    Êý¾Ý´«Êä·½Ê½£¬RTU»òASCII
-    ;    ComAddress=n        Ö÷Éè±¸µØÖ·±àºÅ;    ComDCB=19200,E,8,1  ´®ÐÐÍ¨Ñ¶²ÎÊý
-    -->
-
-    <!--
-       ´®ÐÐÍ¨Ñ¶ÉèÖÃËµÃ÷
-    ;    ComPort=COMn        Í¨Ñ¶¶Ë¿Ú£¬n=1,2,3,4µÈ
-    ;    ComProtocol=Modbus  Í¨Ñ¶Ð­Òé£¬Ò»°ã²»ÐèÉèÖÃ
-    ;    ComDataModal=RTU    Êý¾Ý´«Êä·½Ê½£¬RTU»òASCII
-    ;    ComAddress=n        Ö÷Éè±¸µØÖ·±àºÅ;    ComDCB=19200,E,8,1  ´®ÐÐÍ¨Ñ¶²ÎÊý    
-    Ô­´®¿ÚÍ¨Ñ¶ÉèÖÃ¸ÄÎªÍ¨ÓÃ´®¿ÚÊý¾Ý³Ø.-->
+<!--BLDç³»ç»Ÿé…ç½®æ–‡ä»¶, éžä¸“ä¸šäººå£«è¯·å‹¿ä¿®æ”¹.-->
+<!--Edit by lich @2019-6-16-->
+<PowerPlant ID="éšä¾¿" Name="å‰æž—å¼€å…ƒ" LastUpdate="2019/6/16 20:35:38" Description="ç”µåŽ‚ä¿¡æ¯. ä¾‹:å‰æž—å¼€å…ƒ. PowerPlantæ˜¯æ ¹èŠ‚ç‚¹, æ¯ä¸ªç¨‹åºå¿…é¡»æœ‰ä¸”åªèƒ½æœ‰ä¸€ä¸ª">
+  <Server ID="éšä¾¿" Name="äº”å·æœºç»„BLD" Description="æœåŠ¡å™¨ä¸»æœºä¿¡æ¯. ä¾‹:äº”å·æœºç»„BLD">
+    <ç‚‰æ•° BoilerNumber="1" />
+    <æœåŠ¡å™¨ SupportServer="0" UDP="0" RemotePort="6803" RemoteHost="10.164.12.200" />
     <SerialPorts>
-      <SerialPort  
-        PortName = "COM1"
-        BaudRate = "19200"
-        Parity = "Even"
-        DataBits = "8"
-        StopBits = "1"
-        Handshake = "0"
-        ReadTimeout = "500"
-        WriteTimeout = "500"
-                   
-        DtuUsed="true"
-        PortEnable="true" >
-      </SerialPort>
-      <SerialPort
-        PortName = "COM2"
-        BaudRate = "19200"
-        Parity = "Even"
-        DataBits = "8"
-        StopBits = "1"
-        Handshake = "0"
-        ReadTimeout = "500"
-        WriteTimeout = "500"
-                   
-        DtuUsed="false"
-        PortEnable="true" >
-      </SerialPort>
+      <SerialPort PortName="COM2" BaudRate="19200" Parity="Even" DataBits="8" StopBits="1" Handshake="0" ReadTimeout="300" WriteTimeout="300" UnitID="1" DtuUsed="true" PortEnable="true" />
+      <SerialPort PortName="COM1" BaudRate="19200" Parity="Even" DataBits="8" StopBits="1" Handshake="0" ReadTimeout="300" WriteTimeout="300" UnitID="9" DtuUsed="false" PortEnable="true" />
     </SerialPorts>
-    
-    <!--¹øÂ¯·Ö×é  ÏÔÊ¾¼°Í¨Ñ¶-->
-    <Boilers>
-      <Boiler BoilerID="1" Name="1ºÅ¹øÂ¯" SerialPortName="COM1" UnitID="1" Description="¹øÂ¯ÐÅÏ¢1. Àý:1ºÅ¹øÂ¯" />
-      <Boiler BoilerID="2" Name="2ºÅ¹øÂ¯" SerialPortName="COM2" UnitID="2" Description="¹øÂ¯ÐÅÏ¢2. Name²»¿ÉÒÔÖØ¸´. ¹øÂ¯ÐÅÏ¢ÊÇ×éÖ¯»­ÃæÓÃµÄ. " />
-    </Boilers>
-
-    <!--²É¼¯¿¨·Ö×é Êý¾Ý²É¼¯-->
-    <CaptureCards Description="²É¼¯¿¨×é.ÓÃÓÚ²É¼¯Êý¾Ý">
-      <CaptureCard CaptureCardID="1" Driver="AC6623" Description="²É¼¯¿¨ÐÅÏ¢1. Àý:²É¼¯¿¨1" >
-        <Sensors Description="´«¸ÐÆ÷×é Ê¹ÓÃ°å¿¨µÄÄ£ÄâÁ¿ÊäÈë">
-          <!-- SensorIDÍ¨µÀID, Channel°å¿¨Í¨µÀ BoilerID=¹øÂ¯ Amplification=·Å´ó±¶Êý BasicNoise»ù´¡ÔëÉù UpLimit=ÉÏÏÞ DownLimitÏÂÏÞ -->
-          <Sensor SensorID="1" Channel="1" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="´«¸ÐÆ÷ÐÅÏ¢1. Channel¶ÔÓ¦°å¿¨µÄÍ¨µÀ." />
-          <Sensor SensorID="2" Channel="2" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="´«¸ÐÆ÷ÐÅÏ¢2, ¸ù¾ÝBoilerID ·ÖÅäËùÊôµÄ¹øÂ¯,ÊµÏÖ1Ö÷»ú´øN¸ö¹øÂ¯" />
-          <Sensor SensorID="3" Channel="3" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="4" Channel="4" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="5" Channel="5" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="6" Channel="6" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="7" Channel="7" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="8" Channel="8" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="9" Channel="9" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          
-          <Sensor SensorID="10" Channel="10" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="11" Channel="11" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="12" Channel="12" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="13" Channel="13" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="14" Channel="14" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="15" Channel="15" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="16" Channel="16" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="17" Channel="17" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="18" Channel="18" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="19" Channel="19" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-
-          <Sensor SensorID="20" Channel="20" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="21" Channel="21" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="22" Channel="22" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="23" Channel="23" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="24" Channel="24" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="25" Channel="25" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="26" Channel="26" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="27" Channel="27" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="28" Channel="28" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="29" Channel="29" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          
-          <Sensor SensorID="30" Channel="30" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-        </Sensors>
-        
-        <Valves Description="·§ÃÅ×é Ê¹ÓÃ°å¿¨µÄ¿ª¹ØÁ¿Êä³ö" >
-          <Valve />
-          <Valve />
-        </Valves>
-        <Alarm Description="±¨¾¯×é Ê¹ÓÃ°å¿¨µÄ¿ª¹ØÁ¿Êä³ö TODO: ÊÇ·ñºÍ·§ÃÅºÏ²¢?">
-        </Alarm>
-      </CaptureCard>
-      <CaptureCard CaptureCardID="2" Driver="PC6311" Description="²É¼¯¿¨ÐÅÏ¢2. Àý:²É¼¯¿¨2. CaptureCardID²»¿ÉÒÔÖØ¸´." >
+    <Boilders>
+      <Boilder BoilerNo="1" Caption="å£¹å·ç‚‰" åŽ‚å†…ç¼–å·="1">
+        <æŠ¥è­¦å¼€å…³é‡>TODO:æš‚ç¼º</æŠ¥è­¦å¼€å…³é‡>
+        <æ¸…ç°æŽ§åˆ¶>TODO:æš‚ç¼º</æ¸…ç°æŽ§åˆ¶>
+        <ç®¡é“æ•°>32</ç®¡é“æ•°>
+        <æ€»å› å­>24</æ€»å› å­>
+        <æµé‡å› å­>1</æµé‡å› å­>
+        <é‡‡æ ·é—´éš”>5</é‡‡æ ·é—´éš”>
+        <æ³„æ¼æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>1</æ³„æ¼æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>
+        <å µç°æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>1</å µç°æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>
+        <è¶…é™æŠ¥è­¦å¼€å…³>1</è¶…é™æŠ¥è­¦å¼€å…³>
+        <å µç°æŠ¥è­¦å¼€å…³>1</å µç°æŠ¥è­¦å¼€å…³>
+        <æ•…éšœæŠ¥è­¦å¼€å…³>1</æ•…éšœæŠ¥è­¦å¼€å…³>
+        <åœç‚‰æŠ¥è­¦å¼€å…³>1</åœç‚‰æŠ¥è­¦å¼€å…³>
+        <çº¿ç¨‹ä¼‘çœ æ—¶é—´>990</çº¿ç¨‹ä¼‘çœ æ—¶é—´>
+        <åˆ¤æ–­åœç‚‰æµé‡æ ‡å‡†>1</åˆ¤æ–­åœç‚‰æµé‡æ ‡å‡†>
+        <æ•°æ®æº>s1</æ•°æ®æº>
+        <sqlè¡¨åç¼–å·>1</sqlè¡¨åç¼–å·>
+        <å¼€å§‹è¿è¡Œæ—¶é—´>2019-5-14 00:00:00</å¼€å§‹è¿è¡Œæ—¶é—´>
+      </Boilder>
+      <Boilder BoilerNo="2" Caption="è´°å·ç‚‰" åŽ‚å†…ç¼–å·="2">
+        <æŠ¥è­¦å¼€å…³é‡>TODO:æš‚ç¼º</æŠ¥è­¦å¼€å…³é‡>
+        <æ¸…ç°æŽ§åˆ¶>TODO:æš‚ç¼º</æ¸…ç°æŽ§åˆ¶>
+        <ç®¡é“æ•°>32</ç®¡é“æ•°>
+        <æ€»å› å­>24</æ€»å› å­>
+        <æµé‡å› å­>1</æµé‡å› å­>
+        <é‡‡æ ·é—´éš”>5</é‡‡æ ·é—´éš”>
+        <æ³„æ¼æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>1</æ³„æ¼æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>
+        <å µç°æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>1</å µç°æŠ¥è­¦å»¶è¿Ÿæ—¶é—´>
+        <è¶…é™æŠ¥è­¦å¼€å…³>1</è¶…é™æŠ¥è­¦å¼€å…³>
+        <å µç°æŠ¥è­¦å¼€å…³>1</å µç°æŠ¥è­¦å¼€å…³>
+        <æ•…éšœæŠ¥è­¦å¼€å…³>1</æ•…éšœæŠ¥è­¦å¼€å…³>
+        <åœç‚‰æŠ¥è­¦å¼€å…³>1</åœç‚‰æŠ¥è­¦å¼€å…³>
+        <çº¿ç¨‹ä¼‘çœ æ—¶é—´>990</çº¿ç¨‹ä¼‘çœ æ—¶é—´>
+        <åˆ¤æ–­åœç‚‰æµé‡æ ‡å‡†>1</åˆ¤æ–­åœç‚‰æµé‡æ ‡å‡†>
+        <æ•°æ®æº>s1</æ•°æ®æº>
+        <sqlè¡¨åç¼–å·>1</sqlè¡¨åç¼–å·>
+        <å¼€å§‹è¿è¡Œæ—¶é—´>2019-5-14 00:00:00</å¼€å§‹è¿è¡Œæ—¶é—´>
+      </Boilder>
+    </Boilders>
+    <CaptureCards>
+      <!--CaptureCardID é‡‡é›†å¡ID, Driver é©±åŠ¨. é©±åŠ¨ç›®å‰æ”¯æŒ: AC6623, AC6623SIM, PC6311, PC6311SIM.-->
+      <CaptureCard CaptureCardID="1" Driver="AC6623">
         <Sensors>
-          <Sensor SensorID="31" Channel="1" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="´«¸ÐÆ÷ÐÅÏ¢1. Channel¶ÔÓ¦°å¿¨µÄÍ¨µÀ." />
-          <Sensor SensorID="32" Channel="2" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" Description="´«¸ÐÆ÷ÐÅÏ¢2, ¸ù¾ÝBoilerID ·ÖÅäËùÊôµÄ¹øÂ¯,ÊµÏÖ1Ö÷»ú´øN¸ö¹øÂ¯" />
-          <Sensor SensorID="33" Channel="3" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="34" Channel="4" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="35" Channel="5" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="36" Channel="6" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="37" Channel="7" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="38" Channel="8" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="39" Channel="9" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+          <!--ChannelNumber é€šé“åºå·, BoilderID é”…ç‚‰, BaseNoise åŸºç¡€å™ªéŸ³å› å­, Uplimit ä¸Šé™, Downlimit ä¸‹é™, FFT è­¦æˆ’é™-->
+          <Sensor ChannelNumber="1" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="2" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="3" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="4" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="5" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="6" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="7" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="8" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="9" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="10" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="11" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="12" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="13" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="14" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="15" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="16" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="17" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="18" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="19" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="20" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="21" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="22" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="23" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="24" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="25" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="26" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="27" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="28" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="29" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="30" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="31" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="32" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+        </Sensors>
+      </CaptureCard>
 
-          <Sensor SensorID="40" Channel="10" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="41" Channel="11" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="42" Channel="12" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="43" Channel="13" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="44" Channel="14" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="45" Channel="15" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="46" Channel="16" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="47" Channel="17" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="48" Channel="18" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="49" Channel="19" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-
-          <Sensor SensorID="50" Channel="20" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="51" Channel="21" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="52" Channel="22" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="53" Channel="23" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="54" Channel="24" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="55" Channel="25" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="56" Channel="26" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="57" Channel="27" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="58" Channel="28" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-          <Sensor SensorID="59" Channel="29" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
-
-          <Sensor SensorID="60" Channel="30" BoilerID="1" Amplification="24" BasicNoise="3" UpLimit="5" DownLimit="0.5" />
+      <CaptureCard CaptureCardID="2" Driver="AC6623">
+        <Sensors>
+          <!--ChannelNumber é€šé“åºå·, BoilderID é”…ç‚‰, BaseNoise åŸºç¡€å™ªéŸ³å› å­, Uplimit ä¸Šé™, Downlimit ä¸‹é™, FFT è­¦æˆ’é™-->
+          <Sensor ChannelNumber="41" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="42" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="43" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="44" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="45" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="46" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="47" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="48" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="49" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
+          <Sensor ChannelNumber="50" BoilderID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" />
         </Sensors>
       </CaptureCard>
     </CaptureCards>
-
   </Server>
 </PowerPlant>
-

@@ -255,6 +255,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config - 复制.xml" />
     <Content Include="Config.xml" />
     <Content Include="SolutionItems\ReadMe.txt" />
   </ItemGroup>

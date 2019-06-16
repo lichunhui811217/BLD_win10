@@ -43,11 +43,11 @@ namespace ProfileConversion
 
         private void OpenIniFileDialog_FileOk(object sender, CancelEventArgs e)
         {
-            List<XElement> systemParameters = new List<XElement>();     //系统参数 server
-            List<XElement> boilderParameters;    //炉参数 Boilers
-            List<XElement> captureCardsParameters = new List<XElement>();    //采集卡 CaptureCards
-            List<XElement> sensorsParameters;    //传感器参数 sensor
-            List<XElement> serialPortsParameters = new List<XElement>();    //串口通讯参数 serialPorts
+            List<XNode> systemParameters = new List<XNode>();     //系统参数 server
+            List<XObject> boilderParameters;    //炉参数 Boiler
+            List<XNode> captureCardsParameters = new List<XNode>();    //采集卡 CaptureCards
+            List<XNode> sensorsParameters;    //传感器参数 sensor
+            List<XNode> serialPortsParameters = new List<XNode>();    //串口通讯参数 serialPorts
 
             #region 读参数 glsys.ini文件 
             #region 系统参数
@@ -93,9 +93,6 @@ namespace ProfileConversion
                         , new XAttribute("PortEnable", true)
                     ));
 
-            
-
-
             //[键盘]
             int keysetValue = Convert.ToInt32(IniFile.IniReadValue("键盘", "KeyBoard", ""));
             //[使用FFT]
@@ -120,22 +117,19 @@ namespace ProfileConversion
             #endregion
 
             #region 炉参数
-            boilderParameters = new List<XElement>();
+            boilderParameters = new List<XObject>();
             bool[] bQHKZh = new bool[4];        //清灰控制
             for (int i = 1; i <= BoilerNumber; i++)    //炉参数
             {
+                boilderParameters = new List<XObject>();
                 //号炉
                 int BoilerNo = Convert.ToInt32(IniFile.IniReadValue(i.ToString() + "号炉", "BoilerNo", i.ToString()));
-                boilderParameters.Add(new XElement("BoilerNo"
-                    , new XAttribute("BoilerNo", BoilerNo)
-                    ));
+                boilderParameters.Add(new XAttribute("BoilerNo", BoilerNo));
                 //名称
                 string Caption = IniFile.IniReadValue(i.ToString() + "名称", "Caption", "名称");
                 string 厂内编号 = IniFile.IniReadValue(i.ToString() + "名称", "厂内编号", "1");
-                boilderParameters.Add(new XElement("Caption"
-                    , new XAttribute("Caption", Caption)
-                    , new XAttribute("厂内编号", 厂内编号)
-                    ));
+                boilderParameters.Add(new XAttribute("Caption", Caption));
+                boilderParameters.Add(new XAttribute("厂内编号", 厂内编号));
 
                 //[1串行通讯] 改为通讯池
                 string ComPort = IniFile.IniReadValue(i.ToString() + "串行通讯", "dtuPort", "COM1");
@@ -240,8 +234,8 @@ namespace ProfileConversion
                 float Downlimit;
                 float FFT;
 
-                captureCardsParameters = new List<XElement>();
-                sensorsParameters = new List<XElement>();
+                captureCardsParameters = new List<XNode>();
+                sensorsParameters = new List<XNode>();
                 for (int j = 1; j <= ChannelNumber; j++)
                 {
                     BaseNoise = Convert.ToSingle(IniFile.IniReadValue(tempi.ToString() + "基础噪声因子", j.ToString() + "号通道", "0"));
@@ -260,7 +254,7 @@ namespace ProfileConversion
 
                 }
                 captureCardsParameters.Add(new XElement("CaptureCard"
-                    , new XAttribute("CaptureCardID", "1")
+                    , new XAttribute("CaptureCardID", i)
                     , new XAttribute("Driver", "AC6623")
                     , new XElement("Sensors"
                     , new XComment("ChannelNumber 通道序号, BoilderID 锅炉, BaseNoise 基础噪音因子, Uplimit 上限, Downlimit 下限, FFT 警戒限")
@@ -324,7 +318,6 @@ namespace ProfileConversion
                     parity = Parity.None;
                     break;
             }
-
             return parity;
         }
 
