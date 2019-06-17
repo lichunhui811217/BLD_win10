@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,8 @@ namespace BLD_win10.Device
         /// </summary>
         public Boiler Boiler;
 
+        public DateTime LastOverCapTime { get; }
+
         public Sensor()
         {
         }
@@ -90,6 +93,35 @@ namespace BLD_win10.Device
             this.Downlimit = Downlimit;
             this.FFT = FFT;
             this.Boiler = Boiler;
+        }
+
+        //internal
+        public Color getColor(double value)
+        {
+            if(false)//TODO:如果是吹灰状态,则蓝.
+            {
+                return Color.DodgerBlue;
+            }
+            else if (false)//TODO:超上限时间大于设定时间,则报警(红)
+            {
+                return Color.Red;
+            }
+            else if (value > Uplimit)
+            {
+                return Color.Orange;//超上限,橙色
+            }
+            else if (value < Downlimit)
+            {
+                return Color.Yellow;//超下限,黄
+            }
+            else if (value <= Uplimit && value >= Downlimit)
+            {
+                return Color.Lime;//正常,青柠色
+            }
+            else
+            {
+                return Color.Black;//上面都不是, 说明程序错误.  黑
+            }
         }
     }
 }

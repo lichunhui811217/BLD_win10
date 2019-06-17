@@ -93,6 +93,7 @@
     <Compile Include="Communication\SerialPortCommunication.cs" />
     <Compile Include="Device\Boiler.cs" />
     <Compile Include="Device\CaptureCard.cs" />
+    <Compile Include="Device\DevicesDataCenter.cs" />
     <Compile Include="Device\PowerPlant.cs" />
     <Compile Include="Device\Sensor.cs" />
     <Compile Include="Device\Server.cs" />
@@ -255,6 +256,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config - 1炉2卡.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config - 2炉2卡.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Config - 复制.xml" />
     <Content Include="Config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -19,8 +19,7 @@ namespace BLD_win10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoaderParameters();
-            InitializeComponent();
+            
             Application.Run(new MainForm());
         }
 
