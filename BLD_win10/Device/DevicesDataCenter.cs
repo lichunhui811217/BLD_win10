@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BLD_win10.CaptureCardDriver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -62,10 +64,99 @@ namespace BLD_win10.Device
                 //allSensorsList[0].CaptureCard.CaptureCardID = 2;    //对象引用, 属性更新成功
                 //allSensorsList[1].Boiler.BoilerID = 2;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        public static void StartGetCaptureDataThread()
+        {
+            Thread t = new Thread(new ThreadStart(GetCaptureDataThread));
+            t.Start();
+        }
+
+        public static void GetCaptureDataThread()
+        {
+            IntPtr hDevice;
+            Int32[] addata;
+            CaptureDriver captureDriver;
+
+            #region 加载驱动
+            try
+            {
+                captureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)Enum.Parse(typeof(CaptureDriver.EnumDriverName), "AC6623SIM"));
+                hDevice = captureDriver.OpenDevice(0);
+                captureDriver.CAL(hDevice);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            addata = new Int32[600000];
+
+            #endregion
+
+
+
+            while (true)
+            {
+                foreach (Sensor aSensor in allSensorsList)
+                {
+
+                    string str;
+
+                    captureDriver.TAD(hDevice, 0, 14, 2, 0, 0, 0, 0, 0, 0, 100);
+                    for (int m = 0; m < 1000; m++)
+                    {
+                        for (int n = 0; n < 1000; n++)
+                        {
+                            ; ;
+                        }
+                    }
+
+                    if (captureDriver.TAD_Poll(hDevice) < 0)
+                    {
+                        //timer1.Enabled = false;
+                        captureDriver.TAD_Stop(hDevice);
+                        //listBox_ad.Items.Add("ad fifo over!!!");
+
+                    }
+                    else
+                    {
+                        //read空值则报错
+                        if (captureDriver.TAD_Read(hDevice, captureDriver.TAD_Poll(hDevice), ref addata) == -1)
+                        {
+                            //listBox_ad.Items.Add("ad fifo over!!!");
+                        }
+                        else
+                        {
+                            //listBox_ad.Items.Clear();//清空数据
+                            for (Int16 i = 0; i < 15; i++)
+                            {
+                                str = Convert.ToString(((addata[i]) - 2048) * 5000 / 2048); //  (0..4096分度) = ( -5 .. +5 V 电压)
+                                                                                            //  int j = str.IndexOf('.');//
+                                                                                            //      j = j + 3;
+                                                                                            //    str = str.Substring(0, j);//
+                                str = str + " mv";
+                                //listBox_ad.Items.Add(str);//写入数据
+                            }
+                        }
+
+                    }
+
+                    captureDriver.TAD_Stop(hDevice);
+
+                    Thread.Sleep(10);
+                }
+                //for (int i = 0; i < 10; i++)
+                //{
+                //    Console.WriteLine("ThreadProc: {0}", i);
+                //    // Yield the rest of the time slice.
+                //    Thread.Sleep(10);
+                //}
+            }
+        }
     }
 }
+

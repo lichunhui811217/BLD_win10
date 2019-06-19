@@ -28,7 +28,8 @@ namespace BLD_win10.CaptureCardDriver
         Int32 AD(IntPtr hDevice, Int32 ch, Int32 gain, Int32 sidi);
 
         Int32 TAD(IntPtr hDevice, Int32 stch, Int32 endch, Int32 adg, Int32 sidi, Int32 sammode, Int32 trsl, Int32 trpol, Int32 clksl, Int32 clkpol, Int32 tdata);
-        unsafe Int32 TAD_Read(IntPtr hDevice, Int32 rdlen, Int32[] addata);
+
+        Int32 TAD_Read(IntPtr hDevice, Int32 rdlen, ref Int32[] addata);
 
         Int32 TAD_Poll(IntPtr hDevice);
 

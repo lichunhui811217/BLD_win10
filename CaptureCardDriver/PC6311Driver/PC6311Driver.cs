@@ -93,7 +93,7 @@ namespace BLD_win10.CaptureCardDriver
             throw new NotImplementedException();
         }
 
-        public int TAD_Read(IntPtr hDevice, int rdlen, int[] addata)
+        public int TAD_Read(IntPtr hDevice, int rdlen, ref int[] addata)
         {
             throw new NotImplementedException();
         }

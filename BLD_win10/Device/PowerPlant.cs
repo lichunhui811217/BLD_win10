@@ -20,20 +20,4 @@ namespace BLD_win10.Device
         /// </summary>
         public Server[] Servers;
     }
-
-    class Test
-    {
-        void main()
-        {
-            PowerPlant pp = new PowerPlant();
-            pp.Servers = new Server[] { new Server() };
-            Server[] ns = pp.Servers;
-            int i = ns.Length;
-
-            foreach(Server s in pp.Servers)
-            {
-                Console.WriteLine(s.ServerName);
-            }
-        }
-    }
 }

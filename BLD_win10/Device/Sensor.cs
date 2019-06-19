@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using BLD_win10.Device;
 
@@ -68,6 +69,15 @@ namespace BLD_win10.Device
 
         public DateTime LastOverCapTime { get; }
 
+        private int[] tempArrayValues;
+        public int[] ArrayValuess
+        {
+            get
+            {
+                return tempArrayValues;
+            }
+        }
+
         public Sensor()
         {
         }
@@ -96,7 +106,12 @@ namespace BLD_win10.Device
         }
 
         //internal
-        public Color getColor(double value)
+        /// <summary>
+        /// 获取点应有的颜色
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public Color GetColor(double value)
         {
             if(false)//TODO:如果是吹灰状态,则蓝.
             {
@@ -123,5 +138,6 @@ namespace BLD_win10.Device
                 return Color.Black;//上面都不是, 说明程序错误.  黑
             }
         }
+
     }
 }

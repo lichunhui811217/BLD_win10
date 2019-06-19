@@ -73,7 +73,7 @@ namespace BLD_win10.AppForms
                 dataPoint.XValue = aSensor.SensorID;
                 double r = random.NextDouble() * 10.0;
                 dataPoint.YValues = new double[] { r }; //取随机数填充Y值
-                dataPoint.Color = aSensor.getColor(r);
+                dataPoint.Color = aSensor.GetColor(r);
                 Series series = histogramChart.Series.FindByName("Series_" + aSensor.BoilerID.ToString());
                 series.Points.Add(dataPoint);
 

@@ -75,14 +75,14 @@ namespace BLD_win10.AppForms
             }
             else
             {
-                if (captureDriver.TAD_Read(hDevice, captureDriver.TAD_Poll(hDevice), addata) == -1)
+                if (captureDriver.TAD_Read(hDevice, captureDriver.TAD_Poll(hDevice), ref addata) == -1)
                     listBox_ad.Items.Add("ad fifo over!!!");
                 else
                 {
                     listBox_ad.Items.Clear();
                     for (Int16 i = 0; i < 15; i++)
                     {
-                        str = Convert.ToString(((addata[i]) - 2048) * 5000 / 2048);//
+                        str = Convert.ToString(((addata[i]) - 2048) * 5000 / 2048); //  (0..4096分度) = ( -5 .. +5 V 电压)
                         //  int j = str.IndexOf('.');//
                         //      j = j + 3;
                         //    str = str.Substring(0, j);//

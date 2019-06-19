@@ -32,9 +32,18 @@ namespace BLD_win10.AppForms
             {
                 DevicesDataCenter.InitializeDevicesData();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show(@"系统初始化错误, 请检查配置文件 Config.xml");
+                MessageBox.Show(ex.Message, @"系统初始化错误, 请检查配置文件 Config.xml");
+                this.Close();
+            }
+            try
+            {
+                DevicesDataCenter.StartGetCaptureDataThread();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"系统线程错误.");
                 this.Close();
             }
         }
