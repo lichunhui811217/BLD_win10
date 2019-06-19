@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 using BLD_win10.Device;
 
 namespace BLD_win10.Device
@@ -13,7 +14,7 @@ namespace BLD_win10.Device
     /// <summary>
     /// 传感器类
     /// </summary>
-    public class Sensor
+    public class Sensor : DataPoint
     {
         //SensorID ChannelNumber="1" BoilderID="1" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" 
 
@@ -105,37 +106,44 @@ namespace BLD_win10.Device
             this.Boiler = Boiler;
         }
 
-        //internal
         /// <summary>
-        /// 获取点应有的颜色
+        /// 设置YValue, 计算点应有的颜色.
+        /// 也可以使用 example 中的代码, 来指定任意值和颜色.
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="YValue">纵坐标值, 范围: YValue between 0 - 10 </param>
         /// <returns></returns>
-        public Color GetColor(double value)
+        /// <example>
+        /// aSensor.YValues = new double[] { aDoubleValue };
+        /// aSensor.Color = Color.ColorName;
+        /// </example>
+        public void SetYValue(double YValue)
         {
-            if(false)//TODO:如果是吹灰状态,则蓝.
+            XValue = SensorID;
+            YValues = new double[] { YValue }; //取随机数填充Y值
+            //Color = aSensor.GetColor(r);
+            if (false)//TODO:如果是吹灰状态,则蓝.
             {
-                return Color.DodgerBlue;
+                Color = Color =  Color.DodgerBlue;
             }
             else if (false)//TODO:超上限时间大于设定时间,则报警(红)
             {
-                return Color.Red;
+                Color = Color =  Color.Red;
             }
-            else if (value > Uplimit)
+            else if (YValue > Uplimit)
             {
-                return Color.Orange;//超上限,橙色
+                Color = Color =  Color.Orange;//超上限,橙色
             }
-            else if (value < Downlimit)
+            else if (YValue < Downlimit)
             {
-                return Color.Yellow;//超下限,黄
+                Color = Color =  Color.Yellow;//超下限,黄
             }
-            else if (value <= Uplimit && value >= Downlimit)
+            else if (YValue <= Uplimit && YValue >= Downlimit)
             {
-                return Color.Lime;//正常,青柠色
+                Color = Color =  Color.Lime;//正常,青柠色
             }
             else
             {
-                return Color.Black;//上面都不是, 说明程序错误.  黑
+                Color = Color =  Color.Black;//上面都不是, 说明程序错误.  黑
             }
         }
 

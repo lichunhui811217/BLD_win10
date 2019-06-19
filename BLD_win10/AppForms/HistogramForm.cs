@@ -40,9 +40,7 @@ namespace BLD_win10.AppForms
                 //chartArea.AxisX.IntervalOffset = 1;
                 chartArea.AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount;
 
-
                 histogramChart.ChartAreas.Add(chartArea);
-
 
                 Title title = new Title();
                 title.Name = "Title_" + aBoilerID.ToString();
@@ -69,21 +67,19 @@ namespace BLD_win10.AppForms
             foreach (Sensor aSensor in DevicesDataCenter.allSensorsList)
             {
                 //数据点的填充
-                DataPoint dataPoint = new DataPoint();
-                dataPoint.XValue = aSensor.SensorID;
-                double r = random.NextDouble() * 10.0;
-                dataPoint.YValues = new double[] { r }; //取随机数填充Y值
-                dataPoint.Color = aSensor.GetColor(r);
+                double tempData = random.NextDouble() * 10.0;  //取随机数*10 填充Y值 TODO:
+                aSensor.SetYValue(tempData);
                 Series series = histogramChart.Series.FindByName("Series_" + aSensor.BoilerID.ToString());
-                series.Points.Add(dataPoint);
+                series.Points.Add(aSensor);
 
-                //数据点 X坐标生成
-                ChartArea chartArea = histogramChart.ChartAreas.FindByName("ChartArea_" + aSensor.BoilerID.ToString());
+                ChartArea chartArea = histogramChart.ChartAreas.FindByName("ChartArea_" + aSensor.BoilerID.ToString());//按名称填充ChartAreas.Series
+
+                //按点生成X轴
                 CustomLabel customLabel = new CustomLabel
                 {
-                    FromPosition = aSensor.SensorID - 0.5,
-                    ToPosition = aSensor.SensorID + 0.5,
-                    Text = aSensor.SensorID.ToString()
+                    FromPosition = aSensor.XValue - 0.5,
+                    ToPosition = aSensor.XValue + 0.5,
+                    Text = aSensor.XValue.ToString()
                 };
                 chartArea.AxisX.CustomLabels.Add(customLabel);
             }
