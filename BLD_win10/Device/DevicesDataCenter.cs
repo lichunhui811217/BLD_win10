@@ -9,10 +9,24 @@ namespace BLD_win10.Device
 {
     public static class DevicesDataCenter
     {
+        /// <summary>
+        /// 锅炉数据
+        /// </summary>
         public static List<Boiler> boilersList = new List<Boiler>();
+
+        /// <summary>
+        /// 板卡数据
+        /// </summary>
         public static List<CaptureCard> captureCardsList = new List<CaptureCard>();
+
+        /// <summary>
+        /// 传感器数据
+        /// </summary>
         public static List<Sensor> allSensorsList = new List<Sensor>();
 
+        /// <summary>
+        /// 读取设备的配置文件.  系统初始化必要步骤. 
+        /// </summary>
         public static void InitializeDevicesData()
         {
             try
@@ -51,10 +65,13 @@ namespace BLD_win10.Device
                         double uplimit = Convert.ToDouble(aSensorElement.Attribute("Uplimit").Value);
                         double downlimit = Convert.ToDouble(aSensorElement.Attribute("Downlimit").Value);
                         int fft = Convert.ToInt32(aSensorElement.Attribute("FFT").Value);
+                        int MapLeft = Convert.ToInt32(aSensorElement.Attribute("MapLeft").Value);
+                        int MapTop = Convert.ToInt32(aSensorElement.Attribute("MapTop").Value);
                         Boiler boiler = boilersList.Find(x => x.BoilerID == boilerID);
 
                         Sensor aSensor = new Sensor(sensorID, aCaptureCard, channelNumber, boilerID, multiplicative, baseNoise, uplimit, downlimit, fft, boiler);
-
+                        aSensor.MapLeft = MapLeft;
+                        aSensor.MapTop = MapTop;
                         allSensorsList.Add(aSensor);
                     }
                     captureCardsList.Add(aCaptureCard);
@@ -69,6 +86,10 @@ namespace BLD_win10.Device
         }
 
         public static bool ThreadStatue;
+
+        /// <summary>
+        /// 开始传感器数据读取线程
+        /// </summary>
         public static void StartGetCaptureDataThread()
         {
             Thread t = new Thread(new ThreadStart(GetCaptureDataThread));
@@ -76,11 +97,17 @@ namespace BLD_win10.Device
             t.Start();
         }
 
+        /// <summary>
+        /// 停止传感器数据读取线程
+        /// </summary>
         public static void StopGetCaptureDataThread()
         {
             ThreadStatue = false;
         }
 
+        /// <summary>
+        /// 传感器数据读取线程的主函数
+        /// </summary>
         public static void GetCaptureDataThread()
         {
             IntPtr hDevice;
@@ -162,10 +189,6 @@ namespace BLD_win10.Device
             #endregion
         }
 
-        public static int AddM(int i1, int i2)
-        {
-            return i1 + i2;
-        }
     }
 }
 

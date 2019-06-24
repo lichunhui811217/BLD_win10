@@ -68,6 +68,16 @@ namespace BLD_win10.Device
         /// </summary>
         public Boiler Boiler;
 
+        /// <summary>
+        /// 地图页面定位 距离左
+        /// </summary>
+        public int MapLeft;
+
+        /// <summary>
+        /// 地图页面定位 距离上
+        /// </summary>
+        public int MapTop;
+
         public DateTime LastOverCapTime { get; }
 
         private int[] tempArrayValues;

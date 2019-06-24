@@ -32,6 +32,12 @@
             this.label_Sensor_27 = new System.Windows.Forms.Label();
             this.label_Sensor_28 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.testpictureBox_27 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.testpictureBox_27)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Sensor_27
@@ -62,6 +68,45 @@
             this.timer1.Interval = 700;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // testpictureBox_27
+            // 
+            this.testpictureBox_27.BackColor = System.Drawing.Color.Lime;
+            this.testpictureBox_27.Location = new System.Drawing.Point(622, 12);
+            this.testpictureBox_27.Name = "testpictureBox_27";
+            this.testpictureBox_27.Size = new System.Drawing.Size(16, 16);
+            this.testpictureBox_27.TabIndex = 2;
+            this.testpictureBox_27.TabStop = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(609, 586);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(601, 557);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 71);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // ObservationMapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -69,16 +114,20 @@
             this.BackgroundImage = global::BLD_win10.Properties.Resources.cwt;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(896, 650);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.testpictureBox_27);
             this.Controls.Add(this.label_Sensor_28);
             this.Controls.Add(this.label_Sensor_27);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ObservationMapForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "ObservationMapForm";
             this.Load += new System.EventHandler(this.ObservationMapForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.testpictureBox_27)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,5 +138,9 @@
         private System.Windows.Forms.Label label_Sensor_27;
         private System.Windows.Forms.Label label_Sensor_28;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox testpictureBox_27;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
