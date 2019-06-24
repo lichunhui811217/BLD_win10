@@ -121,6 +121,7 @@
             // 
             this.historicalGraphToolStripMenuItem.Name = "historicalGraphToolStripMenuItem";
             resources.ApplyResources(this.historicalGraphToolStripMenuItem, "historicalGraphToolStripMenuItem");
+            this.historicalGraphToolStripMenuItem.Click += new System.EventHandler(this.HistoricalGraphToolStripMenuItem_Click);
             // 
             // observationMapToolStripMenuItem
             // 
@@ -324,6 +325,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();

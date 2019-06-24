@@ -71,6 +71,7 @@ namespace BLD_win10.Device
         public DateTime LastOverCapTime { get; }
 
         private int[] tempArrayValues;
+
         public int[] ArrayValuess
         {
             get
@@ -91,7 +92,7 @@ namespace BLD_win10.Device
             this.BoilerID = BoilerID;
         }
 
-        public Sensor(int SensorID, CaptureCard CaptureCard, int ChannelNumber, int BoilerID, int Multiplicative, 
+        public Sensor(int SensorID, CaptureCard CaptureCard, int ChannelNumber, int BoilerID, int Multiplicative,
             double BaseNoise, double Uplimit, double Downlimit, int FFT, Boiler Boiler)
         {
             this.SensorID = SensorID;
@@ -120,30 +121,29 @@ namespace BLD_win10.Device
         {
             XValue = SensorID;
             YValues = new double[] { YValue }; //取随机数填充Y值
-            //Color = aSensor.GetColor(r);
             if (false)//TODO:如果是吹灰状态,则蓝.
             {
-                Color = Color =  Color.DodgerBlue;
+                Color = Color.DodgerBlue;
             }
             else if (false)//TODO:超上限时间大于设定时间,则报警(红)
             {
-                Color = Color =  Color.Red;
+                Color = Color.Red;
             }
             else if (YValue > Uplimit)
             {
-                Color = Color =  Color.Orange;//超上限,橙色
+                Color = Color.Orange;//超上限,橙色
             }
             else if (YValue < Downlimit)
             {
-                Color = Color =  Color.Yellow;//超下限,黄
+                Color = Color.Yellow;//超下限,黄
             }
             else if (YValue <= Uplimit && YValue >= Downlimit)
             {
-                Color = Color =  Color.Lime;//正常,青柠色
+                Color = Color.Lime;//正常,青柠色
             }
             else
             {
-                Color = Color =  Color.Black;//上面都不是, 说明程序错误.  黑
+                Color = Color.Black;//上面都不是, 说明程序错误.  黑
             }
         }
 

@@ -1,15 +1,13 @@
 ﻿using BLD_win10.CaptureCardDriver;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace BLD_win10.Device
 {
-    public class DevicesDataCenter
+    public static class DevicesDataCenter
     {
         public static List<Boiler> boilersList = new List<Boiler>();
         public static List<CaptureCard> captureCardsList = new List<CaptureCard>();
@@ -70,10 +68,17 @@ namespace BLD_win10.Device
             }
         }
 
+        public static bool ThreadStatue;
         public static void StartGetCaptureDataThread()
         {
             Thread t = new Thread(new ThreadStart(GetCaptureDataThread));
+            ThreadStatue = true;
             t.Start();
+        }
+
+        public static void StopGetCaptureDataThread()
+        {
+            ThreadStatue = false;
         }
 
         public static void GetCaptureDataThread()
@@ -94,16 +99,13 @@ namespace BLD_win10.Device
                 throw ex;
             }
             addata = new Int32[600000];
-
             #endregion
 
-
-
-            while (true)
+            #region 线程一直读取板卡的AD采样信息
+            while (ThreadStatue)
             {
                 foreach (Sensor aSensor in allSensorsList)
                 {
-
                     string str;
 
                     captureDriver.TAD(hDevice, 0, 14, 2, 0, 0, 0, 0, 0, 0, 100);
@@ -156,6 +158,13 @@ namespace BLD_win10.Device
                 //    Thread.Sleep(10);
                 //}
             }
+            Console.WriteLine("Thread stop.");
+            #endregion
+        }
+
+        public static int AddM(int i1, int i2)
+        {
+            return i1 + i2;
         }
     }
 }

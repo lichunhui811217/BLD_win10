@@ -21,9 +21,7 @@ namespace BLD_win10.AppForms
 
         public MainForm()
         {
-
             InitializeComponent();
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -48,17 +46,9 @@ namespace BLD_win10.AppForms
             }
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            HistogramForm histogramForm = new HistogramForm();
-            histogramForm.MdiParent = this;
-            histogramForm.Show();
-            //histogramForm.WindowState = FormWindowState.Maximized;
+            DevicesDataCenter.StopGetCaptureDataThread();
         }
 
         private void ac6623TestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,11 +77,46 @@ namespace BLD_win10.AppForms
             //System.Configuration.ConfigurationManager.RefreshSection("appSettings");
         }
 
+        /// <summary>
+        /// 其它测试页面 按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OtherTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OtherTestForm otherTestForm = new OtherTestForm();
             otherTestForm.MdiParent = this;
             otherTestForm.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DevicesDataCenter.StopGetCaptureDataThread();
+        }
+
+        /// <summary>
+        /// 棒图按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            HistogramForm histogramForm = new HistogramForm();
+            histogramForm.MdiParent = this;
+            histogramForm.Show();
+            //histogramForm.WindowState = FormWindowState.Maximized;
+        }
+
+        /// <summary>
+        /// 历史曲线按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HistoricalGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoricalGraphForm historicalGraphForm = new HistoricalGraphForm();
+            historicalGraphForm.MdiParent = this;
+            historicalGraphForm.Show();
         }
     }
 }

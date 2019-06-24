@@ -59,7 +59,7 @@ namespace BLD_win10.AppForms
 
         private void histogramChart_Click(object sender, EventArgs e)
         {
-            foreach( Series aSeries in histogramChart.Series)
+            foreach (Series aSeries in histogramChart.Series)
             {
                 aSeries.Points.Clear();
             }
@@ -68,9 +68,9 @@ namespace BLD_win10.AppForms
             {
                 //数据点的填充
                 double tempData = random.NextDouble() * 10.0;  //取随机数*10 填充Y值 TODO:
-                aSensor.SetYValue(tempData);
                 Series series = histogramChart.Series.FindByName("Series_" + aSensor.BoilerID.ToString());
                 series.Points.Add(aSensor);
+                aSensor.SetYValue(tempData);
 
                 ChartArea chartArea = histogramChart.ChartAreas.FindByName("ChartArea_" + aSensor.BoilerID.ToString());//按名称填充ChartAreas.Series
 

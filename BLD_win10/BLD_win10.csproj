@@ -36,6 +36,12 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.4.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.4.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="AppForms\AlarmLogForm.Designer.cs">
       <DependentUpon>AlarmLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\HistoricalGraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\HistoricalGraphForm.Designer.cs">
+      <DependentUpon>HistoricalGraphForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\ObservationMapForm.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,9 @@
     <EmbeddedResource Include="AppForms\AlarmLogForm.resx">
       <DependentUpon>AlarmLogForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\HistoricalGraphForm.resx">
+      <DependentUpon>HistoricalGraphForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\HistogramForm.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,7 @@
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="Device\DeviceGraph1.dgml" />
+    <None Include="packages.config" />
     <None Include="SolutionItems\Graph_Device.dgml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
