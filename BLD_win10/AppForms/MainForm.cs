@@ -118,5 +118,27 @@ namespace BLD_win10.AppForms
             historicalGraphForm.MdiParent = this;
             historicalGraphForm.Show();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ProbabilityOfLeakageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        /// <summary>
+        /// 测点位置图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ObservationMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObservationMapForm observationMapForm = new ObservationMapForm();
+            observationMapForm.MdiParent = this;
+            observationMapForm.Show();
+        }
     }
 }

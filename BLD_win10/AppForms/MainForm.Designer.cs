@@ -65,10 +65,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.mainMenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -127,11 +127,13 @@
             // 
             this.observationMapToolStripMenuItem.Name = "observationMapToolStripMenuItem";
             resources.ApplyResources(this.observationMapToolStripMenuItem, "observationMapToolStripMenuItem");
+            this.observationMapToolStripMenuItem.Click += new System.EventHandler(this.ObservationMapToolStripMenuItem_Click);
             // 
             // probabilityOfLeakageToolStripMenuItem
             // 
             this.probabilityOfLeakageToolStripMenuItem.Name = "probabilityOfLeakageToolStripMenuItem";
             resources.ApplyResources(this.probabilityOfLeakageToolStripMenuItem, "probabilityOfLeakageToolStripMenuItem");
+            this.probabilityOfLeakageToolStripMenuItem.Click += new System.EventHandler(this.ProbabilityOfLeakageToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -295,17 +297,17 @@
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::BLD_win10.Properties.Resources.bmp;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(2);
             resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
             // toolStripButton2
             // 
