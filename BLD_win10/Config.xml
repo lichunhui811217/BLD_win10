@@ -9,7 +9,7 @@
       <SerialPort PortName="COM1" BaudRate="19200" Parity="Even" DataBits="8" StopBits="1" Handshake="0" ReadTimeout="300" WriteTimeout="300" UnitID="9" DtuUsed="false" PortEnable="true" />
     </SerialPorts>
     <Boilers>
-      <Boiler BoilerID="1" Caption="壹号炉" 厂内编号="1" MapImageFilePath="">
+      <Boiler BoilerID="1" Caption="壹号炉" 厂内编号="1" MapFilePath=".\Resources\cwt2.bmp">
         <报警开关量>TODO:暂缺</报警开关量>
         <清灰控制>TODO:暂缺</清灰控制>
         <管道数>32</管道数>
@@ -28,7 +28,7 @@
         <sql表名编号>1</sql表名编号>
         <开始运行时间>2019-5-14 00:00:00</开始运行时间>
       </Boiler>
-      <Boiler BoilerID="2" Caption="贰号炉" 厂内编号="2" MapImageFilePath="">
+      <Boiler BoilerID="2" Caption="贰号炉" 厂内编号="2" MapFilePath=".\Resources\cwt.bmp">
         <报警开关量>TODO:暂缺</报警开关量>
         <清灰控制>TODO:暂缺</清灰控制>
         <管道数>32</管道数>
@@ -56,48 +56,48 @@
         <Sensor SensorID="2" ChannelNumber="2" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="70" MapTop="50" />
         <Sensor SensorID="3" ChannelNumber="3" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="90" MapTop="50" />
         <Sensor SensorID="4" ChannelNumber="4" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="110" MapTop="50" />
-        <Sensor SensorID="5" ChannelNumber="5" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="6" ChannelNumber="6" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="7" ChannelNumber="7" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="8" ChannelNumber="8" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="9" ChannelNumber="9" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="10" ChannelNumber="10" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="11" ChannelNumber="11" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="12" ChannelNumber="12" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="13" ChannelNumber="13" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="14" ChannelNumber="14" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="15" ChannelNumber="15" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="16" ChannelNumber="16" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="17" ChannelNumber="17" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="18" ChannelNumber="18" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="19" ChannelNumber="19" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="20" ChannelNumber="20" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="21" ChannelNumber="21" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="22" ChannelNumber="22" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="23" ChannelNumber="23" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="24" ChannelNumber="24" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
+        <Sensor SensorID="5" ChannelNumber="5" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="130" MapTop="50" />
+        <Sensor SensorID="6" ChannelNumber="6" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="150" MapTop="50" />
+        <Sensor SensorID="7" ChannelNumber="7" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="170" MapTop="50" />
+        <Sensor SensorID="8" ChannelNumber="8" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="190" MapTop="50" />
+        <Sensor SensorID="9" ChannelNumber="9" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="210" MapTop="50" />
+        <Sensor SensorID="10" ChannelNumber="10" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="100" />
+        <Sensor SensorID="11" ChannelNumber="11" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="70" MapTop="100" />
+        <Sensor SensorID="12" ChannelNumber="12" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="90" MapTop="100" />
+        <Sensor SensorID="13" ChannelNumber="13" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="110" MapTop="100" />
+        <Sensor SensorID="14" ChannelNumber="14" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="130" MapTop="100" />
+        <Sensor SensorID="15" ChannelNumber="15" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="150" MapTop="100" />
+        <Sensor SensorID="16" ChannelNumber="16" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="170" MapTop="100" />
+        <Sensor SensorID="17" ChannelNumber="17" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="190" MapTop="100" />
+        <Sensor SensorID="18" ChannelNumber="18" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="210" MapTop="100" />
+        <Sensor SensorID="19" ChannelNumber="19" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="150" />
+        <Sensor SensorID="20" ChannelNumber="20" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="70" MapTop="150" />
+        <Sensor SensorID="21" ChannelNumber="21" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="90" MapTop="150" />
+        <Sensor SensorID="22" ChannelNumber="22" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="110" MapTop="150" />
+        <Sensor SensorID="23" ChannelNumber="23" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="130" MapTop="150" />
+        <Sensor SensorID="24" ChannelNumber="24" BoilerID="1" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="150" MapTop="150" />
         <Sensor SensorID="25" ChannelNumber="25" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="26" ChannelNumber="26" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="27" ChannelNumber="27" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="28" ChannelNumber="28" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="29" ChannelNumber="29" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="30" ChannelNumber="30" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="31" ChannelNumber="31" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="32" ChannelNumber="32" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
+        <Sensor SensorID="26" ChannelNumber="26" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="70" MapTop="50" />
+        <Sensor SensorID="27" ChannelNumber="27" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="90" MapTop="50" />
+        <Sensor SensorID="28" ChannelNumber="28" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="110" MapTop="50" />
+        <Sensor SensorID="29" ChannelNumber="29" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="130" MapTop="50" />
+        <Sensor SensorID="30" ChannelNumber="30" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="150" MapTop="50" />
+        <Sensor SensorID="31" ChannelNumber="31" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="170" MapTop="50" />
+        <Sensor SensorID="32" ChannelNumber="32" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="190" MapTop="50" />
       </CaptureCard>
 
       <CaptureCard CaptureCardID="2" Driver="AC6623">
         <!--ChannelNumber 通道序号, BoilerID 锅炉, BaseNoise 基础噪音因子, Uplimit 上限, Downlimit 下限, FFT 警戒限-->
-        <Sensor SensorID="33" ChannelNumber="1" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="34" ChannelNumber="2" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="35" ChannelNumber="3" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="36" ChannelNumber="4" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="37" ChannelNumber="5" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="38" ChannelNumber="6" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="39" ChannelNumber="7" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="40" ChannelNumber="8" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="41" ChannelNumber="9" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
-        <Sensor SensorID="42" ChannelNumber="10" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="50" />
+        <Sensor SensorID="33" ChannelNumber="1" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="2.2" Downlimit="0.5" FFT="0" MapLeft ="210" MapTop="50" />
+        <Sensor SensorID="34" ChannelNumber="2" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="150" />
+        <Sensor SensorID="35" ChannelNumber="3" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="70" MapTop="150" />
+        <Sensor SensorID="36" ChannelNumber="4" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="90" MapTop="150" />
+        <Sensor SensorID="37" ChannelNumber="5" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="110" MapTop="150" />
+        <Sensor SensorID="38" ChannelNumber="6" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="130" MapTop="150" />
+        <Sensor SensorID="39" ChannelNumber="7" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="150" MapTop="150" />
+        <Sensor SensorID="40" ChannelNumber="8" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="170" MapTop="150" />
+        <Sensor SensorID="41" ChannelNumber="9" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="190" MapTop="150" />
+        <Sensor SensorID="42" ChannelNumber="10" BoilerID="2" Multiplicative="24" BaseNoise="0" Uplimit="5" Downlimit="0.5" FFT="0" MapLeft ="50" MapTop="200" />
       </CaptureCard>
     </CaptureCards>
   </Server>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Xml.Linq;
+using static BLD_win10.CaptureCardDriver.CaptureDriver;
 
 namespace BLD_win10.Device
 {
@@ -29,59 +30,52 @@ namespace BLD_win10.Device
         /// </summary>
         public static void InitializeDevicesData()
         {
-            try
+
+            XDocument configXml = XDocument.Load(@".\Config.xml");
+            XElement PowerPlantElement = configXml.Root;
+            XElement ServerElement = PowerPlantElement.Element("Server");
+
+            //锅炉类 list 初始化
+            XElement BoilersElement = ServerElement.Element("Boilers");
+            IEnumerable<XElement> BoilerElements = BoilersElement.Elements("Boiler");
+            foreach (XElement aBoilderXElement in BoilerElements)
             {
-                XDocument configXml = XDocument.Load(@".\Config.xml");
-                XElement PowerPlantElement = configXml.Root;
-                XElement ServerElement = PowerPlantElement.Element("Server");
-
-                //锅炉类 list 初始化
-                XElement BoilersElement = ServerElement.Element("Boilers");
-                IEnumerable<XElement> BoilerElements = BoilersElement.Elements("Boiler");
-                foreach (XElement aBoilderXElement in BoilerElements)
-                {
-                    boilersList.Add(new Boiler(Convert.ToInt32(aBoilderXElement.Attribute("BoilerID").Value), aBoilderXElement.Attribute("Caption").Value));
-                }
-
-                //板卡类 list 初始化
-                XElement CaptureCardsElement = ServerElement.Element("CaptureCards");
-                IEnumerable<XElement> CaptureCardElements = CaptureCardsElement.Elements("CaptureCard");
-                foreach (XElement aCaptureCardXElement in CaptureCardElements)
-                {
-                    CaptureCard aCaptureCard = new CaptureCard(Convert.ToInt32(aCaptureCardXElement.Attribute("CaptureCardID").Value), aCaptureCardXElement.Attribute("Driver").Value);
-
-
-                    IEnumerable<XElement> sensorElements = aCaptureCardXElement.Elements("Sensor");
-                    foreach (XElement aSensorElement in sensorElements)
-                    {
-                        //SensorID = "1" ChannelNumber = "1" BoilerID = "1" Multiplicative = "24" BaseNoise = "0" Uplimit = "2.2" Downlimit = "0.5" FFT = "0"
-                        //int SensorID, CaptureCard CaptureCard, int ChannelNumber, int BoilerID, int Multiplicative,
-                        //double BaseNoise, double Uplimit, double Downlimit, int FFT, Boiler Boiler
-                        int sensorID = Convert.ToInt32(aSensorElement.Attribute("SensorID").Value);
-                        int channelNumber = Convert.ToInt32(aSensorElement.Attribute("ChannelNumber").Value);
-                        int boilerID = Convert.ToInt32(aSensorElement.Attribute("BoilerID").Value);
-                        int multiplicative = Convert.ToInt32(aSensorElement.Attribute("Multiplicative").Value);
-                        double baseNoise = Convert.ToDouble(aSensorElement.Attribute("BaseNoise").Value);
-                        double uplimit = Convert.ToDouble(aSensorElement.Attribute("Uplimit").Value);
-                        double downlimit = Convert.ToDouble(aSensorElement.Attribute("Downlimit").Value);
-                        int fft = Convert.ToInt32(aSensorElement.Attribute("FFT").Value);
-                        int MapLeft = Convert.ToInt32(aSensorElement.Attribute("MapLeft").Value);
-                        int MapTop = Convert.ToInt32(aSensorElement.Attribute("MapTop").Value);
-                        Boiler boiler = boilersList.Find(x => x.BoilerID == boilerID);
-
-                        Sensor aSensor = new Sensor(sensorID, aCaptureCard, channelNumber, boilerID, multiplicative, baseNoise, uplimit, downlimit, fft, boiler);
-                        aSensor.MapLeft = MapLeft;
-                        aSensor.MapTop = MapTop;
-                        allSensorsList.Add(aSensor);
-                    }
-                    captureCardsList.Add(aCaptureCard);
-                }
-                //allSensorsList[0].CaptureCard.CaptureCardID = 2;    //对象引用, 属性更新成功
-                //allSensorsList[1].Boiler.BoilerID = 2;
+                Boiler boiler = new Boiler();
+                boiler.BoilerID = Convert.ToInt32(aBoilderXElement.Attribute("BoilerID").Value);
+                boiler.Caption = aBoilderXElement.Attribute("Caption").Value;
+                boiler.MapFilePath = aBoilderXElement.Attribute("MapFilePath").Value;
+                boilersList.Add(boiler);
             }
-            catch (Exception ex)
+
+            //板卡类 list 初始化
+            XElement CaptureCardsElement = ServerElement.Element("CaptureCards");
+            IEnumerable<XElement> CaptureCardElements = CaptureCardsElement.Elements("CaptureCard");
+            foreach (XElement aCaptureCardXElement in CaptureCardElements)
             {
-                throw ex;
+                CaptureCard aCaptureCard = new CaptureCard();
+                aCaptureCard.CaptureCardID = Convert.ToInt32(aCaptureCardXElement.Attribute("CaptureCardID").Value);
+                aCaptureCard.CaptureDriver = new CaptureDriver((EnumDriverName)Enum.Parse(typeof(EnumDriverName), aCaptureCardXElement.Attribute("Driver").Value));
+                captureCardsList.Add(aCaptureCard);
+
+                IEnumerable<XElement> sensorElements = aCaptureCardXElement.Elements("Sensor");
+                foreach (XElement aSensorElement in sensorElements)
+                {
+                    Sensor aSensor = new Sensor();
+
+                    aSensor.SensorID = Convert.ToInt32(aSensorElement.Attribute("SensorID").Value);
+                    aSensor.ChannelNumber = Convert.ToInt32(aSensorElement.Attribute("ChannelNumber").Value);
+                    aSensor.BoilerID = Convert.ToInt32(aSensorElement.Attribute("BoilerID").Value);
+                    aSensor.Multiplicative = Convert.ToInt32(aSensorElement.Attribute("Multiplicative").Value);
+                    aSensor.BaseNoise = Convert.ToDouble(aSensorElement.Attribute("BaseNoise").Value);
+                    aSensor.Uplimit = Convert.ToDouble(aSensorElement.Attribute("Uplimit").Value);
+                    aSensor.Downlimit = Convert.ToDouble(aSensorElement.Attribute("Downlimit").Value);
+                    aSensor.FFT = Convert.ToInt32(aSensorElement.Attribute("FFT").Value);
+                    aSensor.MapLeft = Convert.ToInt32(aSensorElement.Attribute("MapLeft").Value);
+                    aSensor.MapTop = Convert.ToInt32(aSensorElement.Attribute("MapTop").Value);
+                    aSensor.Boiler = boilersList.Find(x => x.BoilerID == aSensor.BoilerID);
+
+                    allSensorsList.Add(aSensor);
+                }
             }
         }
 

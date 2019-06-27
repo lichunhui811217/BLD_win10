@@ -32,7 +32,7 @@ namespace BLD_win10.AppForms
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, @"系统初始化错误, 请检查配置文件 Config.xml");
+                MessageBox.Show(ex.StackTrace, ex.Message);
                 this.Close();
             }
             try
@@ -41,7 +41,7 @@ namespace BLD_win10.AppForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"系统线程错误.");
+                MessageBox.Show(ex.StackTrace, ex.Message);
                 this.Close();
             }
         }

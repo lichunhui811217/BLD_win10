@@ -21,9 +21,13 @@ namespace BLD_win10.Device
         /// </summary>
         public string Caption;
 
+        /// <summary>
+        /// 锅炉测点位置图的路径
+        /// </summary>
+        public string MapFilePath;
+
         public Boiler ()
         {
-
         }
 
         public Boiler(int boilerID)
