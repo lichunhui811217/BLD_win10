@@ -57,6 +57,7 @@ namespace BLD_win10.Device
                 aCaptureCard.CaptureDriver = new CaptureDriver((EnumDriverName)Enum.Parse(typeof(EnumDriverName), aCaptureCardXElement.Attribute("Driver").Value));
                 captureCardsList.Add(aCaptureCard);
 
+                //传感器类 list 初始化
                 IEnumerable<XElement> sensorElements = aCaptureCardXElement.Elements("Sensor");
                 foreach (XElement aSensorElement in sensorElements)
                 {
@@ -79,7 +80,10 @@ namespace BLD_win10.Device
             }
         }
 
-        public static bool ThreadStatue;
+        /// <summary>
+        /// 线程状态控制 0=停止线程 1=运行线程
+        /// </summary>
+        private static bool ThreadStatue;
 
         /// <summary>
         /// 开始传感器数据读取线程
@@ -109,19 +113,12 @@ namespace BLD_win10.Device
             CaptureDriver captureDriver;
 
             #region 加载驱动
-            try
-            {
-                captureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)Enum.Parse(typeof(CaptureDriver.EnumDriverName), "AC6623SIM"));
-                hDevice = captureDriver.OpenDevice(0);
-                captureDriver.CAL(hDevice);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            addata = new Int32[600000];
+            captureDriver = new CaptureDriver((CaptureDriver.EnumDriverName)Enum.Parse(typeof(CaptureDriver.EnumDriverName), "AC6623SIM"));
+            hDevice = captureDriver.OpenDevice(0);
+            captureDriver.CAL(hDevice);
             #endregion
 
+            addata = new Int32[600000]; //采样数据
             #region 线程一直读取板卡的AD采样信息
             while (ThreadStatue)
             {

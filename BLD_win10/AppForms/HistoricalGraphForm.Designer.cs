@@ -45,17 +45,23 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.histogramChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.histogramChart)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -78,7 +84,6 @@
             ((System.Windows.Forms.TreeNode)(resources.GetObject("treeView1.Nodes"))),
             ((System.Windows.Forms.TreeNode)(resources.GetObject("treeView1.Nodes1"))),
             ((System.Windows.Forms.TreeNode)(resources.GetObject("treeView1.Nodes2")))});
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
             // 
             // histogramChart
             // 
@@ -135,13 +140,33 @@
             title2.Text = "棒图2";
             this.histogramChart.Titles.Add(title1);
             this.histogramChart.Titles.Add(title2);
-            this.histogramChart.Click += new System.EventHandler(this.histogramChart_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.splitContainer1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // HistoricalGraphForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.tabControl1);
             this.Name = "HistoricalGraphForm";
             this.Load += new System.EventHandler(this.HistogramForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -149,14 +174,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.histogramChart)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.DataVisualization.Charting.Chart histogramChart;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

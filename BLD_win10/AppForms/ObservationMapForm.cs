@@ -25,6 +25,8 @@ namespace BLD_win10.AppForms
         {
             this.SuspendLayout();
             tabControl1.Controls.Clear();
+
+            //根据锅炉信息,生成选项卡 TabPage
             foreach(Boiler boiler in DevicesDataCenter.boilersList)
             {
                 //TabPage
@@ -40,7 +42,7 @@ namespace BLD_win10.AppForms
                 tabPage.UseVisualStyleBackColor = true;
                 tabPage.ClientSize = new Size(tabPage.BackgroundImage.Width, tabPage.BackgroundImage.Height);
                 
-                //pictureBoxes
+                //根据传感器信息, 生成 pictureBoxes(用来显示测点位置信息 TODO: 是否需要换成 label ?), 并根据锅炉ID分配到不同的选项卡内位置
                 foreach (Sensor aSensor in DevicesDataCenter.allSensorsList)
                 {
                     if (aSensor.BoilerID == boiler.BoilerID)
@@ -64,12 +66,15 @@ namespace BLD_win10.AppForms
             selectedTabPage.ClientSize = new Size(selectedTabPage.BackgroundImage.Width, selectedTabPage.BackgroundImage.Height);
             this.tabControl1.ClientSize = new Size(selectedTabPage.ClientSize.Width, selectedTabPage.ClientSize.Height);
             this.ClientSize = new Size(this.tabControl1.Width + 24, this.tabControl1.Height + 24);
-
-            
         }
 
         private bool ColorController = true;
         private Color PointColor = Color.Silver;
+        /// <summary>
+        /// 定时触发 : 测点位置图颜色更新为棒图统一的颜色.  TODO : 闪烁没做.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Timer1_Tick(object sender, EventArgs e)
         {
             ColorController = !ColorController;
@@ -96,6 +101,11 @@ namespace BLD_win10.AppForms
             }
         }
 
+        /// <summary>
+        /// 选项卡内容变更: 根据背景图片 size , 重绘控件和窗体的 size
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             TabPage tabPage = tabControl1.SelectedTab;
