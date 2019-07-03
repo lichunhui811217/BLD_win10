@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoricalGraphForm));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -92,10 +91,7 @@
             chartArea1.AxisX.MajorGrid.Enabled = false;
             chartArea1.AxisX.MajorTickMark.Enabled = false;
             chartArea1.Name = "ChartArea1";
-            chartArea2.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea2.Name = "ChartArea2";
             this.histogramChart.ChartAreas.Add(chartArea1);
-            this.histogramChart.ChartAreas.Add(chartArea2);
             resources.ApplyResources(this.histogramChart, "histogramChart");
             legendItem1.Name = "LegendItem1";
             legend1.CustomItems.Add(legendItem1);
@@ -134,7 +130,7 @@
             title1.IsDockedInsideChartArea = false;
             title1.Name = "Title1";
             title1.Text = "图表1";
-            title2.DockedToChartArea = "ChartArea2";
+            title2.DockedToChartArea = "ChartArea1";
             title2.IsDockedInsideChartArea = false;
             title2.Name = "Title2";
             title2.Text = "棒图2";
